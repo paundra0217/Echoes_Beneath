@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class SettingsAudio : MonoBehaviour
+public class SettingsAudio : MonoBehaviour, ISettingsMenu
 {
     [SerializeField] AudioMixer mixer;
     [SerializeField] Slider sliderMaster;
@@ -44,15 +44,15 @@ public class SettingsAudio : MonoBehaviour
         mixer.SetFloat("VolumeVCL", sliderSFX.value);
     }
 
-    public void GetSavedAudioSettings()
+    public void InitializeSettings()
     {
         sliderMaster.value = 0;
         sliderBGM.value = 0;
         sliderSFX.value = 0;
     }
 
-    public void SaveAudioSettings()
+    public void SaveSettings()
     {
-
+        
     }
 }

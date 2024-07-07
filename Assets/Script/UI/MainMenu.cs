@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace RDCT.MainMenu
+namespace RDCT.Menu
 {
-    public class Menu : MonoBehaviour
+    public class MainMenu : MonoBehaviour
     {
         private static CanvasGroup cg;
 
@@ -13,19 +13,23 @@ namespace RDCT.MainMenu
 
         public static void PlayGame()
         {
-            //lets goooooo!!!
+            CloseMainMenu();
+
+            SaveMenu.Instance.OpenWindow();
         } 
 
         public void OpenSettings()
         {
             CloseMainMenu();
 
-            Settings.Instance.InitializeSettings();
+            Settings.Instance.OpenWindow();
         }
 
         public static void ExitGame()
         {
-            Application.Quit();
+            CloseMainMenu();
+
+            ExitMenu.Instance.OpenWindow();
         }
 
         private static void CloseMainMenu()

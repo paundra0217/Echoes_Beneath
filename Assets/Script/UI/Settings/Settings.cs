@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RDCT.MainMenu
+namespace RDCT.Menu
 {
     [System.Serializable]
     enum SettingsCategory
@@ -19,7 +19,7 @@ namespace RDCT.MainMenu
         public SettingsCategory windowCategory;
     }
 
-    public class Settings : MonoBehaviour
+    public class Settings : MonoBehaviour, IMenuWindow
     {
         [SerializeField] private SettingsWindow[] windows;
 
@@ -46,9 +46,10 @@ namespace RDCT.MainMenu
             cg = GetComponent<CanvasGroup>();
         }
 
-        public void InitializeSettings()
+        public void OpenWindow()
         {
-            SettingsAudio.Instance.GetSavedAudioSettings();
+            SettingsVideo.Instance.InitializeSettings();
+            SettingsAudio.Instance.InitializeSettings();
             
             cg.alpha = 1.0f;
             cg.blocksRaycasts = true;
@@ -89,15 +90,17 @@ namespace RDCT.MainMenu
             SwitchOptions(SettingsCategory.GRAPHICS);
         }
 
-        public void CloseSettings()
+        public void CloseWindow()
         {
             // save settings
+            SettingsAudio.Instance.SaveSettings();
+            SettingsVideo.Instance.SaveSettings();
 
             cg.alpha = 0f;
             cg.blocksRaycasts = false;
             cg.interactable = false;
 
-            Menu.ReOpenMainMenu();
+            MainMenu.ReOpenMainMenu();
         }
     }
 }
