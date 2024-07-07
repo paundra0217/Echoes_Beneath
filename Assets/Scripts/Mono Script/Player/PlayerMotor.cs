@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+namespace RDCT.PlayerController
+{
+
+
 public class PlayerMotor : MonoBehaviour
 {
     [SerializeField] private PlayerStats _stats;
@@ -122,3 +127,6 @@ public class PlayerMotor : MonoBehaviour
 
 
 }
+
+}
+
