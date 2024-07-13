@@ -22,6 +22,8 @@ namespace RDCT.Menu
     public class Settings : MonoBehaviour, IMenuWindow
     {
         [SerializeField] private SettingsWindow[] windows;
+        [SerializeField] private SOSettings defaultSettings;
+        [SerializeField] private SOSettings userSettings;
 
         private static SettingsCategory currentCategory;
         private static CanvasGroup cg;
@@ -48,8 +50,9 @@ namespace RDCT.Menu
 
         public void OpenWindow()
         {
-            SettingsVideo.Instance.InitializeSettings();
-            SettingsAudio.Instance.InitializeSettings();
+            SettingsVideo.Instance.InitializeSettings(userSettings);
+            SettingsAudio.Instance.InitializeSettings(userSettings);
+            SettingsGraphics.Instance.InitializeSettings(userSettings);
             
             cg.alpha = 1.0f;
             cg.blocksRaycasts = true;
@@ -90,12 +93,24 @@ namespace RDCT.Menu
             SwitchOptions(SettingsCategory.GRAPHICS);
         }
 
+        public void SaveSettings()
+        {
+            SettingsAudio.Instance.SaveSettings(userSettings);
+            SettingsVideo.Instance.SaveSettings(userSettings);
+            SettingsGraphics.Instance.SaveSettings(userSettings);
+
+            print(JsonUtility.ToJson(userSettings));
+
+            CloseWindow();
+        }
+
+        public void ResetSettings()
+        {
+            SettingsGraphics.Instance.InitializeSettings(defaultSettings);
+        }
+
         public void CloseWindow()
         {
-            // save settings
-            SettingsAudio.Instance.SaveSettings();
-            SettingsVideo.Instance.SaveSettings();
-
             cg.alpha = 0f;
             cg.blocksRaycasts = false;
             cg.interactable = false;

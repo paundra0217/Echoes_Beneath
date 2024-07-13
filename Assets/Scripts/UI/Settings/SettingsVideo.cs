@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -27,10 +25,10 @@ namespace RDCT.Menu
             _instance = this;
         }
 
-        public void InitializeSettings()
+        public void InitializeSettings(SOSettings settings)
         {
-            displayMode.value = 0;
-            resolution.value = 3;
+            displayMode.value = settings.displayMode;
+            resolution.value = settings.resolution;
         }
 
         public void ChangeDisplayMode(int value)
@@ -80,9 +78,10 @@ namespace RDCT.Menu
             }
         }
 
-        public void SaveSettings()
+        public void SaveSettings(SOSettings settings)
         {
-            
+            settings.displayMode = displayMode.value;
+            settings.resolution = resolution.value;
         }
     }
 }

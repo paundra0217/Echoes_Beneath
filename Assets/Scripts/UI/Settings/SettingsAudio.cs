@@ -28,6 +28,13 @@ public class SettingsAudio : MonoBehaviour, ISettingsMenu
         _instance = this;
     }
 
+    public void InitializeSettings(SOSettings settings)
+    {
+        sliderMaster.value = settings.masterVolume;
+        sliderBGM.value = settings.BGMVolume;
+        sliderSFX.value = settings.SFXVolume;
+    }
+
     public void SetMasterVolume()
     {
         mixer.SetFloat("VolumeMaster", sliderMaster.value);
@@ -44,15 +51,10 @@ public class SettingsAudio : MonoBehaviour, ISettingsMenu
         mixer.SetFloat("VolumeVCL", sliderSFX.value);
     }
 
-    public void InitializeSettings()
+    public void SaveSettings(SOSettings settings)
     {
-        sliderMaster.value = 0;
-        sliderBGM.value = 0;
-        sliderSFX.value = 0;
-    }
-
-    public void SaveSettings()
-    {
-        
+        settings.masterVolume = sliderMaster.value;
+        settings.BGMVolume = sliderBGM.value;
+        settings.SFXVolume = sliderSFX.value;
     }
 }

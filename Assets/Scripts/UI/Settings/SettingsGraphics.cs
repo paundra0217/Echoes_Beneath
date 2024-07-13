@@ -9,7 +9,7 @@ public class SettingsGraphics : MonoBehaviour, ISettingsMenu
     [SerializeField] private TMP_Dropdown quality;
     [SerializeField] private TMP_Dropdown antiAliasing;
     [SerializeField] private TMP_Dropdown SSO;
-    [SerializeField] private TMP_Dropdown PostProcessing;
+    [SerializeField] private TMP_Dropdown postProcessing;
     [SerializeField] private TMP_Dropdown maxFPS;
 
     private static SettingsGraphics _instance;
@@ -29,14 +29,35 @@ public class SettingsGraphics : MonoBehaviour, ISettingsMenu
         _instance = this;
     }
 
-    public void InitializeSettings()
+    public void InitializeSettings(SOSettings settings)
     {
-        
+        quality.value = settings.quality;
+        antiAliasing.value = settings.antiAliasing;
+        SSO.value = settings.SSO;
+        postProcessing.value = settings.postProcessing;
+        maxFPS.value = settings.maxFPS; 
     }
 
     public void SetQuality(int value)
     {
+        switch (value)
+        {
+            case 0: // Low
+                Application.targetFrameRate = -1;
+                break;
 
+            case 1: // Normal
+                Application.targetFrameRate = 30;
+                break;
+
+            case 2: // High
+                Application.targetFrameRate = 60;
+                break;
+
+            case 3: // Ultra
+                Application.targetFrameRate = 90;
+                break;
+        }
     }
 
     public void SetAA(int value)
@@ -77,11 +98,32 @@ public class SettingsGraphics : MonoBehaviour, ISettingsMenu
             case 4: // 120fps
                 Application.targetFrameRate = 120;
                 break;
+
+            case 5: // 144fps
+                Application.targetFrameRate = 144;
+                break;
+
+            case 6: // 165fps
+                Application.targetFrameRate = 165;
+                break;
+
+            case 7: // 240fps
+                Application.targetFrameRate = 240;
+                break;
         }
     }
     
-    public void SaveSettings()
+    public void SaveSettings(SOSettings settings)
     {
-        
+        settings.quality = quality.value;
+        settings.antiAliasing = antiAliasing.value;
+        settings.SSO = SSO.value;
+        settings.postProcessing = postProcessing.value;
+        settings.maxFPS = maxFPS.value;
+    }
+
+    public void ResetSettings(SOSettings defaultSettings)
+    {
+        throw new System.NotImplementedException();
     }
 }

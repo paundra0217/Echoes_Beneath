@@ -30,6 +30,8 @@ namespace RDCT.Menu
             CloseMainMenu();
 
             ExitMenu.Instance.OpenWindow();
+
+            //Application.Quit();
         }
 
         private static void CloseMainMenu()
