@@ -62,6 +62,15 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""3a5bd3fd-409f-46db-a4ea-e83a70ab0bf6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,6 +161,17 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e144a6c4-689e-46d4-92f2-139984901541"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +184,7 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         m_On_Foot_Jump = m_On_Foot.FindAction("Jump", throwIfNotFound: true);
         m_On_Foot_Crouch = m_On_Foot.FindAction("Crouch", throwIfNotFound: true);
         m_On_Foot_Look = m_On_Foot.FindAction("Look", throwIfNotFound: true);
+        m_On_Foot_Interact = m_On_Foot.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -229,6 +250,7 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
     private readonly InputAction m_On_Foot_Jump;
     private readonly InputAction m_On_Foot_Crouch;
     private readonly InputAction m_On_Foot_Look;
+    private readonly InputAction m_On_Foot_Interact;
     public struct On_FootActions
     {
         private @Player_Input m_Wrapper;
@@ -237,6 +259,7 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_On_Foot_Jump;
         public InputAction @Crouch => m_Wrapper.m_On_Foot_Crouch;
         public InputAction @Look => m_Wrapper.m_On_Foot_Look;
+        public InputAction @Interact => m_Wrapper.m_On_Foot_Interact;
         public InputActionMap Get() { return m_Wrapper.m_On_Foot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -258,6 +281,9 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(IOn_FootActions instance)
@@ -274,6 +300,9 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(IOn_FootActions instance)
@@ -297,5 +326,6 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
