@@ -276,7 +276,7 @@ namespace RDCT.Audio
         // - Returns: none
         public void StopVoiceLines()
         {
-            foreach (var a in audioSFX)
+            foreach (var a in audioVCL)
             {
                 a.Source.Stop();
             }
