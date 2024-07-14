@@ -55,14 +55,16 @@ public class PlayerMotor : MonoBehaviour
     //Player Movement
     public void ProcessMove(Vector2 input)
     {
-        
+        //Movement Input
         movedirection.x = input.x;
         movedirection.z = input.y;
 
         controller.Move(transform.TransformDirection(movedirection) * walkSpeed * Time.deltaTime);
-
+        
+        //apply Gravity
         playerVelocity.y -= gravity * Time.deltaTime;
 
+        //Set Fall Speed Limit
         if (controller.isGrounded && playerVelocity.y < 0)
         {
             playerVelocity.y = -2f;
@@ -80,7 +82,7 @@ public class PlayerMotor : MonoBehaviour
         //Debug.Log("masuk");
         if (controller.isGrounded)
         {
-            Debug.Log("lompat");
+            //Debug.Log("lompat");
             playerVelocity.y = jumpPower;
         }
 
@@ -89,6 +91,7 @@ public class PlayerMotor : MonoBehaviour
     //Player Crouch
     public void Crouch()
     {
+        //Toggle Crouch
         IsCrouch = !IsCrouch;
 
         if (IsCrouch)
