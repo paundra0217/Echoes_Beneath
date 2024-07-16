@@ -78,8 +78,8 @@ MonoBehaviour:
   ripplesFadeStart: 50
   ripplesFadeDistance: 200
   customMaterial: {fileID: 2100000, guid: 448685fcd8e17804a814557c2a92b1fb, type: 2}
-  startSmoothness: 0
-  endSmoothness: 0
+  startSmoothness: 0.44
+  endSmoothness: 0.072
   smoothnessFadeStart: 100
   smoothnessFadeDistance: 500
   refractionColor: {r: 0, g: 0.14150941, b: 0.14150941, a: 1}
@@ -153,7 +153,7 @@ MonoBehaviour:
   waterMaskOffset: {x: 0, y: 0}
   decalLayerMask: 1
   lightLayerMask: 1
-  underWater: 0
+  underWater: 1
   volumeBounds: {fileID: 4987797707813058266}
   volumeDepth: 50
   volumePrority: 0
