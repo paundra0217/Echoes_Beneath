@@ -5,6 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Settings", menuName = "Settings")]
 public class SOSettings : ScriptableObject 
 {
+    [Header("Gameplay Settings")]
+    [Tooltip("Sensitivity setting. 0: Not move at all, 5: 1mm = hell of rotations in character")]
+    public float sensitivity;
+
     [Header("Video Settings")]
     [Tooltip("Display Mode setting. 0: Fullscreen, 1: Windowed Fullscreen, 2: Window")]
     public int displayMode;

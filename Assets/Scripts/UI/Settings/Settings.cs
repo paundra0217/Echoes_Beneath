@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RDCT.Menu
+namespace RDCT.Menu.SettingsMenu
 {
     [System.Serializable]
     enum SettingsCategory
     {
+        GAMEPLAY,
         VIDEO,
         AUDIO,
         GRAPHICS
@@ -50,6 +51,7 @@ namespace RDCT.Menu
 
         public void OpenWindow()
         {
+            SettingsGameplay.Instance.InitializeSettings(userSettings);
             SettingsVideo.Instance.InitializeSettings(userSettings);
             SettingsAudio.Instance.InitializeSettings(userSettings);
             SettingsGraphics.Instance.InitializeSettings(userSettings);
@@ -58,7 +60,7 @@ namespace RDCT.Menu
             cg.blocksRaycasts = true;
             cg.interactable = true;
 
-            SwitchOptions(SettingsCategory.VIDEO);
+            SwitchOptions(SettingsCategory.GAMEPLAY);
         }
 
         private void SwitchOptions(SettingsCategory category)
@@ -76,6 +78,11 @@ namespace RDCT.Menu
                 wcg.blocksRaycasts = isEnabled;
                 wcg.interactable = isEnabled;
             }
+        }
+
+        public void SetCategoryToGameplay()
+        {
+            SwitchOptions(SettingsCategory.GAMEPLAY);
         }
 
         public void SetCategoryToVideo()
@@ -98,6 +105,7 @@ namespace RDCT.Menu
             SettingsAudio.Instance.SaveSettings(userSettings);
             SettingsVideo.Instance.SaveSettings(userSettings);
             SettingsGraphics.Instance.SaveSettings(userSettings);
+            SettingsGameplay.Instance.SaveSettings(userSettings);
 
             print(JsonUtility.ToJson(userSettings));
 

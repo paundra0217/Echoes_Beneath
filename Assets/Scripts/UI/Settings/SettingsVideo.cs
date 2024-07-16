@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace RDCT.Menu
+namespace RDCT.Menu.SettingsMenu
 {
     public class SettingsVideo : MonoBehaviour, ISettingsMenu
     {
