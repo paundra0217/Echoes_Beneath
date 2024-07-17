@@ -33,8 +33,8 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     private void Update()
@@ -118,7 +118,7 @@ public class PlayerMotor : MonoBehaviour
     {
         if (hit.collider == null)
         {
-            Debug.Log("gk ada apa apa");
+            //Debug.Log("gk ada apa apa");
             return;
         }
 
