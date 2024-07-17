@@ -166,9 +166,12 @@ public class ItemGrid : MonoBehaviour
         {
             for (int jy = 0; jy < item.HEIGHT; jy++)
             {
-                InventoryItemSlot[item.OnGridPositionX + ix, item.itemSize.height + jy] = null;
+
+                InventoryItemSlot[item.OnGridPositionX + ix, item.OnGridPositionY + jy] = null;
+
             }
         }
+
 
         for (int ix = 0; ix < gridwideSize; ix++)
         {

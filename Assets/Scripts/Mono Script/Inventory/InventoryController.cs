@@ -164,8 +164,8 @@ public class InventoryController : MonoBehaviour
 
         if (selectedItem != null)
         {
-            position.x -= (selectedItem.itemSize.width - 1) * ItemGrid.TileSizeWidth / 2;
-            position.y += (selectedItem.itemSize.height - 1) * ItemGrid.TileSizeHeight / 2;
+            position.x -= (selectedItem.WIDTH - 1) * ItemGrid.TileSizeWidth / 2;
+            position.y += (selectedItem.HEIGHT - 1) * ItemGrid.TileSizeHeight / 2;
         }
 
         return SelectedItemGrid.GetTileGridPosition(position);
