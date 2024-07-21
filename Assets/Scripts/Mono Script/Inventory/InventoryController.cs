@@ -55,7 +55,7 @@ public class InventoryController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-        LeftMouseButtonclick();
+            LeftMouseButtonclick();
         }
 
 
@@ -139,7 +139,7 @@ public class InventoryController : MonoBehaviour
         rectTransform.SetParent(canvasTransform);
 
         int selectedItemID = Random.Range(0, items.Count);
-        inventoryItem.set(items[selectedItemID]);
+        inventoryItem.Set(items[selectedItemID]);
 
     }
 

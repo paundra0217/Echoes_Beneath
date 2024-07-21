@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour
 {
     public ItemSize itemSize;
+    public bool CanStack;
+    public int count;
 
     public int HEIGHT
     {
@@ -31,7 +33,7 @@ public class InventoryItem : MonoBehaviour
     public int OnGridPositionX;
     public int OnGridPositionY;
     public bool IsRotated = false;
-    internal void set(ItemSize itemSize)
+    internal void Set(ItemSize itemSize)
     {
         this.itemSize = itemSize;
 

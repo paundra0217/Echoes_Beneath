@@ -162,23 +162,14 @@ public class ItemGrid : MonoBehaviour
 
     private void CleanGridReference(InventoryItem item)
     {
+
+
         for (int ix = 0; ix < item.WIDTH; ix++)
         {
             for (int jy = 0; jy < item.HEIGHT; jy++)
             {
 
                 InventoryItemSlot[item.OnGridPositionX + ix, item.OnGridPositionY + jy] = null;
-
-            }
-        }
-
-
-        for (int ix = 0; ix < gridwideSize; ix++)
-        {
-            for (int jy = 0; jy < gridheightSize; jy++)
-            {
-
-                Debug.Log(InventoryItemSlot[ix,jy]);
 
             }
         }
