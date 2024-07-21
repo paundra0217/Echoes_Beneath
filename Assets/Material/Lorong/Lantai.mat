@@ -29,7 +29,9 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _HEIGHTMAP0
+  - _HEIGHTMAP1
   - _NORMALMAP0
+  - _NORMALMAP1
   - _NORMALMAP_TANGENT_SPACE0
   - _NORMALMAP_TANGENT_SPACE1
   - _NORMALMAP_TANGENT_SPACE2
@@ -78,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 60f3ef28b5e9f38478b4dc4709df7085, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap2:
@@ -178,7 +180,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 352c87fa6ee647c43a1b3a3d31566eff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap2:
@@ -242,7 +244,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 80caebe2ee6cbca4c96b5041c53e7914, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap2:
@@ -756,4 +758,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DiffusionProfileReferences: []
   m_MaterialReferences:
+  - {fileID: 2100000, guid: cd9c02bf7d56bdb4690d68a9bbc9cab1, type: 2}
   - {fileID: 2100000, guid: cd9c02bf7d56bdb4690d68a9bbc9cab1, type: 2}
