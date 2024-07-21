@@ -20,9 +20,13 @@ namespace RDCT.PlayerController
             inputActions = new Player_Input();
             on_Foot = inputActions.On_Foot;
             motor = GetComponent<PlayerMotor>();
-            on_Foot.Jump.performed += ctx => motor.Jump();
-            on_Foot.Crouch.performed += ctx => motor.Crouch();
-            on_Foot.Interact.performed += ctx => motor.Interact();
+            on_Foot.Run.performed           += ctx => motor.Running();
+            on_Foot.Jump.performed          += ctx => motor.Jump();
+            on_Foot.Crouch.performed        += ctx => motor.Crouch();
+            on_Foot.Interact.performed      += ctx => motor.Interact();
+            on_Foot.Inventory.performed     += ctx => motor.Inventory();
+            on_Foot.FlashLight.performed    += ctx => motor.FlashLight();
+            on_Foot.Journal.performed       += ctx => motor.Journal();
         }
 
         private void FixedUpdate()

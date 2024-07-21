@@ -71,6 +71,42 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Run"",
+                    ""type"": ""Button"",
+                    ""id"": ""a99be778-aed5-47b0-943a-1d97bd3fc6b3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FlashLight"",
+                    ""type"": ""Button"",
+                    ""id"": ""eca31d0d-3ed5-40ab-bb35-06c149bbf406"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb401526-7354-4f1e-ad3a-8f5fbdae9389"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Journal"",
+                    ""type"": ""Button"",
+                    ""id"": ""0a29eedc-0278-40df-9dd7-3026d9a0af95"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +208,50 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04fba1d0-840b-4094-9c4e-0fb293bcba70"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e69c573a-0c6c-4056-a47e-a42913209702"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlashLight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6f5c220b-c28e-4e4d-b5a0-87853df09522"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6cc14a29-2e68-4176-92df-ae1a9fee1c4c"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Journal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +265,10 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         m_On_Foot_Crouch = m_On_Foot.FindAction("Crouch", throwIfNotFound: true);
         m_On_Foot_Look = m_On_Foot.FindAction("Look", throwIfNotFound: true);
         m_On_Foot_Interact = m_On_Foot.FindAction("Interact", throwIfNotFound: true);
+        m_On_Foot_Run = m_On_Foot.FindAction("Run", throwIfNotFound: true);
+        m_On_Foot_FlashLight = m_On_Foot.FindAction("FlashLight", throwIfNotFound: true);
+        m_On_Foot_Inventory = m_On_Foot.FindAction("Inventory", throwIfNotFound: true);
+        m_On_Foot_Journal = m_On_Foot.FindAction("Journal", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +335,10 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
     private readonly InputAction m_On_Foot_Crouch;
     private readonly InputAction m_On_Foot_Look;
     private readonly InputAction m_On_Foot_Interact;
+    private readonly InputAction m_On_Foot_Run;
+    private readonly InputAction m_On_Foot_FlashLight;
+    private readonly InputAction m_On_Foot_Inventory;
+    private readonly InputAction m_On_Foot_Journal;
     public struct On_FootActions
     {
         private @Player_Input m_Wrapper;
@@ -260,6 +348,10 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         public InputAction @Crouch => m_Wrapper.m_On_Foot_Crouch;
         public InputAction @Look => m_Wrapper.m_On_Foot_Look;
         public InputAction @Interact => m_Wrapper.m_On_Foot_Interact;
+        public InputAction @Run => m_Wrapper.m_On_Foot_Run;
+        public InputAction @FlashLight => m_Wrapper.m_On_Foot_FlashLight;
+        public InputAction @Inventory => m_Wrapper.m_On_Foot_Inventory;
+        public InputAction @Journal => m_Wrapper.m_On_Foot_Journal;
         public InputActionMap Get() { return m_Wrapper.m_On_Foot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,6 +376,18 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Run.started += instance.OnRun;
+            @Run.performed += instance.OnRun;
+            @Run.canceled += instance.OnRun;
+            @FlashLight.started += instance.OnFlashLight;
+            @FlashLight.performed += instance.OnFlashLight;
+            @FlashLight.canceled += instance.OnFlashLight;
+            @Inventory.started += instance.OnInventory;
+            @Inventory.performed += instance.OnInventory;
+            @Inventory.canceled += instance.OnInventory;
+            @Journal.started += instance.OnJournal;
+            @Journal.performed += instance.OnJournal;
+            @Journal.canceled += instance.OnJournal;
         }
 
         private void UnregisterCallbacks(IOn_FootActions instance)
@@ -303,6 +407,18 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Run.started -= instance.OnRun;
+            @Run.performed -= instance.OnRun;
+            @Run.canceled -= instance.OnRun;
+            @FlashLight.started -= instance.OnFlashLight;
+            @FlashLight.performed -= instance.OnFlashLight;
+            @FlashLight.canceled -= instance.OnFlashLight;
+            @Inventory.started -= instance.OnInventory;
+            @Inventory.performed -= instance.OnInventory;
+            @Inventory.canceled -= instance.OnInventory;
+            @Journal.started -= instance.OnJournal;
+            @Journal.performed -= instance.OnJournal;
+            @Journal.canceled -= instance.OnJournal;
         }
 
         public void RemoveCallbacks(IOn_FootActions instance)
@@ -327,5 +443,9 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         void OnCrouch(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnRun(InputAction.CallbackContext context);
+        void OnFlashLight(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
+        void OnJournal(InputAction.CallbackContext context);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -11,6 +12,7 @@ public class PlayerMotor : MonoBehaviour
     private CharacterController controller;
     private Vector3 playerVelocity;
     private float walkSpeed;
+    private float RunSpeed;
     private float jumpPower;
     private float gravity;
     private float lookSpeed;
@@ -21,7 +23,13 @@ public class PlayerMotor : MonoBehaviour
 
     //other
     private bool IsGrounded;
-    private bool IsCrouch;
+    private bool IsOpenInventory = false;
+    private bool IsOpenJournal = false;
+    private bool ToggleFlashLight = false;
+    private bool IsRunning = false;
+    private bool IsCrouch = false;
+    [SerializeField] GameObject InventoryUI;
+    [SerializeField] GameObject JournalUI;
     [SerializeField] LayerMask layerMask;
     [SerializeField] float JarakInteract;
     Vector3 movedirection = Vector3.zero;
@@ -33,8 +41,8 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
@@ -45,6 +53,7 @@ public class PlayerMotor : MonoBehaviour
     private void Awake()
         {
         walkSpeed = _stats.walkSpeed;
+        RunSpeed = _stats.RunSpeed;
         jumpPower = _stats.jumpPower;
         gravity = _stats.gravity;
         lookSpeed = _stats.lookSpeed;
@@ -52,6 +61,8 @@ public class PlayerMotor : MonoBehaviour
         defaultHeight = _stats.defaultHeight;
         crouchHeight = _stats.crouchHeight;
         crouchSpeed = _stats.crouchSpeed;
+        InventoryUI = FindAnyObjectByType<GridInteract>().gameObject;
+        InventoryUI.SetActive(false);
         }
     
 
@@ -79,6 +90,21 @@ public class PlayerMotor : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
 
 
+
+    }
+
+    //PlayerRun
+    public void Running()
+    {
+        IsRunning = !IsRunning;
+        if (IsRunning)
+        {
+            walkSpeed = RunSpeed;
+        }
+        else
+        {
+            walkSpeed = _stats.walkSpeed;
+        }
 
     }
 
@@ -113,7 +139,7 @@ public class PlayerMotor : MonoBehaviour
 
 
     }
-
+    //Player Interact
     public void Interact()
     {
         if (hit.collider == null)
@@ -127,6 +153,54 @@ public class PlayerMotor : MonoBehaviour
 
     }
 
+    //Player Open/Close Inventory
+    public void Inventory()
+    {
+        IsOpenInventory = !IsOpenInventory;
+
+        InventoryUI.SetActive(IsOpenInventory);
+        if (IsOpenInventory)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        
+
+    }
+
+    //Player On/Off FlashLight
+    public void FlashLight()
+    {
+        ToggleFlashLight = !ToggleFlashLight;
+        if (ToggleFlashLight)
+        {
+            Debug.Log("Nyalain senter");
+        }
+        else
+        {
+            Debug.Log("matiin senter");
+        }
+    }
+    // Player Open/Close Journal
+    public void Journal()
+    {
+        IsOpenJournal = !IsOpenJournal;
+
+        if (IsOpenJournal)
+        {
+            Debug.Log("Buka Journal");
+        }
+        else
+        {
+            Debug.Log("Tutup Journal");
+        }
+    }
+    //Player
     #endregion
 
     #region Camera
