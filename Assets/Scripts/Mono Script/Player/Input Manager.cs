@@ -22,6 +22,7 @@ namespace RDCT.PlayerController
             motor = GetComponent<PlayerMotor>();
             on_Foot.Jump.performed += ctx => motor.Jump();
             on_Foot.Crouch.performed += ctx => motor.Crouch();
+            on_Foot.Interact.performed += ctx => motor.Interact();
         }
 
         private void FixedUpdate()

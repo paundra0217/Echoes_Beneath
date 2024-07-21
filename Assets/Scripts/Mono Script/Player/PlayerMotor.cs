@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace RDCT.PlayerController
-{
-
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -25,8 +22,10 @@ public class PlayerMotor : MonoBehaviour
     //other
     private bool IsGrounded;
     private bool IsCrouch;
+    [SerializeField] LayerMask layerMask;
+    [SerializeField] float JarakInteract;
     Vector3 movedirection = Vector3.zero;
-
+    RaycastHit hit;
     //Camera
     [SerializeField] private Camera _cam;
     private float xRotation = 0f;
@@ -34,12 +33,17 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+    }
+
+    private void Update()
+    {
+        CheckInteract();
     }
 
     private void Awake()
-    {
+        {
         walkSpeed = _stats.walkSpeed;
         jumpPower = _stats.jumpPower;
         gravity = _stats.gravity;
@@ -48,10 +52,12 @@ public class PlayerMotor : MonoBehaviour
         defaultHeight = _stats.defaultHeight;
         crouchHeight = _stats.crouchHeight;
         crouchSpeed = _stats.crouchSpeed;
-    }
+        }
+    
 
 
-    #region Player_Movement
+
+    #region Player_Movement & input
     //Player Movement
     public void ProcessMove(Vector2 input)
     {
@@ -108,6 +114,19 @@ public class PlayerMotor : MonoBehaviour
 
     }
 
+    public void Interact()
+    {
+        if (hit.collider == null)
+        {
+            //Debug.Log("gk ada apa apa");
+            return;
+        }
+
+        InteractObject interactObject = hit.collider.gameObject.GetComponent<InteractObject>();
+        interactObject.Interaction();
+
+    }
+
     #endregion
 
     #region Camera
@@ -126,10 +145,17 @@ public class PlayerMotor : MonoBehaviour
         transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * lookSpeed);
     }
 
+        #endregion
+
+    #region Interact 
+    
+    public void CheckInteract()
+    {
+        Physics.Raycast(_cam.transform.position, _cam.transform.forward, out hit, JarakInteract, layerMask);       
+    }
     #endregion
 
-
 }
 
-}
+
 
