@@ -152,6 +152,7 @@ public class InventoryController : MonoBehaviour
         }
         else
         {
+            Debug.Log("oke");
             PlaceItem(tileGridPosition);
 
         }

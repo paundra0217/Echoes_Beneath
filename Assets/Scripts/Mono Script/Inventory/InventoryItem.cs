@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryItem : MonoBehaviour
 {
-    public ItemSize itemSize;
-    public bool CanStack;
-    public int count;
 
+    public ItemSize itemSize;
+    public int MaxStack = 4;
+    public int count = 1;
+    
     public int HEIGHT
     {
         get
@@ -30,9 +32,10 @@ public class InventoryItem : MonoBehaviour
 
     }
 
-    public int OnGridPositionX;
-    public int OnGridPositionY;
-    public bool IsRotated = false;
+    [SerializeField] private TMP_Text CountUI;
+    [HideInInspector]public int OnGridPositionX;
+    [HideInInspector]public int OnGridPositionY;
+    [HideInInspector]public bool IsRotated = false;
     internal void Set(ItemSize itemSize)
     {
         this.itemSize = itemSize;
@@ -40,8 +43,7 @@ public class InventoryItem : MonoBehaviour
         GetComponent<Image>().sprite = itemSize.Icon;
         Vector2 size = new Vector2();
         size.x = itemSize.width * ItemGrid.TileSizeWidth;
-        size.y = itemSize.height  *ItemGrid.TileSizeHeight;
-
+        size.y = itemSize.height  * ItemGrid.TileSizeHeight;
         GetComponent<RectTransform>().sizeDelta = size;
     }
 
@@ -54,4 +56,15 @@ public class InventoryItem : MonoBehaviour
 
 
     }
+ 
+    public void SetActiveUI()
+    {
+        CountUI.gameObject.SetActive(true);
+        RefreshCount();
+    }
+    public void RefreshCount()
+    {
+        CountUI.text = count.ToString();
+    }
+
 }

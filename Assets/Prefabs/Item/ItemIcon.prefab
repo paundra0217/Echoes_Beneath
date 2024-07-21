@@ -224,8 +224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSize: {fileID: 11400000, guid: ab655c36ce34f42419c84730f6280685, type: 2}
-  CanStack: 0
-  count: 0
+  MaxStack: 4
+  count: 1
+  CountUI: {fileID: 7286811549740704008}
   OnGridPositionX: 0
   OnGridPositionY: 0
   IsRotated: 0
