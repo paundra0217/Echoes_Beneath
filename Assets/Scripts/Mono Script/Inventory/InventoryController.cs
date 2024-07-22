@@ -14,6 +14,7 @@ public class InventoryController : MonoBehaviour
             inventoryHighlight.SetParent(value);
         }
     }
+    //Other
     InventoryItem selectedItem;
     InventoryItem OverlapItem;
     RectTransform rectTransform;
@@ -29,6 +30,7 @@ public class InventoryController : MonoBehaviour
     }
     private void Update()
     {
+        //Buat Ngebantu Debug aja
         if (Input.GetKeyDown(KeyCode.Q))
         {
             RandomItemSpawn();
@@ -41,7 +43,11 @@ public class InventoryController : MonoBehaviour
         {
             RotateItem();
         }
-
+        if(Cursor.lockState == CursorLockMode.Locked)
+        {
+            return;
+        }
+        //Buat Ngedrag Item
         ItemIconDrag();
 
         if (SelectedItemGrid == null)
@@ -50,9 +56,9 @@ public class InventoryController : MonoBehaviour
             return;
         }
 
-
+        //Buat Highlight Item
         HandleHighlight();
-
+        //Ketika Klik kiri mouse
         if (Input.GetMouseButtonDown(0))
         {
             LeftMouseButtonclick();
@@ -61,6 +67,7 @@ public class InventoryController : MonoBehaviour
 
     }
 
+    //Buat Rotate Item
     private void RotateItem()
     {
         if (selectedItem == null) return;
@@ -68,7 +75,7 @@ public class InventoryController : MonoBehaviour
         selectedItem.Rotate();
 
     }
-
+    //Buat Bantu Debug aja
     private void InsertRandomItem()
     {
         if (selectedItemGrid == null) return;
@@ -77,26 +84,40 @@ public class InventoryController : MonoBehaviour
         selectedItem = null;
         InsertItem(itemToInsert);
     }
-
+    //Insert Item Otomatis ke Item Grid
     private void InsertItem(InventoryItem itemToInsert)
     {
+        //Cari Posisi Kosong yang muat di Grid
         Vector2Int? posOnGrid = selectedItemGrid.FindSpaceForObject(itemToInsert);
 
+        //Kalo gk ada return
         if (posOnGrid == null)
         {
             Destroy(itemToInsert.gameObject);
             return;
         }
         
-
+        //kalo ada di masukin ke posisi yang udh didapetin
         selectedItemGrid.PlaceItem(itemToInsert, posOnGrid.Value.x, posOnGrid.Value.y);
+
+    }
+    public void RandomItemSpawn()
+    {
+        InventoryItem inventoryItem = Instantiate(gameObject1).GetComponent<InventoryItem>();
+        selectedItem = inventoryItem;
+
+        rectTransform = inventoryItem.GetComponent<RectTransform>();
+        rectTransform.SetParent(canvasTransform);
+
+        int selectedItemID = Random.Range(0, items.Count);
+        inventoryItem.Set(items[selectedItemID]);
 
     }
 
     Vector2Int Oldposition;
     InventoryItem ItemtoHighlight;
 
-
+    //Buat ngurus HighLight
     private void HandleHighlight()
     {
         Vector2Int positionOnGrid = GetTileGridPosition();
@@ -129,20 +150,8 @@ public class InventoryController : MonoBehaviour
             inventoryHighlight.SetPosition(SelectedItemGrid, selectedItem, positionOnGrid.x, positionOnGrid.y);
         }
     }
-
-    public void RandomItemSpawn()
-    {
-        InventoryItem inventoryItem = Instantiate(gameObject1).GetComponent<InventoryItem>();
-        selectedItem = inventoryItem;
-
-        rectTransform = inventoryItem.GetComponent<RectTransform>();
-        rectTransform.SetParent(canvasTransform);
-
-        int selectedItemID = Random.Range(0, items.Count);
-        inventoryItem.Set(items[selectedItemID]);
-
-    }
-
+    
+    //Ketika klik kiri
     private void LeftMouseButtonclick()
     {
         Vector2Int tileGridPosition = GetTileGridPosition();
@@ -152,13 +161,11 @@ public class InventoryController : MonoBehaviour
         }
         else
         {
-            Debug.Log("oke");
             PlaceItem(tileGridPosition);
-
         }
 
     }
-
+    //Buat dapet posisi TileGrid
     private Vector2Int GetTileGridPosition()
     {
         Vector2 position = Input.mousePosition;
@@ -172,6 +179,7 @@ public class InventoryController : MonoBehaviour
         return SelectedItemGrid.GetTileGridPosition(position);
     }
 
+    //Buat Input PickUp Item
     private void PickUpItem(Vector2Int tileGridPosition)
     {
         selectedItem = SelectedItemGrid.PickUpItem(tileGridPosition.x, tileGridPosition.y);
@@ -181,6 +189,7 @@ public class InventoryController : MonoBehaviour
         }
     }
 
+    //Buat Input Place Item
     private void PlaceItem(Vector2Int tileGridPosition)
     {
         bool complete = SelectedItemGrid.PlaceItem(selectedItem, tileGridPosition.x, tileGridPosition.y, ref OverlapItem);
@@ -196,6 +205,7 @@ public class InventoryController : MonoBehaviour
         }
     }
 
+    //Buat Ngedrag Item
     private void ItemIconDrag()
     {
         if (selectedItem != null)

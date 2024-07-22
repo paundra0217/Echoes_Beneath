@@ -13,6 +13,7 @@ public class FillFromMicrophone : MonoBehaviour
 
     private void Update()
     {
+
         float loudness = loudnessDetector.GetLoudnessFromMicrophone() * loudnessSensibility;
         Debug.Log(loudness);
         if (loudness < threshold) loudness = 0.01f;

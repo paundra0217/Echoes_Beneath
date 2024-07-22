@@ -9,36 +9,39 @@ public class AudioLoudnessDetector : MonoBehaviour
     string MicrophoneName;
     private void Start()
     {
+        //pake mic yang pertama
         MicrophoneToAudioClip(0);
     }
 
-    private void Update()
-    {
-        float Loudness = GetLoudnessFromMicrophone() * 100;
-        Debug.Log(Loudness);
-    }
+    #region VoiceDetection
     private void MicrophoneToAudioClip(int microphoneIndex)
     {
-        //buat cek mic
+        //buat cek nama mic yang tersedia
         /*
         foreach(var name in Microphone.devices)
         {
             Debug.Log(name);
         }
         */
+        //Simpen nama Mic yang bakal di pake
         MicrophoneName = Microphone.devices[microphoneIndex];
+        //Mulai Ngedeteksi Suara
         microphoneClip = Microphone.Start(MicrophoneName, true, 20, AudioSettings.outputSampleRate);
     }
 
+    //buat ngereturn Loudness dari mic
     public float GetLoudnessFromMicrophone()
     {
         return GetLoudnessFromAudioClip(Microphone.GetPosition(MicrophoneName), microphoneClip);
     }
 
+    //buat ngereturn Loudness dari AudioClip
     public float GetLoudnessFromAudioClip(int clipPosition, AudioClip clip)
     {
+        //Cari posisi Start
         int startPosition = clipPosition - sampleWindow;
         
+        //Biar StartPosition kalo minus startnya di 0
         if(startPosition < 0)
         {
             return 0;
@@ -48,6 +51,8 @@ public class AudioLoudnessDetector : MonoBehaviour
         clip.GetData(waveData, startPosition);
 
         float totalLoudness = 0;
+
+        //Totalin Loudness
         foreach(var samplefloat in waveData)
         {
             totalLoudness += Mathf.Abs(samplefloat); 
@@ -56,6 +61,6 @@ public class AudioLoudnessDetector : MonoBehaviour
         return totalLoudness / sampleWindow;
 
     }
-
+    #endregion
 
 }

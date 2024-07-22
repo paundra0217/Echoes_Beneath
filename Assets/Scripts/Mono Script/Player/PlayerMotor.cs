@@ -53,6 +53,7 @@ public class PlayerMotor : MonoBehaviour
 
     private void Awake()
         {
+        //mindahin data SO ke variabel local
         walkSpeed = _stats.walkSpeed;
         RunSpeed = _stats.RunSpeed;
         jumpPower = _stats.jumpPower;
@@ -66,8 +67,6 @@ public class PlayerMotor : MonoBehaviour
     }
     
     
-
-
 
     #region Player_Movement & input
     //Player Movement
@@ -87,7 +86,7 @@ public class PlayerMotor : MonoBehaviour
         {
             playerVelocity.y = -2f;
         }
-
+        //Player Move
         controller.Move(playerVelocity * Time.deltaTime);
 
 
@@ -97,7 +96,9 @@ public class PlayerMotor : MonoBehaviour
     //PlayerRun
     public void Running()
     {
+        //Buat toggle Lari
         IsRunning = !IsRunning;
+        //kalo true pake RunSpeed, kalo false pake Walkspeed
         if (IsRunning)
         {
             walkSpeed = RunSpeed;
@@ -112,10 +113,9 @@ public class PlayerMotor : MonoBehaviour
     //Player Jump
     public void Jump()
     {
-        //Debug.Log("masuk");
+        //Kalo Grounded baru bisa lompat
         if (controller.isGrounded)
-        {
-            //Debug.Log("lompat");
+        {           
             playerVelocity.y = jumpPower;
         }
 
@@ -126,7 +126,6 @@ public class PlayerMotor : MonoBehaviour
     {
         //Toggle Crouch
         IsCrouch = !IsCrouch;
-
         if (IsCrouch)
         {
             controller.height = crouchHeight;
@@ -143,12 +142,14 @@ public class PlayerMotor : MonoBehaviour
     //Player Interact
     public void Interact()
     {
+        //Kalo Raycast gk nemu apa apa, gk ngapa ngapain
         if (hit.collider == null)
         {
             //Debug.Log("gk ada apa apa");
             return;
         }
 
+        //Kalo ada objek, Function dalam Object dijalanin
         InteractObject interactObject = hit.collider.gameObject.GetComponent<InteractObject>();
         interactObject.Interaction();
 
@@ -157,9 +158,10 @@ public class PlayerMotor : MonoBehaviour
     //Player Open/Close Inventory
     public void Inventory()
     {
+        //toggle Open/Close Inventory
         IsOpenInventory = !IsOpenInventory;
-
         InventoryUI.SetActive(IsOpenInventory);
+
         if (IsOpenInventory)
         {
             Cursor.lockState = CursorLockMode.None;

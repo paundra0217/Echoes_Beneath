@@ -7,11 +7,10 @@ using TMPro;
 
 public class InventoryItem : MonoBehaviour
 {
-
+    //Item Data dan stat
     public ItemSize itemSize;
     public int MaxStack = 4;
-    public int count = 1;
-    
+    public int count = 1;    
     public int HEIGHT
     {
         get
@@ -21,7 +20,6 @@ public class InventoryItem : MonoBehaviour
         }
 
     }
-
     public int WIDTH
     {
         get
@@ -32,10 +30,13 @@ public class InventoryItem : MonoBehaviour
 
     }
 
+    //Other
     [SerializeField] private TMP_Text CountUI;
     [HideInInspector]public int OnGridPositionX;
     [HideInInspector]public int OnGridPositionY;
     [HideInInspector]public bool IsRotated = false;
+
+    //buat ngeSet ukuran dan gambar Item
     internal void Set(ItemSize itemSize)
     {
         this.itemSize = itemSize;
@@ -47,21 +48,22 @@ public class InventoryItem : MonoBehaviour
         GetComponent<RectTransform>().sizeDelta = size;
     }
 
+    //Buat Rotate Item
     internal void Rotate()
     {
         IsRotated = !IsRotated;
-
         RectTransform rectTransform = GetComponent<RectTransform>();
         rectTransform.rotation = Quaternion.Euler(0, 0, IsRotated == true ? 90f : 0f);
-
-
     }
  
+    //buat Item yang bisa diStack, ada angka di kanan bawahnya dinyalain
     public void SetActiveUI()
     {
         CountUI.gameObject.SetActive(true);
         RefreshCount();
     }
+
+    //Buat refresh 
     public void RefreshCount()
     {
         CountUI.text = count.ToString();

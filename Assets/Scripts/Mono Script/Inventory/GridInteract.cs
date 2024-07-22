@@ -14,11 +14,13 @@ public class GridInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         itemGrid = GetComponent<ItemGrid>();
     }
     
+    //Buat Milih SelectedGrid pada InventoryController
+    //Ketika Pointer mouse masuk maka selectedGrid jadi Object ini
     public void OnPointerEnter(PointerEventData eventData)
     {
         inventoryController.SelectedItemGrid = itemGrid;
     }
-
+    //Ketika Pointer mouse keluar maka selectedGrid jadi null
     public void OnPointerExit(PointerEventData eventData)
     {
         inventoryController.SelectedItemGrid = null;
