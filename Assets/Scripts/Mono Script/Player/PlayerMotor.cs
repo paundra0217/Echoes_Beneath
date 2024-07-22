@@ -43,6 +43,7 @@ public class PlayerMotor : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        InventoryUI.SetActive(false);
     }
 
     private void Update()
@@ -62,8 +63,8 @@ public class PlayerMotor : MonoBehaviour
         crouchHeight = _stats.crouchHeight;
         crouchSpeed = _stats.crouchSpeed;
         InventoryUI = FindAnyObjectByType<GridInteract>().gameObject;
-        InventoryUI.SetActive(false);
-        }
+    }
+    
     
 
 

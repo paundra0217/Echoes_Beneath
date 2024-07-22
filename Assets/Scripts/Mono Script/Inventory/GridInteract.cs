@@ -13,6 +13,7 @@ public class GridInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         inventoryController = FindObjectOfType(typeof(InventoryController)) as InventoryController;
         itemGrid = GetComponent<ItemGrid>();
     }
+    
     public void OnPointerEnter(PointerEventData eventData)
     {
         inventoryController.SelectedItemGrid = itemGrid;
@@ -22,7 +23,7 @@ public class GridInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         inventoryController.SelectedItemGrid = null;
     }
-
+    
 
 
 }
