@@ -162,6 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: bb034b18f4fd30c4bb0d6439965a4cc1, type: 2}
+  InventoryUI: {fileID: 0}
+  JournalUI: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -179,6 +181,8 @@ GameObject:
   - component: {fileID: 5545791645757269947}
   - component: {fileID: 6105426029741528844}
   - component: {fileID: 3586171915212751079}
+  - component: {fileID: 239698682509401079}
+  - component: {fileID: 4346733230779982143}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -389,3 +393,35 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &239698682509401079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707657710701939504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b2f92338d4bce4ca80dd8cfa8a0e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: ab655c36ce34f42419c84730f6280685, type: 2}
+  - {fileID: 11400000, guid: 7afc611fb4d172d4bb1c4e7126d2327f, type: 2}
+  - {fileID: 11400000, guid: f8a9474173d22f44db91d1148c637e38, type: 2}
+  gameObject1: {fileID: 5647547164741572264, guid: 30217d91140180e45bea4c56b701ea1b,
+    type: 3}
+  canvasTransform: {fileID: 0}
+--- !u!114 &4346733230779982143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707657710701939504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67da3d0a812d4a84e88c7e7064c2ff48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlighter: {fileID: 0}
