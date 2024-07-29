@@ -202,7 +202,7 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""e144a6c4-689e-46d4-92f2-139984901541"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
