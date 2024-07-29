@@ -4,6 +4,7 @@ using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 [CreateAssetMenu(fileName ="Attribute",menuName ="AI / General Attribute",order = 0)]
 public class GeneralAIStats : ScriptableObject
 {
