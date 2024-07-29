@@ -110,13 +110,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788863403247512582}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000062584877, y: 0.32304275, z: 0.000000074505806, w: 0.94638443}
-  m_LocalPosition: {x: -0.00208001, y: 0, z: -0.0015399792}
+  m_LocalRotation: {x: -0.00000005960465, y: -0.0000001192093, z: -0.5108691, w: 0.8596586}
+  m_LocalPosition: {x: -0.0020800019, y: 0, z: -0.0000000035762786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7289974437190396714}
-  m_LocalEulerAnglesHint: {x: 0, y: 37.694, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -61.443}
 --- !u!108 &7934539422756083657
 Light:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 261.1478
+  m_Intensity: 24.083406
   m_Range: 20
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 1626.5212
+  m_Intensity: 150
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
