@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 3891840589958223554}
   - component: {fileID: 7285661801430190364}
   - component: {fileID: 649201921652040785}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,6 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: bb034b18f4fd30c4bb0d6439965a4cc1, type: 2}
+  InventoryUI: {fileID: 0}
+  JournalUI: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -179,7 +181,7 @@ GameObject:
   - component: {fileID: 5545791645757269947}
   - component: {fileID: 6105426029741528844}
   - component: {fileID: 3586171915212751079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -26,19 +26,30 @@ public class GeneralAIStats : ScriptableObject
     [Header("Detection")]
     [SerializeField] private float AIDetectionRange;
     [SerializeField] private float AIVisionRange;
-    [SerializeField] private float AIDetectionTime;
+    [SerializeField] private float AIForgetTime;
+    [SerializeField] private float AISoundDetectionRange;
 
     [Header("AI Event")]
     [SerializeField][Range(1, 100)] private float AIHuntChances;
 
     [Header("AI Sound")]
-    [SerializeField] private AudioClip[] AIIdleSound;
-    [SerializeField] private AudioClip[] AIRoamSound;
-    [SerializeField] private AudioClip[] AIChaseSound;
-    [SerializeField] private AudioClip[] AIHuntSound;
+    public AudioClip[] AIIdleSound;
+    public AudioClip[] AIRoamSound;
+    public AudioClip[] AIChaseSound;
+    public AudioClip[] AIHuntSound;
 
     public float getAgentDetectionRange()
     {
         return AIVisionRange;
+    }
+
+    public float getAIVoiceDetectionRange()
+    {
+        return AISoundDetectionRange;
+    }
+
+    public float getForgetTime()
+    {
+        return AIForgetTime;
     }
 }
