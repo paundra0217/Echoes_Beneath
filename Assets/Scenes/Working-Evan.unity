@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.03604, g: 324.65222, b: 429.68732, a: 1}
+  m_IndirectSpecularColor: {r: 262.1177, g: 324.74368, b: 429.81012, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -585,44 +585,6 @@ MonoBehaviour:
   loudnessDetector: {fileID: 732651740}
   loudnessSensibility: 100
   threshold: 0.1
---- !u!1 &579014995 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3707657710701939504, guid: 83e2f75738af73748b2db5e304b1cf29,
-    type: 3}
-  m_PrefabInstance: {fileID: 286453182409712786}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &579015000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579014995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b2f92338d4bce4ca80dd8cfa8a0e0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: ab655c36ce34f42419c84730f6280685, type: 2}
-  - {fileID: 11400000, guid: 7afc611fb4d172d4bb1c4e7126d2327f, type: 2}
-  - {fileID: 11400000, guid: f8a9474173d22f44db91d1148c637e38, type: 2}
-  gameObject1: {fileID: 5647547164741572264, guid: 30217d91140180e45bea4c56b701ea1b,
-    type: 3}
-  canvasTransform: {fileID: 1540522874}
---- !u!114 &579015001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579014995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67da3d0a812d4a84e88c7e7064c2ff48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlighter: {fileID: 2027261253}
 --- !u!1 &732651739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1216,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 167238582925025979, guid: 83e2f75738af73748b2db5e304b1cf29,
+        type: 3}
+      propertyPath: canvasTransform
+      value: 
+      objectReference: {fileID: 1540522874}
     - target: {fileID: 649201921652040785, guid: 83e2f75738af73748b2db5e304b1cf29,
         type: 3}
       propertyPath: InventoryUI
@@ -1314,18 +1281,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8232941512997782148, guid: 83e2f75738af73748b2db5e304b1cf29,
+        type: 3}
+      propertyPath: highlighter
+      value: 
+      objectReference: {fileID: 2027261253}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3707657710701939504, guid: 83e2f75738af73748b2db5e304b1cf29,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 579015000}
-    - targetCorrespondingSourceObject: {fileID: 3707657710701939504, guid: 83e2f75738af73748b2db5e304b1cf29,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 579015001}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e2f75738af73748b2db5e304b1cf29, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
