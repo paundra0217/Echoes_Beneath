@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -12,6 +13,9 @@ namespace RDCT.Menu.SettingsMenu
         [SerializeField] Slider sliderMaster;
         [SerializeField] Slider sliderBGM;
         [SerializeField] Slider sliderSFX;
+        [SerializeField] TMP_Dropdown inputDeviceDropdown;
+
+        private List<string> inputDeviceNames = new List<string>();
 
         private static SettingsAudio _instance;
         public static SettingsAudio Instance
@@ -35,6 +39,11 @@ namespace RDCT.Menu.SettingsMenu
             sliderMaster.value = settings.masterVolume;
             sliderBGM.value = settings.BGMVolume;
             sliderSFX.value = settings.SFXVolume;
+
+            foreach (var mic in Microphone.devices)
+            {
+                inputDeviceDropdown.options.Add(new TMP_Dropdown.OptionData(mic));
+            }
         }
 
         public void SetMasterVolume()
@@ -53,11 +62,24 @@ namespace RDCT.Menu.SettingsMenu
             mixer.SetFloat("VolumeVCL", sliderSFX.value);
         }
 
+        public void SetInputDevice(int value)
+        {
+            if (value != 0)
+            {
+
+            }
+        }
+
         public void SaveSettings(SOSettings settings)
         {
             settings.masterVolume = sliderMaster.value;
             settings.BGMVolume = sliderBGM.value;
             settings.SFXVolume = sliderSFX.value;
+
+            if (inputDeviceDropdown.value == 0)
+                settings.inputDevice = "";
+            else
+                settings.inputDevice = inputDeviceDropdown.options[inputDeviceDropdown.value].text;
         }
     }
 }

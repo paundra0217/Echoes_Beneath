@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ namespace RDCT.Menu.SettingsMenu
     {
         [SerializeField] PlayerStats stats;
         [SerializeField] Slider sliderSensitivity;
+        [SerializeField] TMP_InputField inputSensitivity;
 
         private static SettingsGameplay _instance;
         public static SettingsGameplay Instance
@@ -29,12 +31,29 @@ namespace RDCT.Menu.SettingsMenu
         public void InitializeSettings(SOSettings settings)
         {
             sliderSensitivity.value = settings.sensitivity;
+            inputSensitivity.text = Math.Round(sliderSensitivity.value, 2).ToString();
         }
 
         // String.Format("{0:#0.0}", sliderSensitivity.value);
         public void SetSensitivity()
         {
+            inputSensitivity.text = Math.Round(sliderSensitivity.value, 2).ToString();
             stats.lookSpeed = (float)Math.Round(sliderSensitivity.value, 2);
+        }
+
+        public void ValidateSensitivityInput()
+        {
+            float newSensitivity;
+
+            bool isValid = float.TryParse(inputSensitivity.text, out newSensitivity);
+            bool isOutOfRange = newSensitivity > sliderSensitivity.maxValue || newSensitivity < sliderSensitivity.minValue;
+
+            if (isValid && !isOutOfRange)
+                sliderSensitivity.value = newSensitivity;
+            else
+                sliderSensitivity.value = stats.lookSpeed;
+
+            SetSensitivity();
         }
 
         public void SaveSettings(SOSettings settings)
