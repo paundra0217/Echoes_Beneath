@@ -1223,6 +1223,12 @@ PrefabInstance:
       objectReference: {fileID: 1540522874}
     - target: {fileID: 649201921652040785, guid: 83e2f75738af73748b2db5e304b1cf29,
         type: 3}
+      propertyPath: _stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 1322e31d1a3aa294da1ff3a781bba571,
+        type: 2}
+    - target: {fileID: 649201921652040785, guid: 83e2f75738af73748b2db5e304b1cf29,
+        type: 3}
       propertyPath: InventoryUI
       value: 
       objectReference: {fileID: 1540522870}
