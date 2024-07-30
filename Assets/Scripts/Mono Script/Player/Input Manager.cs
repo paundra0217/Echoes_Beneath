@@ -9,8 +9,7 @@ namespace RDCT.PlayerController
 
     public class InputManager : MonoBehaviour
     {
-
-        private Player_Input inputActions;
+        public Player_Input inputActions;
         private Player_Input.On_FootActions on_Foot;
 
         private PlayerMotor motor;

@@ -15,8 +15,9 @@ public class GeneralAIStats : ScriptableObject
     [Header("Movement Option")]
     [SerializeField] private float AIMoveSpeed;
     [SerializeField] private float AITurnRate;
+    [SerializeField] private float AIAccelerationSpeed;
     [SerializeField] [Range(1,3)] private float AIChaseSpeed;
-    [SerializeField] [Range(3,8)] private int AIAcceleration;
+    [SerializeField] [Range(1, 3)] private int AIChaseAccelMultiplier;
 
     [Header("Agent Setting")]
     [SerializeField] private float AgentRadius;
@@ -29,6 +30,7 @@ public class GeneralAIStats : ScriptableObject
     [SerializeField] private float AIVisionRange;
     [SerializeField] private float AIForgetTime;
     [SerializeField] private float AISoundDetectionRange;
+    [SerializeField] [Range(1,5)] private int InvestigateTime;
 
     [Header("AI Event")]
     [SerializeField][Range(1, 100)] private float AIHuntChances;
@@ -52,5 +54,40 @@ public class GeneralAIStats : ScriptableObject
     public float getForgetTime()
     {
         return AIForgetTime;
+    }
+
+    public float getAIChaseSpeed()
+    {
+        return AIMoveSpeed * AIChaseSpeed;
+    }
+
+    public float getAINormalSpeed()
+    {
+        return AIMoveSpeed;
+    }
+
+    public float getAINormalTurnRate()
+    {
+        return AITurnRate;
+    }
+
+    public float getAICHaseTurnRate()
+    {
+        return AITurnRate * 2;
+    }
+
+    public float getAIChaseAcceleration()
+    {
+        return AIAccelerationSpeed * AIChaseAccelMultiplier;
+    }
+    
+    public float getDefaultAcceleration()
+    {
+        return AIAccelerationSpeed;
+    }
+
+    public int getInvestigateTime()
+    {
+        return InvestigateTime;
     }
 }

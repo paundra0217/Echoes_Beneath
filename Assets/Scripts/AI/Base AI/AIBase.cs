@@ -5,6 +5,7 @@ using UnityEngine;
 public enum AIState{
     IDLE,
     ROAM,
+    INVESTIGATE,
     CHASE,
     HUNT
 }
