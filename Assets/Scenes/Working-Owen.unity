@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1017.3375, g: 173.98842, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4223,11 +4223,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EntranceStairs (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253011579680448268, guid: 53c1aa53c61b6474bbf0470c5d7eb7d7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
