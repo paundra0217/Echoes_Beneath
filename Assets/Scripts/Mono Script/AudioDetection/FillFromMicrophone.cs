@@ -15,7 +15,7 @@ public class FillFromMicrophone : MonoBehaviour
     {
 
         float loudness = loudnessDetector.GetLoudnessFromMicrophone() * loudnessSensibility;
-        Debug.Log(loudness);
+        //Debug.Log(loudness);
         if (loudness < threshold) loudness = 0.01f;
 
         audioBar.fillAmount = loudness;

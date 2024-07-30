@@ -17,12 +17,12 @@ public class AudioLoudnessDetector : MonoBehaviour
     private void MicrophoneToAudioClip(int microphoneIndex)
     {
         //buat cek nama mic yang tersedia
-        /*
+        
         foreach(var name in Microphone.devices)
         {
             Debug.Log(name);
         }
-        */
+        
         //Simpen nama Mic yang bakal di pake
         MicrophoneName = Microphone.devices[microphoneIndex];
         //Mulai Ngedeteksi Suara

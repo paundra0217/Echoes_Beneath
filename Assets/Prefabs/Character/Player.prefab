@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2dda4301d977349b2ad08716ed29c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stats: {fileID: 11400000, guid: bb034b18f4fd30c4bb0d6439965a4cc1, type: 2}
+  _stats: {fileID: 11400000, guid: 1322e31d1a3aa294da1ff3a781bba571, type: 2}
   InventoryUI: {fileID: 0}
   JournalUI: {fileID: 0}
   layerMask:
