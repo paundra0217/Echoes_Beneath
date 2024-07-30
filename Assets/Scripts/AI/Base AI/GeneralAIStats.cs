@@ -30,7 +30,7 @@ public class GeneralAIStats : ScriptableObject
     [SerializeField] private float AIVisionRange;
     [SerializeField] private float AIForgetTime;
     [SerializeField] private float AIDelayTime;
-    [SerializeField] [Range(1,5)] private int AISoundDetectionRange;
+    [SerializeField] [Range(1,3)] private int AISoundDetectionRange;
     [SerializeField] [Range(1,5)] private int InvestigateTime;
 
     [Header("AI Event")]
@@ -46,10 +46,10 @@ public class GeneralAIStats : ScriptableObject
     {
         return AIVisionRange;
     }
-
+    
     public float getAIVoiceDetectionRange()
     {
-        return AISoundDetectionRange;
+        return AISoundDetectionRange * AIDetectionRange;
     }
 
     public float getForgetTime()

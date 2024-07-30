@@ -168,13 +168,6 @@ public class AIUtility : AIBase
             if (investigate)
             {
                 resetInvestigate = true;
-                if (lastSeenPos.Count >= 50)
-                {
-                    for (int i = 0;i < lastSeenPos.Count - 2;i++)
-                    {
-                        lastSeenPos.RemoveAt(i);
-                    }
-                }
             }
         }
 
@@ -183,6 +176,13 @@ public class AIUtility : AIBase
 
     private void Investigate()
     {
+        if (lastSeenPos.Count >= 50)
+        {
+            for (int i = 0; i < lastSeenPos.Count - 5; i++)
+            {
+                lastSeenPos.RemoveAt(i);
+            }
+        }
         int keBerapa = lastSeenPos.Count;
         Vector3 pos = lastSeenPos[keBerapa - 1];
         Vector3 invest = new Vector3(pos.x + Random.Range(-5, 5), pos.y, pos.z + Random.Range(-5, 5));
