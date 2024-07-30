@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -163,7 +164,7 @@ public class AIUtility : AIBase
         else if (voiceDetected)
         {
             if (!investigate)
-                StartCoroutine(investiageTimer(5));
+                StartCoroutine(investiageTimer(5, aiStats.getDelayTime()));
             if (investigate)
             {
                 resetInvestigate = true;
@@ -187,6 +188,7 @@ public class AIUtility : AIBase
 
         agent.SetDestination(invest);
         investigate = true;
+        return;
     }
 
     private void Chase()
@@ -246,16 +248,17 @@ public class AIUtility : AIBase
         }
     }
 
-    IEnumerator investiageTimer(float delay)
+    IEnumerator investiageTimer(float delay, float reactionTime)
     {
         int investigates = 0;
         while(true)
         {
+            yield return new WaitForSeconds(reactionTime);
             if (resetInvestigate == true) investigates = 0;
+            Investigate();
             yield return new WaitForSeconds(delay);
             resetInvestigate = false;
             investigates++;
-            Investigate();
             Debug.Log("Invesitage : " + investigates);
             if (investigates >= delay * aiStats.getInvestigateTime())
             {

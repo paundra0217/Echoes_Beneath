@@ -29,7 +29,8 @@ public class GeneralAIStats : ScriptableObject
     [SerializeField] private float AIDetectionRange;
     [SerializeField] private float AIVisionRange;
     [SerializeField] private float AIForgetTime;
-    [SerializeField] private float AISoundDetectionRange;
+    [SerializeField] private float AIDelayTime;
+    [SerializeField] [Range(1,5)] private int AISoundDetectionRange;
     [SerializeField] [Range(1,5)] private int InvestigateTime;
 
     [Header("AI Event")]
@@ -89,5 +90,10 @@ public class GeneralAIStats : ScriptableObject
     public int getInvestigateTime()
     {
         return InvestigateTime;
+    }
+
+    public float getDelayTime()
+    {
+        return AIDelayTime;
     }
 }

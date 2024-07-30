@@ -44,6 +44,7 @@ public class PlayerMotor : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         InventoryUI.SetActive(false);
+        InventoryUI = FindAnyObjectByType<GridInteract>().gameObject;
     }
 
     private void Update()
@@ -63,7 +64,7 @@ public class PlayerMotor : MonoBehaviour
         defaultHeight = _stats.defaultHeight;
         crouchHeight = _stats.crouchHeight;
         crouchSpeed = _stats.crouchSpeed;
-        InventoryUI = FindAnyObjectByType<GridInteract>().gameObject;
+        
     }
     
     
