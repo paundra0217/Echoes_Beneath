@@ -1,6 +1,9 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,9 +17,12 @@ public class AIUtility : AIBase
     private AIFieldOfView perception;
     [SerializeField][Range(.1f, 1.5f)] private float perceptionUpdateTime;
     [SerializeField][Range(.1f, 2f)] private float aiEvaluationTimer;
-    [SerializeField] GameObject lastSeenPosObj;
-    bool investigate, chase;
+    //[SerializeField] GameObject lastSeenPosObj;
+    bool investigate, chase, roam;
     bool resetInvestigate = false;
+    Vector3 lastMoveTo;
+
+    public List<AIPOI> AIPois = new List<AIPOI>();
 
     public List<GameObject> detectedTarget = new List<GameObject>();
     
@@ -68,6 +74,22 @@ public class AIUtility : AIBase
         findPlayer();
         StartCoroutine(perceptionUpdate(perceptionUpdateTime));
         StartCoroutine(aiAgentEvaluationTimer(aiEvaluationTimer));
+        if (AIPois.Count == 0)
+        {
+            GameObject[] pois;
+            pois = GameObject.FindGameObjectsWithTag("AIPoi");
+            if (pois != null)
+            {
+                foreach (var po in pois)
+                {
+                    AIPOI poi = po.GetComponent<AIPOI>();
+                    AIPois.Add(poi);
+                }
+            } else if (pois == null)
+            {
+                Debug.Log("PASANG POI AINYA");
+            }
+        }
     }
 
     public override void onSelected()
@@ -177,8 +199,11 @@ public class AIUtility : AIBase
             {
                 resetInvestigate = true;
             }
+        }else
+        {
+            AiRoam();
         }
-
+        Debug.Log(agent.velocity.magnitude);
         state = aiStateEvaluation();
     }
 
@@ -193,6 +218,7 @@ public class AIUtility : AIBase
 
         agent.SetDestination(invest);
         investigate = true;
+        roam = false;
         return;
     }
 
@@ -200,6 +226,33 @@ public class AIUtility : AIBase
     {
         agent.SetDestination(mPlayer.transform.position);
         chase = true;
+        roam = false;
+    }
+
+    private void AiRoam()
+    {
+        List<Vector3> prio = new List<Vector3>();
+
+        foreach(var poi in AIPois)
+        {
+            prio.Add(poi.getPOIPosition());
+        }
+
+        Vector3 goTo = aiRoamPos(prio[Random.Range(0, prio.Count)]);
+
+        if (agent.velocity.magnitude <= 0) 
+        {
+            agent.SetDestination(goTo);
+            roam = true;
+        }
+    }
+
+    private Vector3 aiRoamPos(Vector3 pos)
+    {
+        int randoms = Random.Range(-5, 5);
+        Vector3 goTo = new Vector3(pos.x + randoms, pos.y, pos.z + randoms);
+        
+        return goTo;
     }
 
     public void addDetectedTarget(GameObject obj)
@@ -414,7 +467,8 @@ public class AIUtility : AIBase
     {
         if (chase) return AIState.CHASE;
         if (investigate) return AIState.INVESTIGATE;
-        if (!investigate && !chase) return AIState.IDLE;
+        if (!investigate && !chase) return AIState.ROAM;
+        if (agent.velocity.magnitude <= 0) return AIState.IDLE;
 
         return AIState.IDLE;
     }
