@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4817.2017, g: 3117.8936, b: 2326.616, a: 1}
+  m_IndirectSpecularColor: {r: 4814.887, g: 3115.5552, b: 2322.4417, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,7 +219,7 @@ PrefabInstance:
     - target: {fileID: 411266182338435287, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.4
+      value: -6.03
       objectReference: {fileID: 0}
     - target: {fileID: 411266182338435287, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
@@ -487,32 +487,32 @@ PrefabInstance:
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2032594935997631641, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -567,17 +567,17 @@ PrefabInstance:
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4394094759924908622, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -587,104 +587,235 @@ PrefabInstance:
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25904dde5bbb0b74b9195e3b5f6e520e, type: 3}
+--- !u!1 &1075724217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1075724219}
+  - component: {fileID: 1075724218}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1075724218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075724217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.1
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 196369b262d4c1a49adc508778866a6d, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &1075724219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075724217}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 323.61475, y: -70.02139, z: 877.441}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266992847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1659351281284176350, guid: d89aa166ee81c9544bdb8da779e71914,
     type: 3}
   m_PrefabInstance: {fileID: 1890069079}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1548972596
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 218.019
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.131
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 915.597
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716362766946007702, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6074783563583031044, guid: b287d27ea98b1c740ae1110467d6ff01,
+        type: 3}
+      propertyPath: m_Name
+      value: Cube
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b287d27ea98b1c740ae1110467d6ff01, type: 3}
 --- !u!1 &1690663078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,3 +1247,5 @@ SceneRoots:
   - {fileID: 1890069079}
   - {fileID: 717608398}
   - {fileID: 659557974}
+  - {fileID: 1075724219}
+  - {fileID: 1548972596}
