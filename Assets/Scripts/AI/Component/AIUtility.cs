@@ -35,7 +35,7 @@ public class AIUtility : AIBase
     bool detected = false;
     bool voiceDetected = false;
     List<Vector3> lastSeenPos = new List<Vector3>(); // Player Last Seen Transform Position
-    GameObject[] clones;
+    //GameObject[] clones;
 
 
     // Sound Var
@@ -60,8 +60,9 @@ public class AIUtility : AIBase
 
     #endregion
 
-    private void Start()
+    override public void Start()
     {
+        base.Start();
         agent = GetComponent<NavMeshAgent>();
         perception = GetComponent<AIFieldOfView>();
         findPlayer();
@@ -129,9 +130,16 @@ public class AIUtility : AIBase
             Vector3 temp = new Vector3(mPlayer.transform.position.x, mPlayer.transform.position.y, mPlayer.transform.position.z);
 
             lastSeenPos.Add(temp);
-        }
-            
+        }   
         else voiceDetected = false;
+
+        if (lastSeenPos.Count >= 50)
+        {
+            for (int i = 0; i < lastSeenPos.Count - 7; i++)
+            {
+                lastSeenPos.RemoveAt(i);
+            }
+        }
     }
 
     public float getAIFOVRange()
@@ -176,15 +184,11 @@ public class AIUtility : AIBase
 
     private void Investigate()
     {
-        if (lastSeenPos.Count >= 50)
-        {
-            for (int i = 0; i < lastSeenPos.Count - 5; i++)
-            {
-                lastSeenPos.RemoveAt(i);
-            }
-        }
-        int keBerapa = lastSeenPos.Count;
-        Vector3 pos = lastSeenPos[keBerapa - 1];
+        int keBerapa = lastSeenPos.Count - 1;
+        int random = 0;
+        if (keBerapa > 5) random = Random.Range(1, 3);
+        Debug.Log(keBerapa + 1 + " <-  -> " + random + ", Result = " + keBerapa);
+        Vector3 pos = lastSeenPos[keBerapa - random];
         Vector3 invest = new Vector3(pos.x + Random.Range(-5, 5), pos.y, pos.z + Random.Range(-5, 5));
 
         agent.SetDestination(invest);
@@ -222,6 +226,16 @@ public class AIUtility : AIBase
         }
     }
 
+    void stopChase(GameObject obj)
+    {
+        Vector3 lastPs = new Vector3(obj.transform.position.x, obj.transform.position.y, obj.transform.position.z);
+        lastSeenPos.Add(lastPs);
+        detectedTarget.Remove(obj);
+        Debug.Log("Remove " + obj);
+        chase = false;
+        if (investigate) resetInvestigate = true;
+    }
+
     IEnumerator perceptionUpdate(float time)
     {
         while (true)
@@ -241,9 +255,7 @@ public class AIUtility : AIBase
             Debug.Log(timer);
             if (timer >= getForgetTime())
             {
-                detectedTarget.Remove(obj);
-                Debug.Log("Remove " + obj);
-                chase = false;
+                stopChase(obj);
                 break;
             }
         }
