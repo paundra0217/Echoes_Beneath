@@ -1,9 +1,11 @@
+using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace RDCT.Menu.SettingsMenu
 {
-    [System.Serializable]
+    [Serializable]
     enum SettingsCategory
     {
         GAMEPLAY,
@@ -12,12 +14,33 @@ namespace RDCT.Menu.SettingsMenu
         GRAPHICS
     }
 
-    [System.Serializable]
+    [Serializable]
     class SettingsWindow
     {
         public Button windowButton;
         public GameObject windowObject;
         public SettingsCategory windowCategory;
+    }
+
+    // Biar bisa diloading dari file JSON
+    [Serializable]
+    public class SettingsStorage
+    {
+        public float sensitivity;
+
+        public int displayMode;
+        public int resolution;
+
+        public float masterVolume;
+        public float BGMVolume;
+        public float SFXVolume;
+        public string inputDevice;
+
+        public int quality;
+        public int antiAliasing;
+        public int SSO;
+        public int postProcessing;
+        public int maxFPS;
     }
 
     public class Settings : MonoBehaviour, IMenuWindow
@@ -44,13 +67,62 @@ namespace RDCT.Menu.SettingsMenu
         private void Awake()
         {
             //InitializeSettings();
+            //File.WriteAllText(Application.persistentDataPath + "/DefaultSettings.json", JsonUtility.ToJson(defaultSettings));
+
             _instance = this;
 
             cg = GetComponent<CanvasGroup>();
+
+            LoadSettingsFromJson();
+            CheckMicrophones();
+        }
+
+        private void CheckMicrophones()
+        {
+            bool microphoneExisted = false;
+
+            foreach (var mic in Microphone.devices)
+            {
+                if (mic == userSettings.inputDevice)
+                    microphoneExisted = true;
+            }
+
+            if (!microphoneExisted)
+            {
+                SettingsAudio.Instance.SetInputDevice(0);
+            }
+        }
+
+        private void LoadSettingsFromJson()
+        {
+            var userSettingsJson = File.ReadAllText(Application.persistentDataPath + "/UserSettings.json");
+            var userSettingsObject = JsonUtility.FromJson<SettingsStorage>(userSettingsJson);
+
+            // Gameplay Settings
+            userSettings.sensitivity = userSettingsObject.sensitivity;
+            
+            // Video Settings
+            userSettings.displayMode = userSettingsObject.displayMode;
+            userSettings.resolution = userSettingsObject.resolution;
+            
+            // Audio Settings
+            userSettings.masterVolume = userSettingsObject.masterVolume;
+            userSettings.BGMVolume = userSettingsObject.BGMVolume;
+            userSettings.SFXVolume = userSettingsObject.SFXVolume;
+            userSettings.inputDevice = userSettingsObject.inputDevice;
+
+            // Graphics Settings
+            userSettings.quality = userSettingsObject.quality;
+            userSettings.antiAliasing = userSettingsObject.antiAliasing;
+            userSettings.SSO = userSettingsObject.SSO;
+            userSettings.postProcessing = userSettingsObject.postProcessing;
+            userSettings.maxFPS = userSettingsObject.maxFPS;
         }
 
         public void OpenWindow()
         {
+            LoadSettingsFromJson();
+
             SettingsGameplay.Instance.InitializeSettings(userSettings);
             SettingsVideo.Instance.InitializeSettings(userSettings);
             SettingsAudio.Instance.InitializeSettings(userSettings);
@@ -72,7 +144,7 @@ namespace RDCT.Menu.SettingsMenu
                 var isEnabled = window.windowCategory == currentCategory;
                 var wcg = window.windowObject.GetComponent<CanvasGroup>();
 
-                window.windowButton.enabled = !isEnabled;
+                window.windowButton.interactable = !isEnabled;
 
                 wcg.alpha = isEnabled ? 1.0f : 0f;
                 wcg.blocksRaycasts = isEnabled;
@@ -107,7 +179,7 @@ namespace RDCT.Menu.SettingsMenu
             SettingsGraphics.Instance.SaveSettings(userSettings);
             SettingsGameplay.Instance.SaveSettings(userSettings);
 
-            print(JsonUtility.ToJson(userSettings));
+            File.WriteAllText(Application.persistentDataPath + "/UserSettings.json", JsonUtility.ToJson(userSettings));
 
             CloseWindow();
         }
