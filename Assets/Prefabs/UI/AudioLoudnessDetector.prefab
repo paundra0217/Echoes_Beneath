@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6600001fc48f9d4eba17cbfef4bdcd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userSettings: {fileID: 0}
+  userSettings: {fileID: 11400000, guid: 2fc798b78474da94bba3eb029967237a, type: 2}
   sampleWindow: 64

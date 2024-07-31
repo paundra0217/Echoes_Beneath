@@ -488,11 +488,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioLoudnessDetector
       objectReference: {fileID: 0}
-    - target: {fileID: 8324236256124060275, guid: 1410d45c6dcbbc045b6d978032ac2106,
-        type: 3}
-      propertyPath: userSettings
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
