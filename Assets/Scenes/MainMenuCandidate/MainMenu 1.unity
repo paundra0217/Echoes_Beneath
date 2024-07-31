@@ -9405,8 +9405,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5086692040037037825}
-        m_TargetAssemblyTypeName: RDCT.Menu.Settings, Assembly-CSharp
-        m_MethodName: CloseWindow
+        m_TargetAssemblyTypeName: RDCT.Menu.SettingsMenu.Settings, Assembly-CSharp
+        m_MethodName: DiscardSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13973,7 +13973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ca2b362146d614695796e15612b5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: bb034b18f4fd30c4bb0d6439965a4cc1, type: 2}
+  stats: {fileID: 11400000, guid: 1322e31d1a3aa294da1ff3a781bba571, type: 2}
   sliderSensitivity: {fileID: 719597563524399211}
   inputSensitivity: {fileID: 1867373369}
 --- !u!224 &4643955920191085948

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class AudioLoudnessDetector : MonoBehaviour
 {
+    [SerializeField] private SOSettings userSettings;
     public int sampleWindow = 64;
+
     private AudioClip microphoneClip;
-    string MicrophoneName;
+    private string MicrophoneName;
+
     private void Start()
     {
         //pake mic yang pertama
-        MicrophoneToAudioClip(0);
+        //MicrophoneToAudioClip(0);
     }
 
     #region VoiceDetection
@@ -24,9 +27,10 @@ public class AudioLoudnessDetector : MonoBehaviour
         }
         
         //Simpen nama Mic yang bakal di pake
-        MicrophoneName = Microphone.devices[microphoneIndex];
+        //MicrophoneName = Microphone.devices[microphoneIndex];
+
         //Mulai Ngedeteksi Suara
-        microphoneClip = Microphone.Start(MicrophoneName, true, 20, AudioSettings.outputSampleRate);
+        microphoneClip = Microphone.Start(userSettings.inputDevice, true, 20, AudioSettings.outputSampleRate);
     }
 
     //buat ngereturn Loudness dari mic
