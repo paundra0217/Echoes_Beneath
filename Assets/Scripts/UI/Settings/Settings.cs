@@ -184,9 +184,21 @@ namespace RDCT.Menu.SettingsMenu
             CloseWindow();
         }
 
+        public void DiscardSettings()
+        {
+            SettingsAudio.Instance.DiscardSettings();
+
+            CloseWindow();
+        }
+
         public void ResetSettings()
         {
             SettingsGraphics.Instance.InitializeSettings(defaultSettings);
+        }
+
+        public SOSettings GetUserSettings()
+        {
+            return userSettings;
         }
 
         public void CloseWindow()
