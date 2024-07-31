@@ -95,28 +95,36 @@ namespace RDCT.Menu.SettingsMenu
 
         private void LoadSettingsFromJson()
         {
-            var userSettingsJson = File.ReadAllText(Application.persistentDataPath + "/UserSettings.json");
-            var userSettingsObject = JsonUtility.FromJson<SettingsStorage>(userSettingsJson);
+            try
+            {
+                var userSettingsJson = File.ReadAllText(Application.persistentDataPath + "/UserSettings.json");
+                var userSettingsObject = JsonUtility.FromJson<SettingsStorage>(userSettingsJson);
 
-            // Gameplay Settings
-            userSettings.sensitivity = userSettingsObject.sensitivity;
-            
-            // Video Settings
-            userSettings.displayMode = userSettingsObject.displayMode;
-            userSettings.resolution = userSettingsObject.resolution;
-            
-            // Audio Settings
-            userSettings.masterVolume = userSettingsObject.masterVolume;
-            userSettings.BGMVolume = userSettingsObject.BGMVolume;
-            userSettings.SFXVolume = userSettingsObject.SFXVolume;
-            userSettings.inputDevice = userSettingsObject.inputDevice;
+                // Gameplay Settings
+                userSettings.sensitivity = userSettingsObject.sensitivity != 0f ? userSettingsObject.sensitivity : defaultSettings.sensitivity;
 
-            // Graphics Settings
-            userSettings.quality = userSettingsObject.quality;
-            userSettings.antiAliasing = userSettingsObject.antiAliasing;
-            userSettings.SSO = userSettingsObject.SSO;
-            userSettings.postProcessing = userSettingsObject.postProcessing;
-            userSettings.maxFPS = userSettingsObject.maxFPS;
+                // Video Settings
+                userSettings.displayMode = userSettingsObject.displayMode;
+                userSettings.resolution = userSettingsObject.resolution;
+
+                // Audio Settings
+                userSettings.masterVolume = userSettingsObject.masterVolume;
+                userSettings.BGMVolume = userSettingsObject.BGMVolume;
+                userSettings.SFXVolume = userSettingsObject.SFXVolume;
+                userSettings.inputDevice = userSettingsObject.inputDevice;
+
+                // Graphics Settings
+                userSettings.quality = userSettingsObject.quality;
+                userSettings.antiAliasing = userSettingsObject.antiAliasing;
+                userSettings.SSO = userSettingsObject.SSO;
+                userSettings.postProcessing = userSettingsObject.postProcessing;
+                userSettings.maxFPS = userSettingsObject.maxFPS;
+            }
+            catch
+            {
+                userSettings = defaultSettings;
+                File.WriteAllText(Application.persistentDataPath + "/UserSettings.json", JsonUtility.ToJson(userSettings));
+            }
         }
 
         public void OpenWindow()
