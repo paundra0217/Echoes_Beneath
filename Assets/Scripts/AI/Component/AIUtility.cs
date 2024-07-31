@@ -37,7 +37,7 @@ public class AIUtility : AIBase
 
     // Player Refrences
     // mPlayer From AIBase
-    [HideInInspector] public AudioLoudnessDetector audioLoudnessDetector;
+    public AudioLoudnessDetector audioLoudnessDetector;
     bool detected = false;
     bool voiceDetected = false;
     List<Vector3> lastSeenPos = new List<Vector3>(); // Player Last Seen Transform Position
