@@ -488,6 +488,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioLoudnessDetector
       objectReference: {fileID: 0}
+    - target: {fileID: 8324236256124060275, guid: 1410d45c6dcbbc045b6d978032ac2106,
+        type: 3}
+      propertyPath: userSettings
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2098,6 +2103,11 @@ PrefabInstance:
       propertyPath: loudnessDetector
       value: 
       objectReference: {fileID: 128888703}
+    - target: {fileID: 4360591652296701816, guid: d89aa166ee81c9544bdb8da779e71914,
+        type: 3}
+      propertyPath: loudnessSensibility
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7002632136941121077, guid: d89aa166ee81c9544bdb8da779e71914,
         type: 3}
       propertyPath: m_Pivot.x

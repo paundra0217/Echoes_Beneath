@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using RDCT.Menu.SettingsMenu;
 
 namespace RDCT.Menu
@@ -47,6 +48,11 @@ namespace RDCT.Menu
             cg.alpha = 1f;
             cg.blocksRaycasts = true;
             cg.interactable = true;
+        }
+
+        public void ChangeScene(string scene)
+        {
+            SceneManager.LoadScene(scene);
         }
     }
 }
