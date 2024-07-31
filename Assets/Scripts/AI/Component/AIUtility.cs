@@ -238,16 +238,9 @@ public class AIUtility : AIBase
             prio.Add(poi.getPOIPosition());
         }
 
-        
         Vector3 goTo = aiRoamPos(prio[Random.Range(0, prio.Count)]);
-        lastMoveTo = goTo;
 
-        if (lastMoveTo == goTo)
-        {
-            goTo = aiRoamPos(prio[Random.Range(0, prio.Count)]);
-        }
-
-        if (agent.velocity.magnitude < 0) 
+        if (agent.velocity.magnitude <= 0) 
         {
             agent.SetDestination(goTo);
             roam = true;
