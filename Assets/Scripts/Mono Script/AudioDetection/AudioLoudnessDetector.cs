@@ -13,7 +13,7 @@ public class AudioLoudnessDetector : MonoBehaviour
     private void Start()
     {
         //pake mic yang pertama
-        //MicrophoneToAudioClip(0);
+        MicrophoneToAudioClip(0);
     }
 
     #region VoiceDetection
