@@ -21,12 +21,6 @@ public class PickUpObject : InteractObject
             //canvass.SetActive(false);
         }
     }
-
-    private void Awake()
-    {
-
-
-    }
     public override void Interaction()
     {
         //itemGrid.gameObject.SetActive(true);
