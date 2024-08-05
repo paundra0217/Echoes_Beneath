@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ObjectiveManager : MonoBehaviour
+{
+    private int PipePoint;
+
+    public void PipeObjectiveClear()
+    {
+        PipePoint++;
+    }
+
+
+}
