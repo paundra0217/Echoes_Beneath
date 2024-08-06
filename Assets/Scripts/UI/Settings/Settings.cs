@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace RDCT.Menu.SettingsMenu
@@ -48,6 +49,7 @@ namespace RDCT.Menu.SettingsMenu
         [SerializeField] private SettingsWindow[] windows;
         [SerializeField] private SOSettings defaultSettings;
         [SerializeField] private SOSettings userSettings;
+        [SerializeField] private UnityEvent functionAfterClose;
 
         private static SettingsCategory currentCategory;
         private static CanvasGroup cg;
@@ -215,7 +217,8 @@ namespace RDCT.Menu.SettingsMenu
             cg.blocksRaycasts = false;
             cg.interactable = false;
 
-            MainMenu.ReOpenMainMenu();
+            //MainMenu.ReOpenMainMenu();
+            functionAfterClose.Invoke();
         }
     }
 }
