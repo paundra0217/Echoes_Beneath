@@ -8,6 +8,9 @@ public class PlayerStats : ScriptableObject
     [Tooltip("Player Walk Speed")]
     public float walkSpeed = 6f;
 
+    [Tooltip("Player Run Speed")]
+    public float RunSpeed = 10f;
+
     [Tooltip("The immediate velocity applied when jumping")]
     public float jumpPower = 7f;
 

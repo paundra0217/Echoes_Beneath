@@ -9,8 +9,7 @@ namespace RDCT.PlayerController
 
     public class InputManager : MonoBehaviour
     {
-
-        private Player_Input inputActions;
+        public Player_Input inputActions;
         private Player_Input.On_FootActions on_Foot;
 
         private PlayerMotor motor;
@@ -19,9 +18,18 @@ namespace RDCT.PlayerController
         {
             inputActions = new Player_Input();
             on_Foot = inputActions.On_Foot;
+            on_Foot.Run.performed           += ctx => motor.Running();
+            on_Foot.Jump.performed          += ctx => motor.Jump();
+            on_Foot.Crouch.performed        += ctx => motor.Crouch();
+            on_Foot.Interact.performed      += ctx => motor.Interact();
+            on_Foot.Inventory.performed     += ctx => motor.Inventory();
+            on_Foot.FlashLight.performed    += ctx => motor.FlashLight();
+            on_Foot.Journal.performed       += ctx => motor.Journal();
+        }
+
+        private void Start()
+        {
             motor = GetComponent<PlayerMotor>();
-            on_Foot.Jump.performed += ctx => motor.Jump();
-            on_Foot.Crouch.performed += ctx => motor.Crouch();
         }
 
         private void FixedUpdate()
