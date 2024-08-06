@@ -51,6 +51,15 @@ namespace RDCT.Menu
             Settings.Instance.OpenWindow();
         }
 
+        public void ClosePauseMenu()
+        {
+            currentlyPaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1.0f;
+            CloseWindow();
+        }
+
         public void QuitGame()
         {
             SceneManager.LoadScene("MainMenu 1");
