@@ -17,7 +17,7 @@ public class GeneralAIStats : ScriptableObject
     [SerializeField] private float AITurnRate;
     [SerializeField] private float AIAccelerationSpeed;
     [SerializeField] [Range(1,3)] private float AIChaseSpeed;
-    [SerializeField] [Range(1, 3)] private int AIChaseAccelMultiplier;
+    [SerializeField] [Range(1, 15)] private int AIChaseAccelMultiplier;
 
     [Header("Agent Setting")]
     [SerializeField] private float AgentRadius;
