@@ -1,6 +1,8 @@
+using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
-using System.Linq;
+using UnityEngine.SceneManagement;
 
 namespace RDCT.Audio
 {
@@ -11,7 +13,7 @@ namespace RDCT.Audio
         VCL
     }
 
-    [System.Serializable]
+    [Serializable]
     class AudioObject
     {
         [Header("Audio Information")]
@@ -38,6 +40,13 @@ namespace RDCT.Audio
         public bool PlayOnAwake;
 
         [HideInInspector] public AudioSource Source;
+    }
+
+    [Serializable]
+    class SceneBGMObject
+    {
+        public string sceneName;
+        public string BGMName;
     }
 
     public class AudioController : MonoBehaviour
@@ -70,6 +79,10 @@ namespace RDCT.Audio
         [Tooltip("List of voice lines that will be played")]
         private AudioObject[] audioVCL;
 
+        [SerializeField]
+        [Tooltip("List of scene and BGM name where when a specific scene loaded, specific BGM played.")]
+        private SceneBGMObject[] sceneBGMList;
+
         private AudioSource currentBGMPlaying;
 
         private static AudioController _instance;
@@ -97,6 +110,8 @@ namespace RDCT.Audio
             _instance = this;
 
             DontDestroyOnLoad(gameObject);
+
+            SceneManager.activeSceneChanged += PlayBGMOnSceneChanged;
 
             InitializeAudios();
         }
@@ -177,6 +192,19 @@ namespace RDCT.Audio
             }
 
             return audio;
+        }
+
+        private void PlayBGMOnSceneChanged(Scene current, Scene next)
+        {
+            try
+            {
+                var audioName = sceneBGMList.FirstOrDefault(s => s.sceneName == next.name).BGMName;
+                PlayBGM(audioName);
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning("Audio cannot be played because either Scene does not exist on the variable.");
+            }
         }
 
         // - Description: Plays a background music, when a background music is currently playing and this function called
