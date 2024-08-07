@@ -5,6 +5,7 @@ using UnityEngine;
 public enum AIState{
     IDLE,
     ROAM,
+    INVESTIGATE,
     CHASE,
     HUNT
 }
@@ -20,14 +21,23 @@ public class AIBase : MonoBehaviour
         onInit();
     }
 
-    void Update()
+    public virtual void Start()
     {
-        onSelected();
+        StartCoroutine(onSelectedUpdate());
     }
 
     public virtual void onSelected() 
     {
         if (!isSelected) return;
+    }
+
+    public virtual IEnumerator onSelectedUpdate()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(.1f);
+            onSelected();
+        }
     }
     public virtual void onExit() { Destroy(this); }
     public virtual void findPlayer() { mPlayer = GameObject.FindGameObjectWithTag("Player"); }

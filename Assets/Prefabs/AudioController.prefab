@@ -51,6 +51,20 @@ MonoBehaviour:
     type: 2}
   VCLGroup: {fileID: -4363856844517016049, guid: f2bba2b39e0c59a40ba6a99321278490,
     type: 2}
-  audioBGM: []
+  audioBGM:
+  - AudioName: MainMenu
+    AudioClip: {fileID: 8300000, guid: 2a3243382c98dc348be58d4a36af974b, type: 3}
+    AudioPitch: 1
+    AudioVolume: 1
+    Looping: 1
+    PlayOnAwake: 1
+    Source: {fileID: 0}
+  - AudioName: SewerAmbiance
+    AudioClip: {fileID: 8300000, guid: 8347544644a686b40b31b2b0fc4914f6, type: 3}
+    AudioPitch: 1
+    AudioVolume: 1
+    Looping: 1
+    PlayOnAwake: 0
+    Source: {fileID: 0}
   audioSFX: []
   audioVCL: []

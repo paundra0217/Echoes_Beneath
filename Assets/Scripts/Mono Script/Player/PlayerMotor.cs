@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using RDCT.Audio;
 
 
 public class PlayerMotor : MonoBehaviour
@@ -32,6 +32,8 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] GameObject JournalUI;
     [SerializeField] LayerMask layerMask;
     [SerializeField] float JarakInteract;
+    private Image invUI;
+    ItemGrid inventoryGrid;
     Vector3 movedirection = Vector3.zero;
     RaycastHit hit;
     //Camera
@@ -43,7 +45,11 @@ public class PlayerMotor : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        InventoryUI.SetActive(false);
+        InventoryUI = FindAnyObjectByType<GridInteract>().gameObject;
+        inventoryGrid = InventoryUI.GetComponent<ItemGrid>();
+        invUI = InventoryUI.GetComponent<Image>();
+        invUI.enabled = false;
+        //InventoryUI.SetActive(false);
     }
 
     private void Update()
@@ -63,7 +69,15 @@ public class PlayerMotor : MonoBehaviour
         defaultHeight = _stats.defaultHeight;
         crouchHeight = _stats.crouchHeight;
         crouchSpeed = _stats.crouchSpeed;
-        InventoryUI = FindAnyObjectByType<GridInteract>().gameObject;
+
+        try
+        {
+            AudioController.Instance.PlayBGM("SewerAmbiance");
+        }
+        catch
+        {
+            Debug.LogWarning("Audio controller is missing from scene.");
+        }
     }
     
     
@@ -160,15 +174,20 @@ public class PlayerMotor : MonoBehaviour
     {
         //toggle Open/Close Inventory
         IsOpenInventory = !IsOpenInventory;
-        InventoryUI.SetActive(IsOpenInventory);
+        
+        //InventoryUI.SetActive(IsOpenInventory);
 
         if (IsOpenInventory)
         {
+            invUI.enabled = true;
+            inventoryGrid.enableAllItem(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
         else
         {
+            invUI.enabled = false;
+            inventoryGrid.enableAllItem(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }

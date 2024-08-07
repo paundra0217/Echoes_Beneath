@@ -31,6 +31,7 @@ public class InventoryController : MonoBehaviour
     private void Update()
     {
         //Buat Ngebantu Debug aja
+        /*
         if (Input.GetKeyDown(KeyCode.Q))
         {
             RandomItemSpawn();
@@ -39,6 +40,7 @@ public class InventoryController : MonoBehaviour
         {
             InsertRandomItem();
         }
+        */
         if (Input.GetKeyDown(KeyCode.R))
         {
             RotateItem();

@@ -1,10 +1,13 @@
+using JetBrains.Annotations;
 using System;
-using System.Collections.Generic;
-using UnityEngine;
-using Random = UnityEngine.Random;
-using UnityEngine.AI;
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class AIUtility : AIBase
 {
@@ -12,7 +15,14 @@ public class AIUtility : AIBase
     [SerializeField] GeneralAIStats aiStats;
     private NavMeshAgent agent;
     private AIFieldOfView perception;
-    [SerializeField] [Range(.1f,1.5f)] private float perceptionUpdateTime;
+    [SerializeField][Range(.1f, 1.5f)] private float perceptionUpdateTime;
+    [SerializeField][Range(.1f, 2f)] private float aiEvaluationTimer;
+    //[SerializeField] GameObject lastSeenPosObj;
+    bool investigate, chase, roam;
+    bool resetInvestigate = false;
+    //Vector3 lastMoveTo;
+
+    public List<AIPOI> AIPois = new List<AIPOI>();
 
     public List<GameObject> detectedTarget = new List<GameObject>();
     
@@ -27,9 +37,11 @@ public class AIUtility : AIBase
 
     // Player Refrences
     // mPlayer From AIBase
-    [HideInInspector] public AudioLoudnessDetector audioLoudnessDetector;
+    public AudioLoudnessDetector audioLoudnessDetector;
     bool detected = false;
     bool voiceDetected = false;
+    List<Vector3> lastSeenPos = new List<Vector3>(); // Player Last Seen Transform Position
+    //GameObject[] clones;
 
 
     // Sound Var
@@ -54,12 +66,30 @@ public class AIUtility : AIBase
 
     #endregion
 
-    private void Start()
+    override public void Start()
     {
+        base.Start();
         agent = GetComponent<NavMeshAgent>();
         perception = GetComponent<AIFieldOfView>();
         findPlayer();
-        StartCoroutine("perceptionUpdate", perceptionUpdateTime);
+        StartCoroutine(perceptionUpdate(perceptionUpdateTime));
+        StartCoroutine(aiAgentEvaluationTimer(aiEvaluationTimer));
+        if (AIPois.Count == 0)
+        {
+            GameObject[] pois;
+            pois = GameObject.FindGameObjectsWithTag("AIPoi");
+            if (pois != null)
+            {
+                foreach (var po in pois)
+                {
+                    AIPOI poi = po.GetComponent<AIPOI>();
+                    AIPois.Add(poi);
+                }
+            } else if (pois == null)
+            {
+                Debug.Log("PASANG POI AINYA");
+            }
+        }
     }
 
     public override void onSelected()
@@ -112,9 +142,26 @@ public class AIUtility : AIBase
         if (loudness < soundTreshold) return;
         Debug.Log("SUARA");
         float distance = Vector3.Distance(transform.position, mPlayer.transform.position);
-        if (distance < aiStats.getAIVoiceDetectionRange())
+        if (distance <= aiStats.getAIVoiceDetectionRange())
+        {
             voiceDetected = true;
+            //clones[1] = (GameObject)Instantiate(lastSeenPosObj, mPlayer.transform.position, Quaternion.identity);
+
+            //Instantiate(lastSeenPosObj);
+
+            Vector3 temp = new Vector3(mPlayer.transform.position.x, mPlayer.transform.position.y, mPlayer.transform.position.z);
+
+            lastSeenPos.Add(temp);
+        }   
         else voiceDetected = false;
+
+        if (lastSeenPos.Count >= 50)
+        {
+            for (int i = 0; i < lastSeenPos.Count - 7; i++)
+            {
+                lastSeenPos.RemoveAt(i);
+            }
+        }
     }
 
     public float getAIFOVRange()
@@ -140,14 +187,73 @@ public class AIUtility : AIBase
             } else detected = false;
         }
 
-        if (isPlayerOnRange() == true) Chase();
-        else state = AIState.IDLE;
+        if (isPlayerOnRange() == true)
+        {
+            Chase();
+        }
+        else if (voiceDetected)
+        {
+            if (!investigate)
+                StartCoroutine(investiageTimer(5, aiStats.getDelayTime()));
+            if (investigate)
+            {
+                resetInvestigate = true;
+            }
+        }else
+        {
+            AiRoam();
+        }
+        Debug.Log(agent.velocity.magnitude);
+        state = aiStateEvaluation();
+    }
+
+    private void Investigate()
+    {
+        int keBerapa = lastSeenPos.Count - 1;
+        int random = 0;
+        if (keBerapa > 5) random = Random.Range(1, 3);
+        Debug.Log(keBerapa + 1 + " <-  -> " + random + ", Result = " + keBerapa);
+        Vector3 pos = lastSeenPos[keBerapa - random];
+        Vector3 invest = new Vector3(pos.x + Random.Range(-5, 5), pos.y, pos.z + Random.Range(-5, 5));
+
+        agent.SetDestination(invest);
+        investigate = true;
+        roam = false;
+        return;
     }
 
     private void Chase()
     {
         agent.SetDestination(mPlayer.transform.position);
-        state = AIState.CHASE;
+        chase = true;
+        roam = false;
+    }
+
+    private void AiRoam()
+    {
+        List<Vector3> prio = new List<Vector3>();
+
+        foreach(var poi in AIPois)
+        {
+            prio.Add(poi.getPOIPosition());
+        }
+
+        Vector3 goTo = aiRoamPos(prio[Random.Range(0, prio.Count)]);
+
+        if (agent.velocity.magnitude <= 0) 
+        {
+            agent.SetDestination(goTo);
+        }
+
+        roam = true;
+    }
+
+    private Vector3 aiRoamPos(Vector3 pos)
+    {
+        int randoms = Random.Range(-5, 5);
+        Vector3 goTo = new Vector3(pos.x + randoms, pos.y, pos.z + randoms);
+        
+        return goTo;
     }
 
     public void addDetectedTarget(GameObject obj)
@@ -174,6 +280,16 @@ public class AIUtility : AIBase
         }
     }
 
+    void stopChase(GameObject obj)
+    {
+        Vector3 lastPs = new Vector3(obj.transform.position.x, obj.transform.position.y, obj.transform.position.z);
+        lastSeenPos.Add(lastPs);
+        detectedTarget.Remove(obj);
+        Debug.Log("Remove " + obj);
+        chase = false;
+        if (investigate) resetInvestigate = true;
+    }
+
     IEnumerator perceptionUpdate(float time)
     {
         while (true)
@@ -191,10 +307,30 @@ public class AIUtility : AIBase
             yield return new WaitForSeconds(1);
             timer++;
             Debug.Log(timer);
-            if (timer > getForgetTime())
+            if (timer >= getForgetTime())
             {
-                detectedTarget.Remove(obj);
-                Debug.Log("Remove " + obj);
+                stopChase(obj);
+                break;
+            }
+        }
+    }
+
+    IEnumerator investiageTimer(float delay, float reactionTime)
+    {
+        int investigates = 0;
+        while(true)
+        {
+            yield return new WaitForSeconds(reactionTime);
+            if (resetInvestigate == true) investigates = 0;
+            Investigate();
+            yield return new WaitForSeconds(delay);
+            resetInvestigate = false;
+            investigates++;
+            Debug.Log("Invesitage : " + investigates);
+            if (investigates >= delay * aiStats.getInvestigateTime())
+            {
+                investigate = false;
+                lastSeenPos.Clear();
                 break;
             }
         }
@@ -205,8 +341,136 @@ public class AIUtility : AIBase
         if (detected)
             return true;
 
-        if (voiceDetected) return true;
+        if (voiceDetected) return false;
 
         return false;
+    }
+
+    #region AI MOVEMENT HANDLER
+    public float moveSpeedHandler()
+    {
+        switch (state)
+        {
+            case AIState.IDLE:
+                {
+                    return aiStats.getAINormalSpeed();
+                }
+
+            case AIState.ROAM:
+                {
+                    return aiStats.getAINormalSpeed();
+                }
+
+            case AIState.INVESTIGATE:
+                {
+                    return aiStats.getAINormalSpeed();
+                }
+
+            case AIState.CHASE:
+                {
+                    return aiStats.getAIChaseSpeed();
+                }
+
+            case AIState.HUNT:
+                {
+                    return aiStats.getAIChaseSpeed();
+                }
+        }
+
+        return aiStats.getAINormalSpeed();
+    }
+
+    public float turnRateHandler()
+    {
+        switch (state)
+        {
+            case AIState.IDLE:
+                {
+                    return aiStats.getAINormalTurnRate();
+                }
+
+            case AIState.ROAM:
+                {
+                    return aiStats.getAINormalTurnRate();
+                }
+
+            case AIState.INVESTIGATE:
+                {
+                    return aiStats.getAINormalTurnRate();
+                }
+
+            case AIState.CHASE:
+                {
+                    return aiStats.getAICHaseTurnRate();
+                }
+
+            case AIState.HUNT:
+                {
+                    return aiStats.getAICHaseTurnRate();
+                }
+        }
+
+        return aiStats.getAINormalTurnRate();
+    }
+
+    public float accelerationHandler()
+    {
+        switch (state)
+        {
+            case AIState.IDLE:
+                {
+                    return aiStats.getDefaultAcceleration();
+                }
+
+            case AIState.ROAM:
+                {
+                    return aiStats.getDefaultAcceleration();
+                }
+
+            case AIState.INVESTIGATE:
+                {
+                    return aiStats.getDefaultAcceleration();
+                }
+
+            case AIState.CHASE:
+                {
+                    return aiStats.getAIChaseAcceleration();
+                }
+
+            case AIState.HUNT:
+                {
+                    return aiStats.getAIChaseAcceleration();
+                }
+        }
+
+        return aiStats.getDefaultAcceleration();
+    }
+
+    #endregion
+
+    IEnumerator aiAgentEvaluationTimer(float time)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(time);
+            aiAgentEvaluation();
+        }
+    }
+
+    public void aiAgentEvaluation()
+    {
+        agent.acceleration = accelerationHandler();
+        agent.speed = moveSpeedHandler();
+        agent.angularSpeed = turnRateHandler();
+    }
+
+    private AIState aiStateEvaluation()
+    {
+        if (chase) return AIState.CHASE;
+        if (investigate) return AIState.INVESTIGATE;
+        if (!investigate && !chase) return AIState.ROAM;
+        if (agent.velocity.magnitude <= 0) return AIState.IDLE;
+
+        return AIState.IDLE;
     }
 }

@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[CustomEditor(typeof(AIFieldOfView))]
+/*[CustomEditor(typeof(AIFieldOfView))]
 public class AIFieldOfViewEditor : Editor
 {
     void OnSceneGUI()
@@ -19,3 +19,4 @@ public class AIFieldOfViewEditor : Editor
         Handles.DrawLine(fow.transform.position, fow.transform.position + viewAngB * fow.viewAngle);
     }
 }
+*/

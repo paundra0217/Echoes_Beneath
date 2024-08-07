@@ -12,7 +12,8 @@ public class ItemGrid : MonoBehaviour
     RectTransform rectTransform;
 
     //Array dari ItemGrid
-    InventoryItem[,] InventoryItemSlot;
+    public InventoryItem[,] InventoryItemSlot;
+    public List<InventoryItem> InventoryItems = new List<InventoryItem>();
 
     //Ukuran dari Array
     [SerializeField] int gridwideSize;
@@ -87,6 +88,7 @@ public class ItemGrid : MonoBehaviour
                     //Kalo Iya itemnya di destroy trus item yang udh ada Countnya++
                     InventoryItemSlot[PosX, PosY].count++;
                     InventoryItemSlot[PosX, PosY].RefreshCount();
+                    InventoryItems.Remove(inventoryItem);
                     Destroy(inventoryItem.gameObject);
                     return;
                 }
@@ -104,7 +106,7 @@ public class ItemGrid : MonoBehaviour
             }
             if (inventoryItem.itemSize.CanStack)
             {
-                InventoryItemSlot[PosX, PosY].SetActiveUI();
+                InventoryItemSlot[PosX, PosY].SetActiveUI(true);
             }
         }
 
@@ -226,6 +228,7 @@ public class ItemGrid : MonoBehaviour
             item.count--;
             item.RefreshCount();
             InventoryItem oke = Instantiate(item);
+            InventoryItems.Add(oke);
             oke.count = 1;
             oke.RefreshCount();
             oke.gameObject.transform.SetParent(item.transform.parent);
@@ -298,4 +301,11 @@ public class ItemGrid : MonoBehaviour
 
     #endregion
 
+    public void enableAllItem(bool tf)
+    {
+        foreach(var gj in InventoryItems)
+        {
+            gj.isVisible(tf);
+        }
+    }
 }

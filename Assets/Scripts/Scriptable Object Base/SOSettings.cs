@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Settings", menuName = "Settings")]
 public class SOSettings : ScriptableObject 
 {
     [Header("Gameplay Settings")]
-    [Tooltip("Sensitivity setting. 0: Not move at all, 5: 1mm = hell of rotations in character")]
+    [Range(0.1f, 10f)]
+    [Tooltip("Sensitivity setting. 0: Not move at all, 10: 1mm = hell of rotations in character")]
     public float sensitivity;
 
     [Header("Video Settings")]
@@ -16,15 +15,17 @@ public class SOSettings : ScriptableObject
     public int resolution;
 
     [Header("Audio Settings")]
-    [Range(-80f, 0f)]
-    [Tooltip("Master volume setting. -80: Dead silent, 0: Very Loud")]
+    [Range(-60f, 5f)]
+    [Tooltip("Master volume setting. -60: Dead silent, 5: Very Loud")]
     public float masterVolume;
-    [Range(-80f, 0f)]
-    [Tooltip("BGM volume setting. -80: Dead silent, 0: Very Loud")]
+    [Range(-60f, 5f)]
+    [Tooltip("BGM volume setting. -60: Dead silent, 5: Very Loud")]
     public float BGMVolume;
-    [Range(-80f, 0f)]
-    [Tooltip("SFX and Voice Line volume setting. -80: Dead silent, 0: Very Loud")]
+    [Range(-60f, 5f)]
+    [Tooltip("SFX and Voice Line volume setting. -60: Dead silent, 5: Very Loud")]
     public float SFXVolume;
+    [Tooltip("Input device setting, used to pick input sound device. Value is the name of the device, if empty then it's using the default defice")]
+    public string inputDevice;
 
     [Header("Graphics Settings")]
     [Tooltip("Graphics quality setting. 0: Low, 1: Normal, 2: High, 3: Ultra")]

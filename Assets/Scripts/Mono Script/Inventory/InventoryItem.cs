@@ -57,9 +57,9 @@ public class InventoryItem : MonoBehaviour
     }
  
     //buat Item yang bisa diStack, ada angka di kanan bawahnya dinyalain
-    public void SetActiveUI()
+    public void SetActiveUI(bool tf)
     {
-        CountUI.gameObject.SetActive(true);
+        CountUI.gameObject.SetActive(tf);
         RefreshCount();
     }
 
@@ -67,6 +67,11 @@ public class InventoryItem : MonoBehaviour
     public void RefreshCount()
     {
         CountUI.text = count.ToString();
+    }
+
+    public void isVisible(bool tf)
+    {
+        gameObject.SetActive(tf);
     }
 
 }
