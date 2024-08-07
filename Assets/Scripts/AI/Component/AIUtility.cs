@@ -155,9 +155,9 @@ public class AIUtility : AIBase
         }   
         else voiceDetected = false;
 
-        if (lastSeenPos.Count >= 50)
+        if (lastSeenPos.Count >= 100)
         {
-            for (int i = 0; i < lastSeenPos.Count - 7; i++)
+            for (int i = 0; i < lastSeenPos.Count - 10; i++)
             {
                 lastSeenPos.RemoveAt(i);
             }
@@ -190,6 +190,7 @@ public class AIUtility : AIBase
         if (isPlayerOnRange() == true)
         {
             Chase();
+            Debug.Log("Player Range");
         }
         else if (voiceDetected)
         {
@@ -198,10 +199,15 @@ public class AIUtility : AIBase
             if (investigate)
             {
                 resetInvestigate = true;
+                Debug.Log("Reset Investigate");
             }
-        }else
+
+            Debug.Log("Voice Detected");
+        }
+        else
         {
             AiRoam();
+            Debug.Log("Roam");
         }
         Debug.Log(agent.velocity.magnitude);
         state = aiStateEvaluation();
@@ -243,9 +249,8 @@ public class AIUtility : AIBase
         if (agent.velocity.magnitude <= 0) 
         {
             agent.SetDestination(goTo);
-        }
-
-        roam = true;
+            roam = true;
+        }  
     }
 
     private Vector3 aiRoamPos(Vector3 pos)
