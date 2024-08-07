@@ -889,6 +889,41 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.textureOffset.x
       value: 0
       objectReference: {fileID: 0}
@@ -902,6 +937,66 @@ PrefabInstance:
       propertyPath: parameters.textureOffset.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
@@ -916,6 +1011,31 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.textureOffset.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.z
+      value: 0.010000003
       objectReference: {fileID: 0}
     - target: {fileID: 2032594935997631641, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -969,6 +1089,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.textureOffset.x
       value: 0
       objectReference: {fileID: 0}
@@ -981,6 +1136,21 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.textureOffset.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.z
+      value: 0.010000003
       objectReference: {fileID: 0}
     - target: {fileID: 4394094759924908622, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -989,6 +1159,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.textureOffset.x
       value: 0
       objectReference: {fileID: 0}
@@ -1002,6 +1207,56 @@ PrefabInstance:
       propertyPath: parameters.textureOffset.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
@@ -1016,6 +1271,56 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.textureOffset.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1032,6 +1337,66 @@ PrefabInstance:
       propertyPath: parameters.textureOffset.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
     - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
@@ -1046,6 +1411,46 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.textureOffset.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1062,6 +1467,56 @@ PrefabInstance:
       propertyPath: parameters.textureOffset.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.negativeFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.041666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.positiveFade.z
+      value: 0.025
+      objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
@@ -1076,6 +1531,31 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.textureOffset.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorUniformFade
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorNegativeFade.z
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorPositiveFade.z
+      value: 0.010000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1142,6 +1622,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
+      propertyPath: parameters.blendingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
+      propertyPath: parameters.meanFreePath
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
       propertyPath: parameters.textureOffset.x
       value: 0
       objectReference: {fileID: 0}
@@ -1155,6 +1645,11 @@ PrefabInstance:
       propertyPath: parameters.textureOffset.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7023179127627239441, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 40c0049dd3308f24a9174a1913a2af96, type: 2}
     - target: {fileID: 7473193657709510662, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: m_Name
