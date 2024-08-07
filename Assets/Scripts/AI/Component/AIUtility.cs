@@ -20,7 +20,7 @@ public class AIUtility : AIBase
     //[SerializeField] GameObject lastSeenPosObj;
     bool investigate, chase, roam;
     bool resetInvestigate = false;
-    Vector3 lastMoveTo;
+    //Vector3 lastMoveTo;
 
     public List<AIPOI> AIPois = new List<AIPOI>();
 
@@ -243,8 +243,9 @@ public class AIUtility : AIBase
         if (agent.velocity.magnitude <= 0) 
         {
             agent.SetDestination(goTo);
-            roam = true;
         }
+
+        roam = true;
     }
 
     private Vector3 aiRoamPos(Vector3 pos)
