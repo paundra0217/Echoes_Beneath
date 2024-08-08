@@ -40,7 +40,7 @@ public class PipePuzzle : PuzzleBase
     public void RotatePipe()
     {
         Point += 1;
-        Valve.transform.Rotate(0f, 0f, -100f * Time.deltaTime);
+        Valve.transform.Rotate(0f, -100f * Time.deltaTime, 0f);
         if(Point >= PointToWin)
         {
             FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().PipeObjectiveClear();
