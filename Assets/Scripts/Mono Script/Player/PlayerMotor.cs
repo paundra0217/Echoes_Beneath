@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Cinemachine;
 
 
 public class PlayerMotor : MonoBehaviour
@@ -28,6 +28,7 @@ public class PlayerMotor : MonoBehaviour
     private bool ToggleFlashLight = false;
     private bool IsRunning = false;
     private bool IsCrouch = false;
+    [SerializeField] Animator anim;
     [SerializeField] GameObject InventoryUI;
     [SerializeField] GameObject JournalUI;
     [SerializeField] LayerMask layerMask;
@@ -37,7 +38,7 @@ public class PlayerMotor : MonoBehaviour
     Vector3 movedirection = Vector3.zero;
     RaycastHit hit;
     //Camera
-    [SerializeField] private Camera _cam;
+    [SerializeField] private CinemachineVirtualCamera _cam;
     private float xRotation = 0f;
 
     void Start()
@@ -84,6 +85,8 @@ public class PlayerMotor : MonoBehaviour
         //Movement Input
         movedirection.x = input.x;
         movedirection.z = input.y;
+
+        
 
         controller.Move(transform.TransformDirection(movedirection) * walkSpeed * Time.deltaTime);
         
