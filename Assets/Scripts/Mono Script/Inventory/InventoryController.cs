@@ -65,7 +65,10 @@ public class InventoryController : MonoBehaviour
         {
             LeftMouseButtonclick();
         }
-
+        if (Input.GetMouseButtonDown(1))
+        {
+            RightClickButtonClick();
+        }
 
     }
 
@@ -167,6 +170,16 @@ public class InventoryController : MonoBehaviour
         }
 
     }
+
+    private void RightClickButtonClick()
+    {
+        Vector2Int tileGridPosition = GetTileGridPosition();
+        if (selectedItem == null)
+        {
+            PickUpItem(tileGridPosition);
+        }
+    }
+
     //Buat dapet posisi TileGrid
     private Vector2Int GetTileGridPosition()
     {

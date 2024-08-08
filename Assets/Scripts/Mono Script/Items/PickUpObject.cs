@@ -14,6 +14,7 @@ public class PickUpObject : InteractObject
     {
         ItemObject.GetComponent<InventoryItem>().Set(itemData);
         canvass = GameObject.FindGameObjectWithTag("InventoryGrid");
+        Debug.Log(canvass);
         if (canvass != null)
         {
             itemGrid = canvass.GetComponentInChildren<ItemGrid>();
