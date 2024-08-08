@@ -76,7 +76,10 @@ namespace RDCT.Menu.SettingsMenu
             _instance = this;
 
             cg = GetComponent<CanvasGroup>();
+        }
 
+        private void Start()
+        {
             LoadSettingsFromJson();
             CheckMicrophones();
         }
