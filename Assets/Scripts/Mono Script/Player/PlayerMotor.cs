@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using RDCT.Audio;
+using Cinemachine;
 
 
 public class PlayerMotor : MonoBehaviour
@@ -28,6 +29,7 @@ public class PlayerMotor : MonoBehaviour
     private bool ToggleFlashLight = false;
     private bool IsRunning = false;
     private bool IsCrouch = false;
+    private CapsuleCollider coll;
     [SerializeField] GameObject InventoryUI;
     [SerializeField] GameObject JournalUI;
     [SerializeField] LayerMask layerMask;
@@ -37,11 +39,14 @@ public class PlayerMotor : MonoBehaviour
     Vector3 movedirection = Vector3.zero;
     RaycastHit hit;
     //Camera
-    [SerializeField] private Camera _cam;
+    [SerializeField] private CinemachineVirtualCamera[] _cam;
+    private int CameraIndex = 0;
+    [SerializeField] private Animator anim;
     private float xRotation = 0f;
 
     void Start()
     {
+        coll = GetComponent<CapsuleCollider>();
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -92,6 +97,9 @@ public class PlayerMotor : MonoBehaviour
         //Movement Input
         movedirection.x = input.x;
         movedirection.z = input.y;
+        float move = Mathf.Max(Mathf.Abs(movedirection.x), Mathf.Abs(movedirection.z));
+
+        anim.SetFloat("movement", move);
 
         controller.Move(transform.TransformDirection(movedirection) * walkSpeed * Time.deltaTime);
         
@@ -143,14 +151,25 @@ public class PlayerMotor : MonoBehaviour
     {
         //Toggle Crouch
         IsCrouch = !IsCrouch;
+        anim.SetBool("Isjongkok", IsCrouch);
         if (IsCrouch)
         {
-            controller.height = crouchHeight;
+            //controller.height = crouchHeight;
+            controller.center = new Vector3(0,-0.25f,0);
+            controller.height = 1.5f;
+            _cam[1].gameObject.SetActive(true);
+            _cam[0].gameObject.SetActive(false);
+            CameraIndex = 1;
             walkSpeed = crouchSpeed;
         }
         else
         {
-            controller.height = defaultHeight;
+            _cam[1].gameObject.SetActive(false);
+            _cam[0].gameObject.SetActive(true);
+            CameraIndex = 0;
+            controller.center = new Vector3(0, 0, 0);
+            controller.height = 2f;
+            //controller.height = defaultHeight;
             walkSpeed = _stats.walkSpeed;
         }
 
@@ -239,7 +258,7 @@ public class PlayerMotor : MonoBehaviour
         xRotation -= (mouseY * Time.deltaTime) * lookSpeed;
         xRotation = Mathf.Clamp(xRotation, -lookXLimit, lookXLimit);
 
-        _cam.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        _cam[CameraIndex].transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
 
         transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * lookSpeed);
     }
@@ -250,7 +269,7 @@ public class PlayerMotor : MonoBehaviour
     
     public void CheckInteract()
     {
-        Physics.Raycast(_cam.transform.position, _cam.transform.forward, out hit, JarakInteract, layerMask);       
+        Physics.Raycast(_cam[CameraIndex].transform.position, _cam[CameraIndex].transform.forward, out hit, JarakInteract, layerMask);       
     }
     #endregion
 
