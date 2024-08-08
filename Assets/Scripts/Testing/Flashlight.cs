@@ -15,7 +15,7 @@ public class Flashlight : MonoBehaviour
         flashlight = GetComponent<Light>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(isActive) battery -= Time.deltaTime * (drainRate);
         if(battery <= 0f) FlashOff();
