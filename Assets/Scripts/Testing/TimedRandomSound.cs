@@ -25,8 +25,8 @@ public class TimedRandomSound : MonoBehaviour
     {
         if(_timerActive) _currentTime = _currentTime + Time.deltaTime;
         TimeSpan _actualTime = TimeSpan.FromSeconds(_currentTime);
-        Debug.Log(_timer);
-        Debug.Log(_actualTime.Seconds);
+        // Debug.Log(_timer);
+        // Debug.Log(_actualTime.Seconds);
         if(_actualTime.Seconds == _timer)
         {
             CallSFX();
