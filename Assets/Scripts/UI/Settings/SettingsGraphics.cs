@@ -10,6 +10,7 @@ namespace RDCT.Menu.SettingsMenu
     {
         [SerializeField] private TMP_Dropdown quality;
         [SerializeField] private TMP_Dropdown antiAliasing;
+        [SerializeField] private TMP_Dropdown VSync;
         [SerializeField] private TMP_Dropdown SSO;
         [SerializeField] private TMP_Dropdown postProcessing;
         [SerializeField] private TMP_Dropdown maxFPS;
@@ -35,6 +36,7 @@ namespace RDCT.Menu.SettingsMenu
         {
             quality.value = settings.quality;
             antiAliasing.value = settings.antiAliasing;
+            VSync.value = settings.VSync;
             SSO.value = settings.SSO;
             postProcessing.value = settings.postProcessing;
             maxFPS.value = settings.maxFPS;
@@ -63,6 +65,11 @@ namespace RDCT.Menu.SettingsMenu
         }
 
         public void SetAA(int value)
+        {
+
+        }
+
+        public void SetVSync(int value)
         {
 
         }
@@ -119,6 +126,7 @@ namespace RDCT.Menu.SettingsMenu
         {
             settings.quality = quality.value;
             settings.antiAliasing = antiAliasing.value;
+            settings.VSync = VSync.value;
             settings.SSO = SSO.value;
             settings.postProcessing = postProcessing.value;
             settings.maxFPS = maxFPS.value;
