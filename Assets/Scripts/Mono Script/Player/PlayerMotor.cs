@@ -26,7 +26,7 @@ public class PlayerMotor : MonoBehaviour
     private bool IsGrounded;
     private bool IsOpenInventory = false;
     private bool IsOpenJournal = false;
-    private bool ToggleFlashLight = false;
+    private bool ToggleFlashLight = true;
     private bool IsRunning = false;
     private bool IsCrouch = false;
     private CapsuleCollider coll;
@@ -223,11 +223,11 @@ public class PlayerMotor : MonoBehaviour
         ToggleFlashLight = !ToggleFlashLight;
         if (ToggleFlashLight)
         {
-            Debug.Log("Nyalain senter");
+            Debug.Log("");
         }
         else
         {
-            Debug.Log("matiin senter");
+            Debug.Log("asd");
         }
     }
     // Player Open/Close Journal
