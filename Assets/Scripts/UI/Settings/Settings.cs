@@ -39,6 +39,7 @@ namespace RDCT.Menu.SettingsMenu
 
         public int quality;
         public int antiAliasing;
+        public int VSync;
         public int SSO;
         public int postProcessing;
         public int maxFPS;
@@ -50,6 +51,7 @@ namespace RDCT.Menu.SettingsMenu
         [SerializeField] private SOSettings defaultSettings;
         [SerializeField] private SOSettings userSettings;
         [SerializeField] private UnityEvent functionAfterClose;
+        [SerializeField] private UnityEvent fucntionAfterSave;
 
         private static SettingsCategory currentCategory;
         private static CanvasGroup cg;
@@ -118,6 +120,7 @@ namespace RDCT.Menu.SettingsMenu
                 // Graphics Settings
                 userSettings.quality = userSettingsObject.quality;
                 userSettings.antiAliasing = userSettingsObject.antiAliasing;
+                userSettings.VSync = userSettingsObject.VSync;
                 userSettings.SSO = userSettingsObject.SSO;
                 userSettings.postProcessing = userSettingsObject.postProcessing;
                 userSettings.maxFPS = userSettingsObject.maxFPS;
@@ -190,6 +193,8 @@ namespace RDCT.Menu.SettingsMenu
             SettingsGameplay.Instance.SaveSettings(userSettings);
 
             File.WriteAllText(Application.persistentDataPath + "/UserSettings.json", JsonUtility.ToJson(userSettings));
+
+            fucntionAfterSave.Invoke();
 
             CloseWindow();
         }

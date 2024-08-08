@@ -32,9 +32,11 @@ public class SOSettings : ScriptableObject
     public int quality;
     [Tooltip("Anti aliasing setting. 0: disabled, 1: 2x MSAA, 2: 4x MSAA, 3: 8x MSAA, 4: 16x MSAA")]
     public int antiAliasing;
-    [Tooltip("SSO setting. (WIP)")]
+    [Tooltip("VSync setting. 0: disabled, 1: enabled")]
+    public int VSync;
+    [Tooltip("SSO setting. 0: disabled, 1: enabled")]
     public int SSO;
-    [Tooltip("Post processing setting. (WIP)")]
+    [Tooltip("Post processing setting. 0: disabled, 1: enabled")]
     public int postProcessing;
     [Tooltip("Max FPS setting. 0: Uncapped, 1: 30, 2: 60, 3: 90, 4: 120, 5: 144, 6: 165, 7: 240")]
     public int maxFPS;
