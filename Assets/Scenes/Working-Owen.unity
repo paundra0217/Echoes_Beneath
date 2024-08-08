@@ -887,10 +887,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 464813041576750308, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.blendingMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -900,12 +910,12 @@ PrefabInstance:
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.z
-      value: 0.025
+      value: 0.041666668
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -915,27 +925,27 @@ PrefabInstance:
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.z
-      value: 0.025
+      value: 0.041666668
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -964,53 +974,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.blendingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.x
-      value: 0.041666668
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.z
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
-        type: 3}
-      propertyPath: parameters.positiveFade.x
       value: 0.041666668
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.positiveFade.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.z
-      value: 0.025
+      value: 0.041666668
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1089,8 +1104,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.blendingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1100,12 +1120,12 @@ PrefabInstance:
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.z
-      value: 0.025
+      value: 0.041666668
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1115,27 +1135,27 @@ PrefabInstance:
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.z
-      value: 0.025
+      value: 0.041666668
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1151,6 +1171,16 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.m_EditorPositiveFade.z
       value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205210659632054177, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623332413068602108, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.819
       objectReference: {fileID: 0}
     - target: {fileID: 4394094759924908622, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1159,13 +1189,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.blendingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.x
-      value: 0.041666668
+      value: 0.016666668
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1175,12 +1210,12 @@ PrefabInstance:
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.z
-      value: 0.025
+      value: 0.0625
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.x
-      value: 0.041666668
+      value: 0.016666668
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1190,22 +1225,22 @@ PrefabInstance:
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.z
-      value: 0.025
+      value: 0.0625
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1224,13 +1259,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.blendingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.x
-      value: 0.041666668
+      value: 0.0625
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1240,12 +1280,12 @@ PrefabInstance:
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.z
-      value: 0.025
+      value: 0.008333334
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.x
-      value: 0.041666668
+      value: 0.0625
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1255,22 +1295,22 @@ PrefabInstance:
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.z
-      value: 0.025
+      value: 0.008333334
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1286,6 +1326,26 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.m_EditorPositiveFade.z
       value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6047195421670807946, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6047195421670807946, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.size.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.invertFade
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1295,12 +1355,12 @@ PrefabInstance:
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.x
-      value: 0.00625
+      value: 0.0125
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1315,7 +1375,7 @@ PrefabInstance:
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.x
-      value: 0.00625
+      value: 0.0125
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1346,6 +1406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.m_EditorUniformFade
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.m_EditorAdvancedFade
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1367,10 +1432,20 @@ PrefabInstance:
       propertyPath: parameters.m_EditorPositiveFade.z
       value: 0.010000003
       objectReference: {fileID: 0}
+    - target: {fileID: 6140543240727050296, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
+      propertyPath: parameters.blendingMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6518624327060855771, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1424,13 +1499,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.blendingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.x
-      value: 0.041666668
+      value: 0.016666668
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1440,12 +1520,12 @@ PrefabInstance:
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.z
-      value: 0.025
+      value: 0.0625
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.x
-      value: 0.041666668
+      value: 0.016666668
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1455,22 +1535,22 @@ PrefabInstance:
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.z
-      value: 0.025
+      value: 0.0625
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1489,53 +1569,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.blendingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.x
-      value: 0.041666668
+      value: 0.03125
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.negativeFade.z
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
-        type: 3}
-      propertyPath: parameters.positiveFade.x
       value: 0.041666668
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
+      propertyPath: parameters.positiveFade.x
+      value: 0.03125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
+        type: 3}
       propertyPath: parameters.positiveFade.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.positiveFade.z
-      value: 0.025
+      value: 0.041666668
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1843,7 +1928,7 @@ PrefabInstance:
     - target: {fileID: 1367783384994390975, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 1596516972936723567, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
@@ -2088,7 +2173,7 @@ PrefabInstance:
     - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: parameters.priority
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
@@ -2098,7 +2183,7 @@ PrefabInstance:
     - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: parameters.meanFreePath
-      value: 0.1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
