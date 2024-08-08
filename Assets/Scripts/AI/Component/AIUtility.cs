@@ -7,6 +7,7 @@ using System.Linq.Expressions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using static Unity.VisualScripting.Member;
 using Random = UnityEngine.Random;
 
 public class AIUtility : AIBase
@@ -18,8 +19,9 @@ public class AIUtility : AIBase
     [SerializeField][Range(.1f, 1.5f)] private float perceptionUpdateTime;
     [SerializeField][Range(.1f, 2f)] private float aiEvaluationTimer;
     //[SerializeField] GameObject lastSeenPosObj;
-    bool investigate, chase, roam;
+    bool investigate, chase, roam, isMakingSound;
     bool resetInvestigate = false;
+    public AudioSource aSource;
     //Vector3 lastMoveTo;
 
     public List<AIPOI> AIPois = new List<AIPOI>();
@@ -74,6 +76,7 @@ public class AIUtility : AIBase
         findPlayer();
         StartCoroutine(perceptionUpdate(perceptionUpdateTime));
         StartCoroutine(aiAgentEvaluationTimer(aiEvaluationTimer));
+        aSource = GetComponent<AudioSource>();
         if (AIPois.Count == 0)
         {
             GameObject[] pois;
@@ -99,6 +102,9 @@ public class AIUtility : AIBase
         playerSound = audioLoudnessDetector.GetLoudnessFromMicrophone() * 100;
         findSmartAction();
         perceptionEvaluation();
+
+        if (aSource.isPlaying == false)
+            isMakingSound = false;
     }
 
 
@@ -195,7 +201,7 @@ public class AIUtility : AIBase
         else if (voiceDetected)
         {
             if (!investigate)
-                StartCoroutine(investiageTimer(5, aiStats.getDelayTime()));
+                StartCoroutine(investiageTimer(15, aiStats.getDelayTime()));
             if (investigate)
             {
                 resetInvestigate = true;
@@ -230,6 +236,13 @@ public class AIUtility : AIBase
 
     private void Chase()
     {
+        if (!isMakingSound)
+        {
+            var klip = aiStats.getRandomChaseSound();
+            aSource.PlayOneShot(klip);
+            isMakingSound = true;
+        }
+
         agent.SetDestination(mPlayer.transform.position);
         chase = true;
         roam = false;

@@ -96,4 +96,9 @@ public class GeneralAIStats : ScriptableObject
     {
         return AIDelayTime;
     }
+
+    public AudioClip getRandomChaseSound()
+    {
+        return AIChaseSound[Random.Range(0, AIChaseSound.Length)];
+    }
 }
