@@ -80,7 +80,10 @@ public class PlayerMotor : MonoBehaviour
         }
     }
     
-    
+    public void PlayerSetUp()
+    {
+        lookSpeed = _stats.lookSpeed;
+    }
 
     #region Player_Movement & input
     //Player Movement

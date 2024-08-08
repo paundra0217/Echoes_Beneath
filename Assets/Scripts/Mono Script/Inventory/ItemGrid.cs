@@ -308,4 +308,6 @@ public class ItemGrid : MonoBehaviour
             gj.isVisible(tf);
         }
     }
+
+
 }
