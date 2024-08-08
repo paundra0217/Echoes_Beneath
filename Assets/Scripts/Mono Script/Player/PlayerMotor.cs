@@ -30,6 +30,7 @@ public class PlayerMotor : MonoBehaviour
     private bool IsRunning = false;
     private bool IsCrouch = false;
     private CapsuleCollider coll;
+    [SerializeField] Flashlight senter;
     [SerializeField] GameObject InventoryUI;
     [SerializeField] GameObject JournalUI;
     [SerializeField] LayerMask layerMask;
@@ -223,11 +224,11 @@ public class PlayerMotor : MonoBehaviour
         ToggleFlashLight = !ToggleFlashLight;
         if (ToggleFlashLight)
         {
-            Debug.Log("");
+            senter.FlashOn();
         }
         else
         {
-            Debug.Log("");
+            senter.FlashOff();
         }
     }
     // Player Open/Close Journal
