@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8428756618105536458}
   - component: {fileID: 143052980177353120}
   - component: {fileID: 4677113251900722944}
+  - component: {fileID: 3270730901303301613}
   m_Layer: 7
   m_Name: Spot Light
   m_TagString: Untagged
@@ -217,6 +218,21 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
+--- !u!114 &3270730901303301613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096939244114781812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5042490916f1044c88c14423c3e801c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battery: 100
+  drainRate: 2
+  rechargeAmount: 20
 --- !u!1 &5113501878044444369
 GameObject:
   m_ObjectHideFlags: 0

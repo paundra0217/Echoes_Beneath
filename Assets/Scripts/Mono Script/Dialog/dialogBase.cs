@@ -24,7 +24,10 @@ public class dialogBase : MonoBehaviour
 
         if (titledialogs != null)
         {
-            titledialogs.dialogGUI.text = titledialogs.dialogs;
+            if (titledialogs.speaker.Length > 0)
+                titledialogs.dialogGUI.text = titledialogs.speaker + " : " + titledialogs.dialogs;
+            else
+                titledialogs.dialogGUI.text = titledialogs.dialogs;
             StartCoroutine(waktuTunggu(titledialogs, titledialogs.dialogs.Length / 3));
         }
         else return;
