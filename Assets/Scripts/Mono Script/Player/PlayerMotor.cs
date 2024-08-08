@@ -197,7 +197,7 @@ public class PlayerMotor : MonoBehaviour
         }
         else
         {
-            Debug.Log("asd");
+            Debug.Log("");
         }
     }
     // Player Open/Close Journal
