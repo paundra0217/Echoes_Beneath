@@ -233,7 +233,7 @@ public class AIUtility : AIBase
             AiRoam();
             Debug.Log("Roam");
         }
-        Debug.Log(agent.velocity.magnitude);
+        //Debug.Log(agent.velocity.magnitude);
         state = aiStateEvaluation();
     }
 
