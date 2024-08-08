@@ -41,6 +41,8 @@ public class GeneralAIStats : ScriptableObject
     public AudioClip[] AIRoamSound;
     public AudioClip[] AIChaseSound;
     public AudioClip[] AIHuntSound;
+    public AudioClip[] AIReaction;
+    public AudioClip[] AIWalkSound;
 
     public float getAgentDetectionRange()
     {
@@ -100,5 +102,15 @@ public class GeneralAIStats : ScriptableObject
     public AudioClip getRandomChaseSound()
     {
         return AIChaseSound[Random.Range(0, AIChaseSound.Length)];
+    }
+
+    public AudioClip getRandomReactionSound()
+    {
+        return AIReaction[Random.Range(0, AIReaction.Length)];
+    }
+
+    public AudioClip getRandomWalkSound()
+    {
+        return AIWalkSound[Random.Range(0, AIWalkSound.Length)];
     }
 }
