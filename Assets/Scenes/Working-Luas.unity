@@ -722,7 +722,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _flashlight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6330317951809296148}
     - target: {fileID: 758489468390276305, guid: 83e2f75738af73748b2db5e304b1cf29,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1423,8 +1423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b86345b7c2fb042b2bfe0da84bbc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxObject: {fileID: 8002952621049495962, guid: b897133ddc7396344ab540df7b4f5c1e,
-    type: 3}
 --- !u!1 &2013720307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1722,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 488618821}
     m_Modifications:
+    - target: {fileID: 143052980177353120, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1774,16 +1777,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5096939244114781812, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5113501878044444369, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_Name
       value: Flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113501878044444369, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beaa4188174bba64d92379bcc6f032d5, type: 3}
+--- !u!1 &6330317951809296148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5113501878044444369, guid: beaa4188174bba64d92379bcc6f032d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6330317951809296147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
