@@ -935,17 +935,17 @@ PrefabInstance:
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1725758885492057643, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1015,17 +1015,17 @@ PrefabInstance:
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901060604703810761, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1145,17 +1145,17 @@ PrefabInstance:
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178584115400834985, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1230,17 +1230,17 @@ PrefabInstance:
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4803718220718757603, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1300,17 +1300,17 @@ PrefabInstance:
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5059280449143560219, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1344,11 +1344,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
-      propertyPath: parameters.invertFade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
-        type: 3}
       propertyPath: parameters.blendingMode
       value: 1
       objectReference: {fileID: 0}
@@ -1406,11 +1401,6 @@ PrefabInstance:
         type: 3}
       propertyPath: parameters.m_EditorUniformFade
       value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
-        type: 3}
-      propertyPath: parameters.m_EditorAdvancedFade
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6070072339656764932, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1540,17 +1530,17 @@ PrefabInstance:
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6667418163392258516, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -1610,17 +1600,17 @@ PrefabInstance:
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8254069933782507029, guid: 25904dde5bbb0b74b9195e3b5f6e520e,
         type: 3}
@@ -2015,15 +2005,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 2241935881259636995, guid: 19000249df5289047957a0c2a8404b65,
+    - target: {fileID: 2122772798319278892, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
-      propertyPath: surfaceType
-      value: 2
+      propertyPath: m_LocalScale.x
+      value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 2241935881259636995, guid: 19000249df5289047957a0c2a8404b65,
+    - target: {fileID: 2122772798319278892, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
-      propertyPath: geometryType
-      value: 0
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122772798319278892, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122772798319278892, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122772798319278892, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: 2241935881259636995, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
@@ -2173,11 +2178,6 @@ PrefabInstance:
     - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: parameters.priority
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
-        type: 3}
-      propertyPath: parameters.blendingMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2805258963963547632, guid: 19000249df5289047957a0c2a8404b65,
@@ -2390,6 +2390,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 64.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5359562262838790811, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359562262838790811, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359562262838790811, guid: 19000249df5289047957a0c2a8404b65,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.85
+      objectReference: {fileID: 0}
     - target: {fileID: 6737859709586077486, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -2420,11 +2435,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 7023179127627239441, guid: 19000249df5289047957a0c2a8404b65,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 40c0049dd3308f24a9174a1913a2af96, type: 2}
     - target: {fileID: 7309277300888930014, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2515,16 +2525,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -17.34
       objectReference: {fileID: 0}
-    - target: {fileID: 7533065874287798791, guid: 19000249df5289047957a0c2a8404b65,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 383fb7cf7feba634d9576d39dd615c3b, type: 2}
-    - target: {fileID: 7533065874287798791, guid: 19000249df5289047957a0c2a8404b65,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: ad33f6273839b844fa9ba5050afc2786, type: 2}
     - target: {fileID: 8434851229858182401, guid: 19000249df5289047957a0c2a8404b65,
         type: 3}
       propertyPath: m_LocalScale.x
