@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using RDCT.Audio;
 
 
 public class PlayerMotor : MonoBehaviour
@@ -69,10 +69,21 @@ public class PlayerMotor : MonoBehaviour
         defaultHeight = _stats.defaultHeight;
         crouchHeight = _stats.crouchHeight;
         crouchSpeed = _stats.crouchSpeed;
-        
+
+        try
+        {
+            AudioController.Instance.PlayBGM("SewerAmbiance");
+        }
+        catch
+        {
+            Debug.LogWarning("Audio controller is missing from scene.");
+        }
     }
     
-    
+    public void PlayerSetUp()
+    {
+        lookSpeed = _stats.lookSpeed;
+    }
 
     #region Player_Movement & input
     //Player Movement

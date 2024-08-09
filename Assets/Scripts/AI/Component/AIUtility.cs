@@ -7,6 +7,7 @@ using System.Linq.Expressions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using static Unity.VisualScripting.Member;
 using Random = UnityEngine.Random;
 
 public class AIUtility : AIBase
@@ -18,9 +19,11 @@ public class AIUtility : AIBase
     [SerializeField][Range(.1f, 1.5f)] private float perceptionUpdateTime;
     [SerializeField][Range(.1f, 2f)] private float aiEvaluationTimer;
     //[SerializeField] GameObject lastSeenPosObj;
-    bool investigate, chase, roam;
+    bool investigate, chase, roam, isMakingSound;
     bool resetInvestigate = false;
-    Vector3 lastMoveTo;
+    public AudioSource aSource;
+    public Animator animator;
+    //Vector3 lastMoveTo;
 
     public List<AIPOI> AIPois = new List<AIPOI>();
 
@@ -34,6 +37,7 @@ public class AIUtility : AIBase
 
     // Time Refrences
     int Hour, Minute;
+    int minuteTimeStop, timeElapsed;
 
     // Player Refrences
     // mPlayer From AIBase
@@ -41,6 +45,7 @@ public class AIUtility : AIBase
     bool detected = false;
     bool voiceDetected = false;
     List<Vector3> lastSeenPos = new List<Vector3>(); // Player Last Seen Transform Position
+    bool reacting;
     //GameObject[] clones;
 
 
@@ -62,6 +67,7 @@ public class AIUtility : AIBase
     {
         Hour = TimeManager.Hour;
         Minute = TimeManager.Minute;
+        timeElapsed++;
     }
 
     #endregion
@@ -74,6 +80,10 @@ public class AIUtility : AIBase
         findPlayer();
         StartCoroutine(perceptionUpdate(perceptionUpdateTime));
         StartCoroutine(aiAgentEvaluationTimer(aiEvaluationTimer));
+        aSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
+        timeElapsed = 0;
+        reacting = true;
         if (AIPois.Count == 0)
         {
             GameObject[] pois;
@@ -99,8 +109,22 @@ public class AIUtility : AIBase
         playerSound = audioLoudnessDetector.GetLoudnessFromMicrophone() * 100;
         findSmartAction();
         perceptionEvaluation();
+        animationControllers();
+        if (aSource.isPlaying == false)
+            isMakingSound = false;
     }
 
+    void animationControllers()
+    {
+        if (agent.velocity.sqrMagnitude > 0)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
+    }
 
     private void findSmartAction()
     {
@@ -155,9 +179,9 @@ public class AIUtility : AIBase
         }   
         else voiceDetected = false;
 
-        if (lastSeenPos.Count >= 50)
+        if (lastSeenPos.Count >= 100)
         {
-            for (int i = 0; i < lastSeenPos.Count - 7; i++)
+            for (int i = 0; i < lastSeenPos.Count - 10; i++)
             {
                 lastSeenPos.RemoveAt(i);
             }
@@ -190,18 +214,24 @@ public class AIUtility : AIBase
         if (isPlayerOnRange() == true)
         {
             Chase();
+            Debug.Log("Player Range");
         }
         else if (voiceDetected)
         {
             if (!investigate)
-                StartCoroutine(investiageTimer(5, aiStats.getDelayTime()));
+                StartCoroutine(investiageTimer(15, aiStats.getDelayTime()));
             if (investigate)
             {
                 resetInvestigate = true;
+                Debug.Log("Reset Investigate");
             }
-        }else
+
+            Debug.Log("Voice Detected");
+        }
+        else
         {
             AiRoam();
+            Debug.Log("Roam");
         }
         Debug.Log(agent.velocity.magnitude);
         state = aiStateEvaluation();
@@ -240,11 +270,13 @@ public class AIUtility : AIBase
 
         Vector3 goTo = aiRoamPos(prio[Random.Range(0, prio.Count)]);
 
-        if (agent.velocity.magnitude <= 0) 
+        if (agent.velocity.magnitude <= 0 && timeElapsed > minuteTimeStop) 
         {
+            minuteTimeStop = Random.Range(15,20);
             agent.SetDestination(goTo);
             roam = true;
-        }
+            timeElapsed = 0;
+        }  
     }
 
     private Vector3 aiRoamPos(Vector3 pos)
@@ -308,6 +340,7 @@ public class AIUtility : AIBase
             Debug.Log(timer);
             if (timer >= getForgetTime())
             {
+                reacting = true;
                 stopChase(obj);
                 break;
             }
@@ -338,8 +371,17 @@ public class AIUtility : AIBase
     public bool isPlayerOnRange()
     {
         if (detected)
+        {
+            if (!isMakingSound && reacting)
+            {
+                var klip = aiStats.getRandomReactionSound();
+                aSource.PlayOneShot(klip);
+                isMakingSound = true;
+                reacting = false;
+            }
             return true;
-
+        }
+            
         if (voiceDetected) return false;
 
         return false;

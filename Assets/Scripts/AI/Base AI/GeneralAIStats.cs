@@ -17,7 +17,7 @@ public class GeneralAIStats : ScriptableObject
     [SerializeField] private float AITurnRate;
     [SerializeField] private float AIAccelerationSpeed;
     [SerializeField] [Range(1,3)] private float AIChaseSpeed;
-    [SerializeField] [Range(1, 3)] private int AIChaseAccelMultiplier;
+    [SerializeField] [Range(1, 15)] private int AIChaseAccelMultiplier;
 
     [Header("Agent Setting")]
     [SerializeField] private float AgentRadius;
@@ -41,6 +41,8 @@ public class GeneralAIStats : ScriptableObject
     public AudioClip[] AIRoamSound;
     public AudioClip[] AIChaseSound;
     public AudioClip[] AIHuntSound;
+    public AudioClip[] AIReaction;
+    public AudioClip[] AIWalkSound;
 
     public float getAgentDetectionRange()
     {
@@ -95,5 +97,20 @@ public class GeneralAIStats : ScriptableObject
     public float getDelayTime()
     {
         return AIDelayTime;
+    }
+
+    public AudioClip getRandomChaseSound()
+    {
+        return AIChaseSound[Random.Range(0, AIChaseSound.Length)];
+    }
+
+    public AudioClip getRandomReactionSound()
+    {
+        return AIReaction[Random.Range(0, AIReaction.Length)];
+    }
+
+    public AudioClip getRandomWalkSound()
+    {
+        return AIWalkSound[Random.Range(0, AIWalkSound.Length)];
     }
 }

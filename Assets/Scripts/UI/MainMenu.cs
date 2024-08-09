@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using RDCT.Menu.SettingsMenu;
+using RDCT.Audio;
 
 namespace RDCT.Menu
 {
@@ -15,9 +16,11 @@ namespace RDCT.Menu
 
         public static void PlayGame()
         {
-            CloseMainMenu();
+            //CloseMainMenu();
 
-            SaveMenu.Instance.OpenWindow();
+            //SaveMenu.Instance.OpenWindow();
+            AudioController.Instance.PlayBGM("SewerAmbiance");
+            SceneManager.LoadScene("Level1");
         } 
 
         public void OpenSettings()
