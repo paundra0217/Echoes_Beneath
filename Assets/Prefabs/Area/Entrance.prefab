@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8396173035897931481
 Transform:
   m_ObjectHideFlags: 0
@@ -84,7 +84,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2623332413068602108
 Transform:
   m_ObjectHideFlags: 0
@@ -121,8 +121,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.016666668, y: 0.5, z: 0.0625}
-    negativeFade: {x: 0.016666668, y: 0.5, z: 0.0625}
+    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -152,7 +152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6047195421670807946
 Transform:
   m_ObjectHideFlags: 0
@@ -189,8 +189,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.0125, y: 0.25, z: 0.041666668}
-    negativeFade: {x: 0.0125, y: 0.25, z: 0.041666668}
+    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -385,7 +385,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 91a78bc3946b57f4f89a76e919a2fa25, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 23d21ed9ff3d4ea46b42f653fbbc0bbd, type: 2}
 --- !u!1 &5767812692339933892
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6140543240727050296
 Transform:
   m_ObjectHideFlags: 0
@@ -491,8 +491,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.005, y: 0.25, z: 0.041666668}
-    negativeFade: {x: 0.005, y: 0.25, z: 0.041666668}
+    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -522,7 +522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5718320674486649850
 Transform:
   m_ObjectHideFlags: 0
@@ -559,8 +559,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.03125, y: 0.25, z: 0.041666668}
-    negativeFade: {x: 0.03125, y: 0.25, z: 0.041666668}
+    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -590,7 +590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7329526435697864550
 Transform:
   m_ObjectHideFlags: 0
@@ -627,8 +627,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.25, z: 0.041666668}
-    negativeFade: {x: 0.041666668, y: 0.25, z: 0.041666668}
+    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6306096463627901825
 Transform:
   m_ObjectHideFlags: 0
@@ -695,8 +695,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.25, z: 0.041666668}
-    negativeFade: {x: 0.041666668, y: 0.25, z: 0.041666668}
+    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -726,7 +726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &464813041576750308
 Transform:
   m_ObjectHideFlags: 0
@@ -763,8 +763,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.0625, y: 0.5, z: 0.008333334}
-    negativeFade: {x: 0.0625, y: 0.5, z: 0.008333334}
+    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -794,7 +794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2205210659632054177
 Transform:
   m_ObjectHideFlags: 0
@@ -831,8 +831,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.016666668, y: 0.5, z: 0.0625}
-    negativeFade: {x: 0.016666668, y: 0.5, z: 0.0625}
+    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
