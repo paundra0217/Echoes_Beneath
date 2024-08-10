@@ -17,9 +17,8 @@ public class Flashlight : MonoBehaviour
 
     void Update()
     {
-        if(isActive) battery -= Time.deltaTime * (drainRate);
         if(battery <= 0f) FlashOff();
-        Debug.Log(battery);
+        if(isActive) battery -= Time.deltaTime * (drainRate);
     }
 
     public void FlashOn()

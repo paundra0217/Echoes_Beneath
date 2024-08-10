@@ -48,6 +48,6 @@ MonoBehaviour:
   - 2
   - 3
   - 5
-  _waterSplash: {fileID: 8300000, guid: 1cc4cd3b7bae45d4b80ece9908f77093, type: 3}
+  _waterSplash: {fileID: 8300000, guid: 48cc3affdcd9d134a8f3f87478a40262, type: 3}
   sfxObject: {fileID: 6714074514465967048, guid: b085878937815474dbd6d8507a55c966,
     type: 3}

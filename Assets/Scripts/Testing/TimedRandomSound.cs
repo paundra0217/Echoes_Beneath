@@ -5,7 +5,7 @@ using System;
 
 public class TimedRandomSound : MonoBehaviour
 {
-    [SerializeField] float[] _setOfTime = {2, 3, 5};
+    [SerializeField] float[] _setOfTime;
     int _randomNumber;
     bool _timerActive;
     float _currentTime, _timer;
@@ -25,8 +25,8 @@ public class TimedRandomSound : MonoBehaviour
     {
         if(_timerActive) _currentTime = _currentTime + Time.deltaTime;
         TimeSpan _actualTime = TimeSpan.FromSeconds(_currentTime);
-        // Debug.Log(_timer);
-        // Debug.Log(_actualTime.Seconds);
+        Debug.Log(_timer);
+        Debug.Log(_actualTime.Seconds);
         if(_actualTime.Seconds == _timer)
         {
             CallSFX();
@@ -41,7 +41,7 @@ public class TimedRandomSound : MonoBehaviour
         _timer = _setOfTime[_randomNumber];
         _currentTime = 0f;
         //play sfx
-        PlaySFXClip(_waterSplash, transform, UnityEngine.Random.Range(0.2f,0.5f));
+        PlaySFXClip(_waterSplash, transform, 0.1f);
     }
 
     void PlaySFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
