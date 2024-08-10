@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -29,6 +30,11 @@ namespace RDCT.Menu.SettingsMenu
         {
             displayMode.value = settings.displayMode;
             resolution.value = settings.resolution;
+        }
+        public void LoadSettings(SOSettings settings)
+        {
+            ChangeDisplayMode(settings.displayMode);
+            ChangeResolution(settings.resolution);
         }
 
         public void ChangeDisplayMode(int value)

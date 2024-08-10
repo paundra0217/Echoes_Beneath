@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -60,6 +61,14 @@ namespace RDCT.Menu.SettingsMenu
             inputDeviceDropdown.value = selectedInputDevice;
 
             previousInputDevice = settings.inputDevice;
+        }
+
+        public void LoadSettings(SOSettings settings)
+        {
+            mixer.SetFloat("VolumeMaster", settings.masterVolume);
+            mixer.SetFloat("VolumeBGM", settings.BGMVolume);
+            mixer.SetFloat("VolumeSFX", settings.SFXVolume);
+            mixer.SetFloat("VolumeVCL", settings.SFXVolume);
         }
 
         public void SetMasterVolume()
