@@ -927,12 +927,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &698008342 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2456421160620049800, guid: d89aa166ee81c9544bdb8da779e71914,
-    type: 3}
-  m_PrefabInstance: {fileID: 1499552840}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &867442802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,35 +2238,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
         type: 3}
-      propertyPath: img
-      value: 
-      objectReference: {fileID: 698008342}
-    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
-        type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 468019896}
-    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
-        type: 3}
-      propertyPath: dialogs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
-        type: 3}
-      propertyPath: dialogs.Array.data[0].title
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
-        type: 3}
-      propertyPath: dialogs.Array.data[0].dialogs
-      value: "I\u2019ve been working for 25 years but this is the first time that
-        I\u2019ve been assigned to work in this part of the district"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
-        type: 3}
-      propertyPath: dialogs.Array.data[0].speaker
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8944000350086331193, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
         type: 3}
       propertyPath: m_Name
