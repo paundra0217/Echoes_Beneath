@@ -6,8 +6,8 @@ using UnityEngine;
 public class ItemGrid : MonoBehaviour
 {
     //ukuran dari gambar (hitung manual)
-    public const float TileSizeWidth = 22;
-    public const float TileSizeHeight = 22;
+    public const float TileSizeWidth = 115.3792f;
+    public const float TileSizeHeight = 117.5f;
 
     RectTransform rectTransform;
 
