@@ -335,6 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 5089114183484007036}
   minigameskelar: 0
+  ButuhMouse: 0
 --- !u!114 &7192590708687501029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9206991627078992239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03e4183d5b92b19499d2b10aba3a7c7a, type: 3}
   m_Name: 

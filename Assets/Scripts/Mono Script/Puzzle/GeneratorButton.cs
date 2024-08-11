@@ -15,10 +15,10 @@ public class GeneratorButton : MonoBehaviour
 
     private void OnMouseDown()
     {
+
         if (generatorPuzzle.Benar)
         {
             generatorPuzzle.WinGames();
-            generatorButton.enabled = false;
             FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().GeneratorObjectiveClear();
         }
         else

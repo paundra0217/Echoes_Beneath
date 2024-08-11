@@ -10,17 +10,25 @@ public class GeneratorPuzzle : PuzzleBase
     [SerializeField] private bool Kunci2;
     [SerializeField] private bool Kunci3;
     [SerializeField] private bool Kunci4;
-    [Header("Lever SetUp")]
+    [Header("Generator SetUp")]
     [SerializeField] private Lever Lever1;
     [SerializeField] private Lever Lever2;
     [SerializeField] private Lever Lever3;
     [SerializeField] private Lever Lever4;
+    [SerializeField] private GeneratorButton generatorButton;
+    GeneratorPuzzle generatorPuzzle;
     public PuzzleInteract puzzleInteract;
     public bool Benar;
 
     private void Start()
     {
         puzzleInteract = GetComponent<PuzzleInteract>();
+        generatorPuzzle = GetComponent<GeneratorPuzzle>();
+    }
+
+    private void OnEnable()
+    {
+        Generatorenabled(true);
     }
 
     private void FixedUpdate()
@@ -50,16 +58,23 @@ public class GeneratorPuzzle : PuzzleBase
     public void WinGames()
     {
         Debug.Log("menang");
-        Lever1.enabled = false;
-        Lever2.enabled = false;
-        Lever3.enabled = false;
-        Lever4.enabled = false;
+        Generatorenabled(false);
         CancelMinigames();
+    }
+
+    private void Generatorenabled(bool oke)
+    {
+        Lever1.enabled = oke;
+        Lever2.enabled = oke;
+        Lever3.enabled = oke;
+        Lever4.enabled = oke;
+        generatorButton.enabled = oke;
     }
 
     public void Losegames()
     {
         Debug.Log("kalah");
+        Generatorenabled(false);
         CancelMinigames();
     }
 
@@ -68,9 +83,11 @@ public class GeneratorPuzzle : PuzzleBase
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         puzzleInteract.virtualCamera.gameObject.SetActive(false);
+        generatorPuzzle.enabled = false;
         FindObjectOfType<InputManager>().GetComponent<InputManager>().enabled = true;        
 
     }
 
+    
 
 }
