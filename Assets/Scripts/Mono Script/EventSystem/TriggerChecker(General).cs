@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WaterTrigger : MonoBehaviour
+public class GeneralTrigger : MonoBehaviour
 {
     public UnityEvent Activate;
     public UnityEvent Deactivate;
@@ -13,7 +13,10 @@ public class WaterTrigger : MonoBehaviour
     {
         if(collider.CompareTag("Player"))
         {
-            Activate.Invoke();
+            if(UnityEngine.Random.Range(1,8) == 7)
+            {
+                Activate.Invoke();
+            }
         }
     }
 
