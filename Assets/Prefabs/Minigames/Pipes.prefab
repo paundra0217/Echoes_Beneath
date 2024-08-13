@@ -214,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 6692970126998553964}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.4742, y: 1.25, z: 6.14}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8204994, y: 2.593517, z: 1.788631}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -307,6 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 5973036348001296000}
   minigameskelar: 0
+  ButuhMouse: 0
 --- !u!114 &4529079645552957233
 MonoBehaviour:
   m_ObjectHideFlags: 0
