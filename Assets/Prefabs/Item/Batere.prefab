@@ -145,14 +145,14 @@ GameObject:
   - component: {fileID: 7786752048134242287}
   - component: {fileID: 1822113841572588981}
   - component: {fileID: 7489662819470611185}
-  - component: {fileID: 4147131877483572295}
+  - component: {fileID: 8500718260617008175}
   m_Layer: 5
-  m_Name: ItemIcon
+  m_Name: Batere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7786752048134242287
 RectTransform:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4147131877483572295
+--- !u!114 &8500718260617008175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5647547164741572264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dddc0fb1a95108246962da2fc362e476, type: 3}
+  m_Script: {fileID: 11500000, guid: de42e9c12ca5fc7479dadb33501e90ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemSize: {fileID: 11400000, guid: ab655c36ce34f42419c84730f6280685, type: 2}
@@ -228,5 +228,5 @@ MonoBehaviour:
   count: 1
   CountUI: {fileID: 7286811549740704008}
   OnGridPositionX: 0
-  OnGridPositionY: 4
+  OnGridPositionY: 0
   IsRotated: 0

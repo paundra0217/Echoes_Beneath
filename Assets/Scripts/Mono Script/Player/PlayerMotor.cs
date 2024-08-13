@@ -23,6 +23,7 @@ public class PlayerMotor : MonoBehaviour
     private float crouchSpeed;
 
     //other
+    public bool CanRun = false;
     private bool IsGrounded;
     private bool IsOpenInventory = false;
     private bool IsOpenJournal = false;
@@ -39,6 +40,7 @@ public class PlayerMotor : MonoBehaviour
     ItemGrid inventoryGrid;
     Vector3 movedirection = Vector3.zero;
     RaycastHit hit;
+
     //Camera
     [SerializeField] private CinemachineVirtualCamera[] _cam;
     private int CameraIndex = 0;
@@ -122,6 +124,11 @@ public class PlayerMotor : MonoBehaviour
     //PlayerRun
     public void Running()
     {
+        if (!CanRun)
+        {
+            return;
+        }
+
         //Buat toggle Lari
         IsRunning = !IsRunning;
         //kalo true pake RunSpeed, kalo false pake Walkspeed

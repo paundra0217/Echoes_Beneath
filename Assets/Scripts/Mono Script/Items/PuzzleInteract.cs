@@ -9,6 +9,7 @@ public class PuzzleInteract : InteractObject
     public CinemachineVirtualCamera virtualCamera;
     private PuzzleBase puzzle;
     public bool minigameskelar = false;
+    [SerializeField] bool ButuhMouse;
     private void Start()
     {
         puzzle = GetComponent<PuzzleBase>();
@@ -19,6 +20,11 @@ public class PuzzleInteract : InteractObject
         if (minigameskelar)
         {
             return;
+        }
+        if (ButuhMouse)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         virtualCamera.gameObject.SetActive(true);
         FindObjectOfType<InputManager>().GetComponent<InputManager>().enabled = false;
