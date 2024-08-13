@@ -84,6 +84,7 @@ public class AIUtility : AIBase
         animator = GetComponent<Animator>();
         timeElapsed = 0;
         reacting = true;
+        StartCoroutine(randomVoice());
         if (AIPois.Count == 0)
         {
             GameObject[] pois;
@@ -257,6 +258,48 @@ public class AIUtility : AIBase
         agent.SetDestination(mPlayer.transform.position);
         chase = true;
         roam = false;
+    }
+
+    IEnumerator randomVoice()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(4);
+            playRandomSound();
+        }
+    }
+
+    void playRandomSound()
+    {
+        switch (state)
+        {
+            case AIState.IDLE:
+                {
+                    AudioClip clip = aiStats.AIIdleSound[Random.Range(0, aiStats.AIIdleSound.Length - 1)];
+                    aSource.PlayOneShot(clip);
+                    break;
+                }
+            case AIState.ROAM:
+                {
+                    AudioClip clip = aiStats.AIIdleSound[Random.Range(0, aiStats.AIIdleSound.Length - 1)];
+                    aSource.PlayOneShot(clip);
+                    break;
+                }
+            case AIState.INVESTIGATE:
+                {
+                    AudioClip clip = aiStats.AIIdleSound[Random.Range(0, aiStats.AIIdleSound.Length - 1)];
+                    aSource.PlayOneShot(clip);
+                    break;
+                }
+            case AIState.CHASE:
+                {
+                    break;
+                }
+            case AIState.HUNT:
+                {
+                    break;
+                }
+        }
     }
 
     private void AiRoam()
