@@ -55,7 +55,7 @@ namespace RDCT.Menu
 
         public void ChangeScene(string scene)
         {
-            SceneManager.LoadScene(scene);
+            LoadingScreen.LoadScene(scene);
         }
     }
 }
