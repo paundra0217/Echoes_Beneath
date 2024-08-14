@@ -121,8 +121,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
-    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    positiveFade: {x: 0.016666668, y: 0.5, z: 0.0625}
+    negativeFade: {x: 0.016666668, y: 0.5, z: 0.0625}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -189,8 +189,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
-    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    positiveFade: {x: 0.0125, y: 0.25, z: 0.041666668}
+    negativeFade: {x: 0.0125, y: 0.25, z: 0.041666668}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -491,8 +491,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
-    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    positiveFade: {x: 0.005, y: 0.25, z: 0.041666668}
+    negativeFade: {x: 0.005, y: 0.25, z: 0.041666668}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -559,8 +559,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
-    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    positiveFade: {x: 0.03125, y: 0.25, z: 0.041666668}
+    negativeFade: {x: 0.03125, y: 0.25, z: 0.041666668}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -627,8 +627,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
-    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    positiveFade: {x: 0.041666668, y: 0.25, z: 0.041666668}
+    negativeFade: {x: 0.041666668, y: 0.25, z: 0.041666668}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -695,8 +695,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
-    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    positiveFade: {x: 0.041666668, y: 0.25, z: 0.041666668}
+    negativeFade: {x: 0.041666668, y: 0.25, z: 0.041666668}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -763,8 +763,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
-    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    positiveFade: {x: 0.0625, y: 0.5, z: 0.008333334}
+    negativeFade: {x: 0.0625, y: 0.5, z: 0.008333334}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -831,8 +831,8 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 7e1cc774c55df914f8f38903f032d2cb, type: 3}
     textureScrollingSpeed: {x: 0.03, y: 0.03, z: 0.03}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.041666668, y: 0.5, z: 0.025}
-    negativeFade: {x: 0.041666668, y: 0.5, z: 0.025}
+    positiveFade: {x: 0.016666668, y: 0.5, z: 0.0625}
+    negativeFade: {x: 0.016666668, y: 0.5, z: 0.0625}
     m_EditorUniformFade: 0.25
     m_EditorPositiveFade: {x: 0, y: 0, z: 0.010000003}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0.010000003}
@@ -3782,12 +3782,12 @@ PrefabInstance:
     - target: {fileID: 1284049210606878322, guid: ed25e73ae4d28dd43a3c763daff69ca3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.147551
+      value: -16.541
       objectReference: {fileID: 0}
     - target: {fileID: 1284049210606878322, guid: ed25e73ae4d28dd43a3c763daff69ca3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8569589
+      value: -3.84
       objectReference: {fileID: 0}
     - target: {fileID: 1284049210606878322, guid: ed25e73ae4d28dd43a3c763daff69ca3,
         type: 3}
