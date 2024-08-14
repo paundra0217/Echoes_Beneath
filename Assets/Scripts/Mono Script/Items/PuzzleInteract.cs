@@ -26,7 +26,9 @@ public class PuzzleInteract : InteractObject
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+
         virtualCamera.gameObject.SetActive(true);
+        FindObjectOfType<PlayerMotor>().GetComponent<PlayerMotor>().ChangeState(true);
         FindObjectOfType<InputManager>().GetComponent<InputManager>().enabled = false;
         puzzle.enabled = true;
 

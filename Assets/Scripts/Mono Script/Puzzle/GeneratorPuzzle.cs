@@ -16,7 +16,9 @@ public class GeneratorPuzzle : PuzzleBase
     [SerializeField] private Lever Lever3;
     [SerializeField] private Lever Lever4;
     [SerializeField] private GeneratorButton generatorButton;
+
     GeneratorPuzzle generatorPuzzle;
+    [SerializeField] BoxCollider GeneratorCollider;
     public PuzzleInteract puzzleInteract;
     public bool Benar;
 
@@ -68,6 +70,7 @@ public class GeneratorPuzzle : PuzzleBase
         Lever2.enabled = oke;
         Lever3.enabled = oke;
         Lever4.enabled = oke;
+        GeneratorCollider.enabled = !oke;
         generatorButton.enabled = oke;
     }
 
@@ -80,6 +83,7 @@ public class GeneratorPuzzle : PuzzleBase
 
     public void CancelMinigames()
     {
+        FindObjectOfType<PlayerMotor>().GetComponent<PlayerMotor>().ChangeState(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         puzzleInteract.virtualCamera.gameObject.SetActive(false);
