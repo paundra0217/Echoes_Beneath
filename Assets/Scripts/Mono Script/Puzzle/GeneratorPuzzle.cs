@@ -16,7 +16,9 @@ public class GeneratorPuzzle : PuzzleBase
     [SerializeField] private Lever Lever3;
     [SerializeField] private Lever Lever4;
     [SerializeField] private GeneratorButton generatorButton;
+
     GeneratorPuzzle generatorPuzzle;
+    [SerializeField] BoxCollider GeneratorCollider;
     public PuzzleInteract puzzleInteract;
     public bool Benar;
 
@@ -29,6 +31,7 @@ public class GeneratorPuzzle : PuzzleBase
     private void OnEnable()
     {
         Generatorenabled(true);
+
     }
 
     private void FixedUpdate()
@@ -68,6 +71,7 @@ public class GeneratorPuzzle : PuzzleBase
         Lever2.enabled = oke;
         Lever3.enabled = oke;
         Lever4.enabled = oke;
+        GeneratorCollider.enabled = !oke;
         generatorButton.enabled = oke;
     }
 

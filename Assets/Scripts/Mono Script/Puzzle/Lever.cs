@@ -24,6 +24,7 @@ public class Lever : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log(Kunci);
         Kunci = !Kunci;
     }
 
