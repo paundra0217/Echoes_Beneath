@@ -31,7 +31,6 @@ public class GeneratorPuzzle : PuzzleBase
     private void OnEnable()
     {
         Generatorenabled(true);
-
     }
 
     private void FixedUpdate()
@@ -84,6 +83,7 @@ public class GeneratorPuzzle : PuzzleBase
 
     public void CancelMinigames()
     {
+        FindObjectOfType<PlayerMotor>().GetComponent<PlayerMotor>().ChangeState(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         puzzleInteract.virtualCamera.gameObject.SetActive(false);

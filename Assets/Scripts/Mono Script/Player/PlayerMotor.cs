@@ -46,6 +46,10 @@ public class PlayerMotor : MonoBehaviour
     private int CameraIndex = 0;
     [SerializeField] private Animator anim;
     private float xRotation = 0f;
+    // Player State
+
+    public enum PlayerState {InMinigames, normal}
+    public PlayerState playerState;
 
     void Start()
     {
@@ -281,6 +285,20 @@ public class PlayerMotor : MonoBehaviour
     }
     #endregion
 
+    #region
+    public void ChangeState(bool oke)
+    {
+        if (oke)
+        {
+            playerState = PlayerState.InMinigames;
+        }
+        else
+        {
+            playerState = PlayerState.normal;
+        }
+
+    }
+    #endregion
 }
 
 
