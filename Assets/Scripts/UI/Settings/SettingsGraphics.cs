@@ -1,4 +1,5 @@
 using RDCT.Menu;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -42,26 +43,19 @@ namespace RDCT.Menu.SettingsMenu
             maxFPS.value = settings.maxFPS;
         }
 
+        public void LoadSettings(SOSettings settings)
+        {
+            SetQuality(settings.quality);
+            SetAA(settings.antiAliasing);
+            SetVSync(settings.VSync);
+            SetSSO(settings.SSO);
+            SetPostProcessing(settings.postProcessing);
+            SetMaxFPS(settings.maxFPS);
+        }
+
         public void SetQuality(int value)
         {
-            switch (value)
-            {
-                case 0: // Low
-                    Application.targetFrameRate = -1;
-                    break;
-
-                case 1: // Normal
-                    Application.targetFrameRate = 30;
-                    break;
-
-                case 2: // High
-                    Application.targetFrameRate = 60;
-                    break;
-
-                case 3: // Ultra
-                    Application.targetFrameRate = 90;
-                    break;
-            }
+            QualitySettings.SetQualityLevel(value);
         }
 
         public void SetAA(int value)
@@ -71,7 +65,7 @@ namespace RDCT.Menu.SettingsMenu
 
         public void SetVSync(int value)
         {
-
+            QualitySettings.vSyncCount = value;
         }
 
         public void SetSSO(int value)

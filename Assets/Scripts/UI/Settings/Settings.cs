@@ -133,6 +133,11 @@ namespace RDCT.Menu.SettingsMenu
                 userSettings = defaultSettings;
                 File.WriteAllText(Application.persistentDataPath + "/UserSettings.json", JsonUtility.ToJson(userSettings));
             }
+
+            SettingsGameplay.Instance.LoadSettings(userSettings);
+            SettingsVideo.Instance.LoadSettings(userSettings);
+            SettingsAudio.Instance.LoadSettings(userSettings);
+            SettingsGraphics.Instance.LoadSettings(userSettings);
         }
 
         public void OpenWindow()
