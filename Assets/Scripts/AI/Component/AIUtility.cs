@@ -270,6 +270,7 @@ public class AIUtility : AIBase
     private void Chase()
     {
         agent.SetDestination(mPlayer.transform.position);
+        JumpscareHandler();
         chase = true;
         roam = false;
     }
@@ -572,11 +573,11 @@ public class AIUtility : AIBase
         return AIState.IDLE;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void JumpscareHandler()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            animator.SetTrigger("Jumpscare");
+            Debug.Log("Jump Scare");
         }
     }
 }
