@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using RDCT.Audio;
 using Cinemachine;
+using TMPro;
 
 
 public enum PlayerState { InMinigames, normal }
@@ -39,6 +40,7 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] GameObject JournalUI;
     [SerializeField] LayerMask layerMask;
     [SerializeField] float JarakInteract;
+    [SerializeField] GameObject Interacttxt;
     private Image invUI;
     ItemGrid inventoryGrid;
     Vector3 movedirection = Vector3.zero;
@@ -292,7 +294,16 @@ public class PlayerMotor : MonoBehaviour
     
     public void CheckInteract()
     {
-        Physics.Raycast(_cam[CameraIndex].transform.position, _cam[CameraIndex].transform.forward, out hit, JarakInteract, layerMask);       
+        Physics.Raycast(_cam[CameraIndex].transform.position, _cam[CameraIndex].transform.forward, out hit, JarakInteract, layerMask);
+        if(hit.collider != null && playerState == PlayerState.normal)
+        {
+            Interacttxt.SetActive(true);
+        }
+        else
+        {
+            Interacttxt.SetActive(false);
+        }
+
     }
     #endregion
 
