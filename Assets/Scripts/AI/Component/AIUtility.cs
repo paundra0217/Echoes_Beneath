@@ -109,6 +109,7 @@ public class AIUtility : AIBase
 
     public override void onSelected()
     {
+        pState = motor.playerState;
         if (pState == PlayerState.InMinigames)
         {
             playerInMinigames();
@@ -127,6 +128,7 @@ public class AIUtility : AIBase
     void playerInMinigames()
     {
         agent.acceleration = 0;
+        agent.SetDestination(transform.position);
     }
 
     void animationControllers()

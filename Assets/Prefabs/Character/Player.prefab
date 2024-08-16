@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 1322e31d1a3aa294da1ff3a781bba571, type: 2}
+  CanRun: 0
   senter: {fileID: 2017660818950785167}
   InventoryUI: {fileID: 0}
   JournalUI: {fileID: 0}
@@ -149,6 +150,7 @@ MonoBehaviour:
   - {fileID: 2461528274078509248}
   - {fileID: 2346124022969150705}
   anim: {fileID: 7029918686960819914}
+  playerState: 1
 --- !u!1 &2520793018673936174
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,17 +812,17 @@ PrefabInstance:
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000000044348694
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4893473
+      value: -0.48934734
       objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.031802773
+      value: 0.031814575
       objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
@@ -830,7 +832,7 @@ PrefabInstance:
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.04458338
+      value: -0.04458339
       objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
@@ -840,7 +842,7 @@ PrefabInstance:
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000074505797
+      value: 0.000000005587935
       objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}

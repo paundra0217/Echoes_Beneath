@@ -30,7 +30,7 @@ public class PlayerMotor : MonoBehaviour
     private bool IsGrounded;
     private bool IsOpenInventory = false;
     private bool IsOpenJournal = false;
-    private bool ToggleFlashLight = true;
+    private bool ToggleFlashLight = false;
     private bool IsRunning = false;
     private bool IsCrouch = false;
     private CapsuleCollider coll;
@@ -206,6 +206,10 @@ public class PlayerMotor : MonoBehaviour
 
         //Kalo ada objek, Function dalam Object dijalanin
         InteractObject interactObject = hit.collider.gameObject.GetComponent<InteractObject>();
+        if (ToggleFlashLight)
+        {
+            FlashLight();
+        }
         interactObject.Interaction();
 
     }
