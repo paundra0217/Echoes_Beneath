@@ -15,14 +15,14 @@ public class SOSettings : ScriptableObject
     public int resolution;
 
     [Header("Audio Settings")]
-    [Range(-60f, 5f)]
-    [Tooltip("Master volume setting. -60: Dead silent, 5: Very Loud")]
+    [Range(-60f, 0f)]
+    [Tooltip("Master volume setting. -60: Dead silent, 0: Very Loud")]
     public float masterVolume;
-    [Range(-60f, 5f)]
-    [Tooltip("BGM volume setting. -60: Dead silent, 5: Very Loud")]
+    [Range(-60f, 0f)]
+    [Tooltip("BGM volume setting. -60: Dead silent, 0: Very Loud")]
     public float BGMVolume;
-    [Range(-60f, 5f)]
-    [Tooltip("SFX and Voice Line volume setting. -60: Dead silent, 5: Very Loud")]
+    [Range(-60f, 0f)]
+    [Tooltip("SFX and Voice Line volume setting. -60: Dead silent, 0: Very Loud")]
     public float SFXVolume;
     [Tooltip("Input device setting, used to pick input sound device. Value is the name of the device, if empty then it's using the default defice")]
     public string inputDevice;

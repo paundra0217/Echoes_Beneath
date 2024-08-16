@@ -6,6 +6,7 @@ namespace RDCT.Menu
 {
     public class PauseMenu : MonoBehaviour, IMenuWindow
     {
+        [SerializeField] private GameObject blurObject;
         private static CanvasGroup cg;
         private static bool currentlyPaused;
         private static bool isInPauseMenu;
@@ -70,6 +71,8 @@ namespace RDCT.Menu
         {
             isInPauseMenu = false;
 
+            blurObject.SetActive(false);
+
             cg.alpha = 0f;
             cg.blocksRaycasts = false;
             cg.interactable = false;
@@ -78,6 +81,8 @@ namespace RDCT.Menu
         public void OpenWindow()
         {
             isInPauseMenu = true;
+
+            blurObject.SetActive(true);
 
             cg.alpha = 1f;
             cg.blocksRaycasts = true;
