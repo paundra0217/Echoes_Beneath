@@ -19,7 +19,7 @@ public class SOSettings : ScriptableObject
     [Tooltip("Master volume setting. -60: Dead silent, 0: Very Loud")]
     public float masterVolume;
     [Range(-60f, 0f)]
-    [Tooltip("BGM volume setting. -60: Dead silent, 0: Very Loud")]
+    [Tooltip("BGM volume setting. -60: Dead silent, 0: Very Loud")] 
     public float BGMVolume;
     [Range(-60f, 0f)]
     [Tooltip("SFX and Voice Line volume setting. -60: Dead silent, 0: Very Loud")]
