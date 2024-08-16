@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using static Unity.VisualScripting.Member;
 using Random = UnityEngine.Random;
@@ -121,7 +122,6 @@ public class AIUtility : AIBase
         findSmartAction();
         perceptionEvaluation();
         animationControllers();
-        JumpscareHandler();
         if (aSource.isPlaying == false)
             isMakingSound = false;
     }
@@ -273,6 +273,7 @@ public class AIUtility : AIBase
     private void Chase()
     {
         agent.SetDestination(mPlayer.transform.position);
+        JumpscareHandler();
         chase = true;
         roam = false;
     }
@@ -577,10 +578,20 @@ public class AIUtility : AIBase
 
     void JumpscareHandler()
     {
+        
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
+            agent.acceleration = 0;
+            agent.SetDestination(transform.position);
             animator.SetTrigger("Jumpscare");
             Debug.Log("Jump Scare");
         }
     }
+
+    public void ChangeAfterJumpScare()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
+    }
+
 }
