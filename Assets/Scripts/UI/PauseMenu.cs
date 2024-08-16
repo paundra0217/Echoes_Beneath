@@ -62,7 +62,8 @@ namespace RDCT.Menu
 
         public void QuitGame()
         {
-            SceneManager.LoadScene("MainMenu 1");
+            Time.timeScale = 1.0f;
+            LoadingScreen.LoadScene("MainMenu 1");
         }
 
         public void CloseWindow()
