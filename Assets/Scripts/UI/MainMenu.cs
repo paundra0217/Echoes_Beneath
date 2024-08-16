@@ -34,9 +34,9 @@ namespace RDCT.Menu
         {
             CloseMainMenu();
 
-            ExitMenu.Instance.OpenWindow();
+            //ExitMenu.Instance.OpenWindow();
 
-            //Application.Quit();
+            Application.Quit();
         }
 
         private static void CloseMainMenu()
