@@ -121,6 +121,7 @@ public class AIUtility : AIBase
         findSmartAction();
         perceptionEvaluation();
         animationControllers();
+        JumpscareHandler();
         if (aSource.isPlaying == false)
             isMakingSound = false;
     }
@@ -272,7 +273,6 @@ public class AIUtility : AIBase
     private void Chase()
     {
         agent.SetDestination(mPlayer.transform.position);
-        JumpscareHandler();
         chase = true;
         roam = false;
     }
@@ -579,6 +579,7 @@ public class AIUtility : AIBase
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
+            animator.SetTrigger("Jumpscare");
             Debug.Log("Jump Scare");
         }
     }
