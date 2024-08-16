@@ -33,9 +33,9 @@ public class dialogBase : MonoBehaviour
             textBox.gameObject.SetActive (true);
 
             if (titledialogs.speaker.Length > 0)
-                titledialogs.dialogGUI.text = titledialogs.speaker + " : " + titledialogs.dialogs;
+                titledialogs.dialogGUI.text = titledialogs.speaker + " : \"" + titledialogs.dialogs + "\"";
             else
-                titledialogs.dialogGUI.text = titledialogs.dialogs;
+                titledialogs.dialogGUI.text = "\"" + titledialogs.dialogs + "\"";
 
             StartCoroutine(waktuTunggu(titledialogs, titledialogs.dialogs.Length / 10, titledialogs));
         }
