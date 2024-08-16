@@ -46,6 +46,8 @@ public class AIUtility : AIBase
     bool voiceDetected = false;
     List<Vector3> lastSeenPos = new List<Vector3>(); // Player Last Seen Transform Position
     bool reacting;
+    PlayerState pState;
+    PlayerMotor motor;
     //GameObject[] clones;
 
 
@@ -84,6 +86,8 @@ public class AIUtility : AIBase
         animator = GetComponent<Animator>();
         timeElapsed = 0;
         reacting = true;
+        motor = mPlayer.GetComponent<PlayerMotor>();
+        pState = motor.getPlayerstate();
         StartCoroutine(randomVoice());
         if (AIPois.Count == 0)
         {
@@ -105,6 +109,12 @@ public class AIUtility : AIBase
 
     public override void onSelected()
     {
+        pState = motor.playerState;
+        if (pState == PlayerState.InMinigames)
+        {
+            playerInMinigames();
+            return;
+        }
         isSelected = true;
         base.onSelected();
         playerSound = audioLoudnessDetector.GetLoudnessFromMicrophone() * 100;
@@ -113,6 +123,12 @@ public class AIUtility : AIBase
         animationControllers();
         if (aSource.isPlaying == false)
             isMakingSound = false;
+    }
+
+    void playerInMinigames()
+    {
+        agent.acceleration = 0;
+        agent.SetDestination(transform.position);
     }
 
     void animationControllers()
@@ -256,6 +272,7 @@ public class AIUtility : AIBase
     private void Chase()
     {
         agent.SetDestination(mPlayer.transform.position);
+        JumpscareHandler();
         chase = true;
         roam = false;
     }
@@ -556,5 +573,13 @@ public class AIUtility : AIBase
         if (agent.velocity.magnitude <= 0) return AIState.IDLE;
 
         return AIState.IDLE;
+    }
+
+    void JumpscareHandler()
+    {
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            Debug.Log("Jump Scare");
+        }
     }
 }

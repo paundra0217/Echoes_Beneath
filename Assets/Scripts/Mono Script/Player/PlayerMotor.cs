@@ -6,6 +6,9 @@ using RDCT.Audio;
 using Cinemachine;
 
 
+public enum PlayerState { InMinigames, normal }
+
+
 public class PlayerMotor : MonoBehaviour
 {
     [SerializeField] private PlayerStats _stats;
@@ -27,7 +30,7 @@ public class PlayerMotor : MonoBehaviour
     private bool IsGrounded;
     private bool IsOpenInventory = false;
     private bool IsOpenJournal = false;
-    private bool ToggleFlashLight = true;
+    private bool ToggleFlashLight = false;
     private bool IsRunning = false;
     private bool IsCrouch = false;
     private CapsuleCollider coll;
@@ -48,8 +51,7 @@ public class PlayerMotor : MonoBehaviour
     private float xRotation = 0f;
     // Player State
 
-    public enum PlayerState {InMinigames, normal}
-    public PlayerState playerState;
+    public PlayerState playerState = PlayerState.normal;
 
     void Start()
     {
@@ -95,6 +97,11 @@ public class PlayerMotor : MonoBehaviour
     public void PlayerSetUp()
     {
         lookSpeed = _stats.lookSpeed;
+    }
+
+    public PlayerState getPlayerstate()
+    {
+        return playerState;
     }
 
     #region Player_Movement & input
@@ -199,6 +206,10 @@ public class PlayerMotor : MonoBehaviour
 
         //Kalo ada objek, Function dalam Object dijalanin
         InteractObject interactObject = hit.collider.gameObject.GetComponent<InteractObject>();
+        if (ToggleFlashLight)
+        {
+            FlashLight();
+        }
         interactObject.Interaction();
 
     }

@@ -83,6 +83,7 @@ public class GeneratorPuzzle : PuzzleBase
 
     public void CancelMinigames()
     {
+        Generatorenabled(false);
         FindObjectOfType<PlayerMotor>().GetComponent<PlayerMotor>().ChangeState(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
