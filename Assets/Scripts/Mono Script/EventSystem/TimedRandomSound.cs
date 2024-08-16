@@ -5,9 +5,9 @@ using System;
 
 public class TimedRandomSound : MonoBehaviour
 {
-    [SerializeField] float[] _setOfTime = {2, 3, 5};
+    [SerializeField] float[] _setOfTime;
     int _randomNumber;
-    bool _timerActive;
+    bool _timerActive, isActive;
     float _currentTime, _timer;
     [SerializeField] AudioClip _waterSplash;
     [SerializeField] AudioSource sfxObject;
@@ -17,21 +17,23 @@ public class TimedRandomSound : MonoBehaviour
         _currentTime = 0;
         _randomNumber = UnityEngine.Random.Range(0, _setOfTime.Length);
         _timer = _setOfTime[_randomNumber];
-        _timerActive = true;
+        _timerActive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_timerActive) _currentTime = _currentTime + Time.deltaTime;
-        TimeSpan _actualTime = TimeSpan.FromSeconds(_currentTime);
-        // Debug.Log(_timer);
-        // Debug.Log(_actualTime.Seconds);
-        if(_actualTime.Seconds == _timer)
+        if(isActive)
         {
+            if(_timerActive) _currentTime = _currentTime + Time.deltaTime;
+            TimeSpan _actualTime = TimeSpan.FromSeconds(_currentTime);
+            Debug.Log(_timer);
+            Debug.Log(_actualTime.Seconds);
+            if(_actualTime.Seconds == _timer)
             CallSFX();
         }
     }
+        
 
     void CallSFX()
     {
@@ -41,7 +43,7 @@ public class TimedRandomSound : MonoBehaviour
         _timer = _setOfTime[_randomNumber];
         _currentTime = 0f;
         //play sfx
-        PlaySFXClip(_waterSplash, transform, UnityEngine.Random.Range(0.2f,0.5f));
+        PlaySFXClip(_waterSplash, transform, 0.1f);
     }
 
     void PlaySFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
@@ -63,5 +65,17 @@ public class TimedRandomSound : MonoBehaviour
         _randomPosition = new Vector3 (_randomPosition.x + UnityEngine.Random.Range(-100,100), _randomPosition.y, _randomPosition.z + UnityEngine.Random.Range(-100,100));
 
         return _randomPosition;
+    }
+
+    public void Activate()
+    {
+        isActive = true;
+        _timerActive = true;
+    }
+
+    public void Deactivate()
+    {
+        isActive = false;
+        _timerActive = false;
     }
 }

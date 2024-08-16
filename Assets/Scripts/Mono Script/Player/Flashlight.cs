@@ -15,11 +15,10 @@ public class Flashlight : MonoBehaviour
         flashlight = GetComponent<Light>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if(battery <= 0f) FlashOff();
-        if(isActive) battery -= Time.deltaTime * (drainRate);       
-        //Debug.Log(battery);
+        if(isActive) battery -= Time.deltaTime * (drainRate);
     }
 
     public void FlashOn()
