@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RDCT.PlayerController;
+using RDCT.Audio;
 
 public class PipePuzzle : PuzzleBase
 {
@@ -14,12 +15,13 @@ public class PipePuzzle : PuzzleBase
     PipePuzzle pipePuzzle;
     private int Point = 0;
     [SerializeField] int PointToWin;
-    
-
+    AudioSource audioSource;
     private void Start()
     {
         puzzleInteract = GetComponent<PuzzleInteract>();
         pipePuzzle = GetComponent<PipePuzzle>();
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -28,17 +30,19 @@ public class PipePuzzle : PuzzleBase
         {
             Debug.Log("monyet");
             RotatePipe();
+            return;
         }
         if (Input.GetKeyDown(Back))
         {
             CancelMinigames();
         }
-
+        audioSource.enabled = false;
     }
 
 
     public void RotatePipe()
     {
+        audioSource.enabled = true;
         Point += 1;
         Valve.transform.Rotate(0f, -100f * Time.deltaTime, 0f);
         if(Point >= PointToWin)
@@ -60,7 +64,6 @@ public class PipePuzzle : PuzzleBase
 
     }
 
-    
 
 
 

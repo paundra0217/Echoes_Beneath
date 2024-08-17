@@ -41,6 +41,7 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] LayerMask layerMask;
     [SerializeField] float JarakInteract;
     [SerializeField] GameObject Interacttxt;
+    AudioSource audioSource;
     private Image invUI;
     ItemGrid inventoryGrid;
     Vector3 movedirection = Vector3.zero;
@@ -65,6 +66,7 @@ public class PlayerMotor : MonoBehaviour
         inventoryGrid = InventoryUI.GetComponent<ItemGrid>();
         invUI = InventoryUI.GetComponent<Image>();
         invUI.enabled = false;
+        audioSource = GetComponent<AudioSource>();
         //InventoryUI.SetActive(false);
     }
 
@@ -114,7 +116,8 @@ public class PlayerMotor : MonoBehaviour
         movedirection.x = input.x;
         movedirection.z = input.y;
         float move = Mathf.Max(Mathf.Abs(movedirection.x), Mathf.Abs(movedirection.z));
-
+        if (move > 0) audioSource.enabled = true;
+        else audioSource.enabled = false;
         anim.SetFloat("movement", move);
 
         controller.Move(transform.TransformDirection(movedirection) * walkSpeed * Time.deltaTime);
@@ -246,6 +249,7 @@ public class PlayerMotor : MonoBehaviour
     public void FlashLight()
     {
         ToggleFlashLight = !ToggleFlashLight;
+        AudioController.Instance.PlaySFX("Flashlight");
         if (ToggleFlashLight)
         {
             senter.FlashOn();
@@ -254,6 +258,7 @@ public class PlayerMotor : MonoBehaviour
         {
             senter.FlashOff();
         }
+
     }
     // Player Open/Close Journal
     public void Journal()
