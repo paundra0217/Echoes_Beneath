@@ -1,3 +1,4 @@
+using RDCT.Menu;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -17,6 +18,7 @@ public class FPSCounter : MonoBehaviour
         frameDeltaTime = new float[100];
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +36,8 @@ public class FPSCounter : MonoBehaviour
             total += frame;
         }
 
-        return frameDeltaTime.Length / total;
+        float fps = Mathf.Clamp(frameDeltaTime.Length / total, 0, 1000);
+
+        return fps;
     }
 }

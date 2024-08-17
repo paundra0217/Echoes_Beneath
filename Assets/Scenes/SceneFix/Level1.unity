@@ -4701,6 +4701,11 @@ PrefabInstance:
       propertyPath: uiText
       value: 
       objectReference: {fileID: 781561155}
+    - target: {fileID: 1607312695950051293, guid: 31bda2cb01cb76c48abb33eedf1acbbd,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1890069080}
     - target: {fileID: 2356309173426599968, guid: 31bda2cb01cb76c48abb33eedf1acbbd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6526,6 +6531,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d89aa166ee81c9544bdb8da779e71914, type: 3}
+--- !u!114 &1890069080 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7630611931820053425, guid: d89aa166ee81c9544bdb8da779e71914,
+    type: 3}
+  m_PrefabInstance: {fileID: 1890069079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdd0053d07d4be429c797d59fd9a3c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1896909258
 PrefabInstance:
   m_ObjectHideFlags: 0
