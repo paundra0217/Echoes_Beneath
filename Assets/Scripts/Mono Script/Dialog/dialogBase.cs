@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ public class dialogBase : MonoBehaviour
 {
     public TextMeshProUGUI textBox;
     public dialog[] dialogs;
+    private List<dialog> dialogQ = new List<dialog>();
 
     private void Awake()
     {
@@ -30,31 +32,54 @@ public class dialogBase : MonoBehaviour
 
         if (titledialogs != null && titledialogs.canBeCalled)
         {
-            textBox.gameObject.SetActive (true);
+            if (!dialogQ.Contains(titledialogs)) dialogQ.Add(titledialogs);
 
-            if (titledialogs.speaker.Length > 0)
-                titledialogs.dialogGUI.text = titledialogs.speaker + " : \"" + titledialogs.dialogs + "\"";
+            if (!textBox.isActiveAndEnabled)
+                textBox.gameObject.SetActive (true);
+
+            if (dialogQ[0].speaker.Length > 0)
+                dialogQ[0].dialogGUI.text = dialogQ[0].speaker + " : \"" + dialogQ[0].dialogs + "\"";
             else
-                titledialogs.dialogGUI.text = "\"" + titledialogs.dialogs + "\"";
+                dialogQ[0].dialogGUI.text = "\"" + dialogQ[0].dialogs + "\"";
 
-            StartCoroutine(waktuTunggu(titledialogs, titledialogs.dialogs.Length / 10, titledialogs));
+            var waktu = 0;
+
+            if (dialogQ[0].dialogs.Length < 40) waktu = 8;
+            else if (dialogQ[0].dialogs.Length < 80) waktu = dialogQ[0].dialogs.Length / 5;
+
+            StartCoroutine(waktuTunggu(dialogQ[0], waktu));
         }
         else return;
     }
 
-    IEnumerator waktuTunggu(dialog ini, float tungguLama, dialog dialo)
+    IEnumerator waktuTunggu(dialog ini, float tungguLama)
     {
         while (true)
         {
             yield return new WaitForSeconds(tungguLama);
-            hentikanDialog(ini);
-            dialo.dialogGUI.gameObject.SetActive(false);
-            break;
+            if (dialogQ.Count > 0)
+            {
+                dialogQ.Remove(dialogQ[0]);
+                if (dialogQ.Count != 0)
+                    panggilDialog(dialogQ[0].title);
+                else
+                {
+                    textBox.gameObject.SetActive(false);
+                    break;
+                }
+            }
+            else
+            {
+                //hentikanDialog(ini);
+                textBox.gameObject.SetActive(false);
+                break;
+            }
         }
     }
 
     public void hentikanDialog(dialog ini)
     {
+        dialogQ.Remove(ini);
         ini.dialogGUI.text = "";
     }
 
