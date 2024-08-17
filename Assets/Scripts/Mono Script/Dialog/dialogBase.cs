@@ -28,7 +28,7 @@ public class dialogBase : MonoBehaviour
     {
         dialog titledialogs = Array.Find<dialog>(dialogs, s => s.title == titleDial);
 
-        if (titledialogs != null)
+        if (titledialogs != null && titledialogs.canBeCalled)
         {
             textBox.gameObject.SetActive (true);
 
@@ -57,6 +57,16 @@ public class dialogBase : MonoBehaviour
     {
         ini.dialogGUI.text = "";
     }
+
+    public void dialogConditionFull(string titleDial)
+    {
+        dialog titledialogs = Array.Find<dialog>(dialogs, s => s.title == titleDial);
+
+        if (titledialogs != null)
+        {
+            titledialogs.canBeCalled = true;
+        }
+    }
 }
 
 [Serializable]
@@ -65,6 +75,7 @@ public class dialog
     public string title;
     public string speaker;
     [TextArea] public string dialogs;
+    public bool canBeCalled = true;
 
     [HideInInspector] public TextMeshProUGUI dialogGUI;
 }

@@ -50,66 +50,81 @@ MonoBehaviour:
     speaker: 
     dialogs: "I\u2019ve been working for 25 years but this is the first time that
       I\u2019ve been assigned to work in this part of the district"
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2
     speaker: 
     dialogs: Usually there is a different inspector that is assigned for this, but
       the company seems to be understaffed because of the incident that happened
       not long ago after a flood
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 3
     speaker: 
     dialogs: First, I need to head to the maintenance room to collect my items
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 4
     speaker: 
     dialogs: Damn this room is a mess
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 5
     speaker: 
     dialogs: The clipboard and flashlight should be on the table
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 6
     speaker: 
     dialogs: seems like my task is to inspect and repair any leaks from the pipes
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 7
     speaker: 
     dialogs: I should start exploring the area to familiarize myself
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 8
     speaker: 
     dialogs: After 25 I never get used to the ire feeling when I'm in this labyrinth/sewer
       system
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.1
     speaker: 
     dialogs: Alright, here we go... Area 02. This place gives me the creeps already.
       Better get this over with.
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.2
     speaker: 
     dialogs: I've been warned about this area. Still, I need to check those pipes.
       Let's hope nothing breaks while I'm here.
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.3
     speaker: 
     dialogs: The pipes here are a mess. Looks like they've been neglected for years.
       Better start fixing these before it gets worse.
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.4
     speaker: 
     dialogs: "There's odd markings on the pipes\u2026 odd"
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.5
     speaker: 
     dialogs: What the... A tunnel behind the pipes? How did I miss this before?
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.6
     speaker: 
     dialogs: This tunnel looks ancient. I wonder how long it's been hidden down here.
+    canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.7
     speaker: 
     dialogs: "An old note\u2026"
+    canBeCalled: 1
     dialogGUI: {fileID: 0}

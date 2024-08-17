@@ -187,6 +187,81 @@ PrefabInstance:
       propertyPath: textBox
       value: 
       objectReference: {fileID: 349389961}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[0].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[1].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[2].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[3].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[4].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[5].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[6].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[7].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[8].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[9].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[10].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[11].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[12].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[13].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[14].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8944000350086331193, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
         type: 3}
       propertyPath: m_Name
@@ -4701,6 +4776,11 @@ PrefabInstance:
       propertyPath: uiText
       value: 
       objectReference: {fileID: 781561155}
+    - target: {fileID: 1607312695950051293, guid: 31bda2cb01cb76c48abb33eedf1acbbd,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1890069080}
     - target: {fileID: 2356309173426599968, guid: 31bda2cb01cb76c48abb33eedf1acbbd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6526,6 +6606,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d89aa166ee81c9544bdb8da779e71914, type: 3}
+--- !u!114 &1890069080 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7630611931820053425, guid: d89aa166ee81c9544bdb8da779e71914,
+    type: 3}
+  m_PrefabInstance: {fileID: 1890069079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdd0053d07d4be429c797d59fd9a3c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1896909258
 PrefabInstance:
   m_ObjectHideFlags: 0

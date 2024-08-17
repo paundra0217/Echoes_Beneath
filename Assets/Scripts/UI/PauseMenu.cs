@@ -11,7 +11,7 @@ namespace RDCT.Menu
         private static bool currentlyPaused;
         private static bool isInPauseMenu;
 
-        private void Awake()
+        private void Start()
         {
             cg = GetComponent<CanvasGroup>();
         }
@@ -87,6 +87,11 @@ namespace RDCT.Menu
             cg.alpha = 1f;
             cg.blocksRaycasts = true;
             cg.interactable = true;
+        }
+
+        public bool isInPause()
+        {
+            return isInPauseMenu;
         }
     }
 }
