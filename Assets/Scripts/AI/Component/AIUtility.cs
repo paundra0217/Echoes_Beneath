@@ -589,10 +589,9 @@ public class AIUtility : AIBase
         }
     }
 
-    public void ChangeAfterJumpScare()
+    public void ChangeAfterJumpScare(string namascene)
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
+        SceneManager.LoadScene(namascene);
     }
 
 }
