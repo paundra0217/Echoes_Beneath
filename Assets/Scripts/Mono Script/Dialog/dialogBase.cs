@@ -45,7 +45,7 @@ public class dialogBase : MonoBehaviour
             var waktu = 0;
 
             if (dialogQ[0].dialogs.Length < 40) waktu = 8;
-            else if (dialogQ[0].dialogs.Length < 80) waktu = dialogQ[0].dialogs.Length / 5;
+            else if (dialogQ[0].dialogs.Length > 60) waktu = 10;
 
             StartCoroutine(waktuTunggu(dialogQ[0], waktu));
         }
