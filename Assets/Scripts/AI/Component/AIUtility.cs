@@ -578,8 +578,9 @@ public class AIUtility : AIBase
 
     void JumpscareHandler()
     {
-        
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        var dist = Vector3.Distance(transform.position, mPlayer.transform.position);
+
+        if (agent.remainingDistance <= agent.stoppingDistance && dist <= 1)
         {
             agent.acceleration = 0;
             agent.SetDestination(transform.position);
