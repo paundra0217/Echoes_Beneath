@@ -22,6 +22,8 @@ public class FPSCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         frameDeltaTime[lastFrameIdx] = Time.deltaTime;
         lastFrameIdx = (lastFrameIdx + 1) % frameDeltaTime.Length;
 

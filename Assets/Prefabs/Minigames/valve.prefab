@@ -167,7 +167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS "E" To ROTATE
+  m_text: PRESS "E" TO ROTATE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6379f0516da28a74c9bab13c8d2a77dd, type: 2}
   m_sharedMaterial: {fileID: -4776811821824913735, guid: 6379f0516da28a74c9bab13c8d2a77dd,
