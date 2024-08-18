@@ -8,12 +8,16 @@ public class TriggerMainEnding : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("ini gk tau");
         if (other.gameObject.GetComponent<PlayerMotor>())
         {
-            SceneManager.LoadScene("Escape Ending");
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            if (FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().CheckObjective())
+            {
+                SceneManager.LoadScene("Escape Ending");
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            Debug.Log("ini player");
         }
     }
-
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.18533, g: 324.8582, b: 429.96686, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 671088639
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -779,12 +779,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You narrowly got out of the sewer with your entire body still attached.
+  m_text: 'You narrowly got out of the sewer with your entire body still attached.
     You told this case to your co-workers and they believed it for it has been an
     urban legend in the area. Finally, you called the police after figuring out the
     mysteries that lie below. Parts of the sewer are destroyed and a channeling altar
     is destroyed in the investigation, resulting in a never to be heard again the
     echoes beneath.
+
+    Thanks For Playing The Demon'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6379f0516da28a74c9bab13c8d2a77dd, type: 2}
   m_sharedMaterial: {fileID: -4776811821824913735, guid: 6379f0516da28a74c9bab13c8d2a77dd,
@@ -794,7 +796,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1011,7 +1013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Escape Ending
+  m_text: 'Thanks For Testing Demo
 
 '
   m_isRightToLeft: 0
@@ -1023,7 +1025,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
