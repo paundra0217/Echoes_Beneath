@@ -21,6 +21,7 @@ public class PuzzleInteract : InteractObject
     {
         if (minigameskelar)
         {
+            //gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             return;
         }
         if (ButuhMouse)

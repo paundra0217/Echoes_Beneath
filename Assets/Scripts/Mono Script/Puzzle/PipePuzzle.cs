@@ -56,6 +56,7 @@ public class PipePuzzle : PuzzleBase
 
     public void CancelMinigames()
     {
+        audioSource.enabled = false;
         puzzleInteract.TutorText.SetActive(false);
         FindObjectOfType<PlayerMotor>().GetComponent<PlayerMotor>().ChangeState(false);
         puzzleInteract.virtualCamera.gameObject.SetActive(false);

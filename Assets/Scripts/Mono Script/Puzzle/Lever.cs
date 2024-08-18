@@ -14,11 +14,11 @@ public class Lever : MonoBehaviour
     {
         if (Kunci)
         {
-            PusatRotasi.rotation = Quaternion.Euler(PosisiBawah, 0f, 0f);
+            PusatRotasi.rotation = Quaternion.Euler(PosisiBawah, PusatRotasi.rotation.y, PusatRotasi.rotation.z);
         }
         else
         {
-            PusatRotasi.rotation = Quaternion.Euler(PosisiAtas, 0f, 0f);
+            PusatRotasi.rotation = Quaternion.Euler(PosisiAtas, PusatRotasi.rotation.y, PusatRotasi.rotation.z);
         }
     }
 
