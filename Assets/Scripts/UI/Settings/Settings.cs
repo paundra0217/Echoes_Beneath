@@ -47,6 +47,7 @@ namespace RDCT.Menu.SettingsMenu
 
     public class Settings : MonoBehaviour, IMenuWindow
     {
+        [SerializeField] private GameObject mainMenuBlur;
         [SerializeField] private SettingsWindow[] windows;
         [SerializeField] private SOSettings defaultSettings;
         [SerializeField] private SOSettings userSettings;
@@ -142,6 +143,11 @@ namespace RDCT.Menu.SettingsMenu
 
         public void OpenWindow()
         {
+            if (mainMenuBlur != null)
+            {
+                mainMenuBlur.SetActive(true);
+            }
+
             LoadSettingsFromJson();
 
             SettingsGameplay.Instance.InitializeSettings(userSettings);
@@ -226,6 +232,11 @@ namespace RDCT.Menu.SettingsMenu
 
         public void CloseWindow()
         {
+            if (mainMenuBlur != null)
+            {
+                mainMenuBlur.SetActive(false);
+            }
+
             cg.alpha = 0f;
             cg.blocksRaycasts = false;
             cg.interactable = false;
