@@ -55,7 +55,7 @@ public class AIUtility : AIBase
     // Sound Var
     [Header("Sound Setting")]
     private float playerSound;
-    [Range(1,10)] public int soundTreshold;
+    [Range(30,50)] public int soundTreshold;
 
 
     #region Time Refrences
@@ -118,12 +118,13 @@ public class AIUtility : AIBase
         }
         isSelected = true;
         base.onSelected();
-        playerSound = audioLoudnessDetector.GetLoudnessFromMicrophone() * 100;
+        playerSound = audioLoudnessDetector.GetLoudnessFromMicrophone() * 1000;
         findSmartAction();
         perceptionEvaluation();
         animationControllers();
         if (aSource.isPlaying == false)
             isMakingSound = false;
+        //Debug.Log(playerSound);
     }
 
     void playerInMinigames()
@@ -580,7 +581,7 @@ public class AIUtility : AIBase
     {
         var dist = Vector3.Distance(transform.position, mPlayer.transform.position);
 
-        if (agent.remainingDistance <= agent.stoppingDistance && dist <= 1)
+        if (dist <= 1.5f)
         {
             agent.acceleration = 0;
             agent.SetDestination(transform.position);
