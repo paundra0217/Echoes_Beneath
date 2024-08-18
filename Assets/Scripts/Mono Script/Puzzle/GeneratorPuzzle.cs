@@ -61,6 +61,7 @@ public class GeneratorPuzzle : PuzzleBase
     {
         Debug.Log("menang");
         Generatorenabled(false);
+        puzzleInteract.minigameskelar = true;
         CancelMinigames();
     }
 
