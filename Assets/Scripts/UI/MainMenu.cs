@@ -32,7 +32,7 @@ namespace RDCT.Menu
 
         public static void ExitGame()
         {
-            CloseMainMenu();
+            //CloseMainMenu();
 
             //ExitMenu.Instance.OpenWindow();
 
