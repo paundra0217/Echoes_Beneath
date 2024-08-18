@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TriggerJokeEnding : MonoBehaviour
+public class TriggerJokeEnding : InteractObject
 {
 
-    private void OnTriggerEnter(Collider other)
+    public override void Interaction()
     {
-        if (other.gameObject.GetComponent<PlayerMotor>())
-        {
-            SceneManager.LoadScene("The Cat Isn’t So Curious");
-        }
+        SceneManager.LoadScene("The Cat Isn’t So Curious");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
     }
 
 }
