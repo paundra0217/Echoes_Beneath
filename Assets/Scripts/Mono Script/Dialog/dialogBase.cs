@@ -45,8 +45,11 @@ public class dialogBase : MonoBehaviour
             var waktu = 0;
 
             if (dialogQ[0].dialogs.Length < 40) waktu = 8;
-            else if (dialogQ[0].dialogs.Length > 60) waktu = 10;
-
+            else if (dialogQ[0].dialogs.Length > 40) waktu = 10;
+            else if (dialogQ[0].dialogs.Length > 60) waktu = 12;
+            else waktu = 14;
+            waktu += (dialogQ.Count - 1) * waktu;
+            Debug.Log(waktu);
             StartCoroutine(waktuTunggu(dialogQ[0], waktu));
         }
         else return;
@@ -57,16 +60,17 @@ public class dialogBase : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(tungguLama);
-            if (dialogQ.Count > 0)
+            if (dialogQ.Count != 0)
             {
                 dialogQ.Remove(dialogQ[0]);
-                if (dialogQ.Count != 0)
+                if (dialogQ.Count > 0)
                     panggilDialog(dialogQ[0].title);
                 else
                 {
                     textBox.gameObject.SetActive(false);
                     break;
                 }
+                
             }
             else
             {
