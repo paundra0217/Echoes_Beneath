@@ -8,7 +8,7 @@ public class TriggerJokeEnding : InteractObject
 
     public override void Interaction()
     {
-        SceneManager.LoadScene("The Cat Isn’t So Curious");
+        SceneManager.LoadScene("JokeEnding");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 

@@ -13,7 +13,7 @@ public class TriggerMainEnding : MonoBehaviour
         {
             if (FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().CheckObjective())
             {
-                SceneManager.LoadScene("Escape Ending");
+                SceneManager.LoadScene("EscapeEnding");
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
