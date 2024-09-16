@@ -593,6 +593,8 @@ public class AIUtility : AIBase
     public void ChangeAfterJumpScare(string namascene)
     {
         SceneManager.LoadScene(namascene);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 }
