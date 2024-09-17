@@ -586,6 +586,7 @@ public class AIUtility : AIBase
             agent.acceleration = 0;
             agent.SetDestination(transform.position);
             animator.SetTrigger("Jumpscare");
+            aSource.PlayOneShot(aiStats.JumpscareSound);
             Debug.Log("Jump Scare");
         }
     }
@@ -596,5 +597,4 @@ public class AIUtility : AIBase
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
-
 }
