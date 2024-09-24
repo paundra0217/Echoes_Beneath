@@ -39,6 +39,7 @@ namespace RDCT.Menu.SettingsMenu
 
         public int quality;
         public int antiAliasing;
+        public int VSync;
         public int SSO;
         public int postProcessing;
         public int maxFPS;
@@ -46,10 +47,12 @@ namespace RDCT.Menu.SettingsMenu
 
     public class Settings : MonoBehaviour, IMenuWindow
     {
+        [SerializeField] private GameObject mainMenuBlur;
         [SerializeField] private SettingsWindow[] windows;
         [SerializeField] private SOSettings defaultSettings;
         [SerializeField] private SOSettings userSettings;
         [SerializeField] private UnityEvent functionAfterClose;
+        [SerializeField] private UnityEvent fucntionAfterSave;
 
         private static SettingsCategory currentCategory;
         private static CanvasGroup cg;
@@ -74,7 +77,10 @@ namespace RDCT.Menu.SettingsMenu
             _instance = this;
 
             cg = GetComponent<CanvasGroup>();
+        }
 
+        private void Start()
+        {
             LoadSettingsFromJson();
             CheckMicrophones();
         }
@@ -118,6 +124,7 @@ namespace RDCT.Menu.SettingsMenu
                 // Graphics Settings
                 userSettings.quality = userSettingsObject.quality;
                 userSettings.antiAliasing = userSettingsObject.antiAliasing;
+                userSettings.VSync = userSettingsObject.VSync;
                 userSettings.SSO = userSettingsObject.SSO;
                 userSettings.postProcessing = userSettingsObject.postProcessing;
                 userSettings.maxFPS = userSettingsObject.maxFPS;
@@ -127,10 +134,20 @@ namespace RDCT.Menu.SettingsMenu
                 userSettings = defaultSettings;
                 File.WriteAllText(Application.persistentDataPath + "/UserSettings.json", JsonUtility.ToJson(userSettings));
             }
+
+            SettingsGameplay.Instance.LoadSettings(userSettings);
+            SettingsVideo.Instance.LoadSettings(userSettings);
+            SettingsAudio.Instance.LoadSettings(userSettings);
+            SettingsGraphics.Instance.LoadSettings(userSettings);
         }
 
         public void OpenWindow()
         {
+            if (mainMenuBlur != null)
+            {
+                mainMenuBlur.SetActive(true);
+            }
+
             LoadSettingsFromJson();
 
             SettingsGameplay.Instance.InitializeSettings(userSettings);
@@ -191,6 +208,8 @@ namespace RDCT.Menu.SettingsMenu
 
             File.WriteAllText(Application.persistentDataPath + "/UserSettings.json", JsonUtility.ToJson(userSettings));
 
+            fucntionAfterSave.Invoke();
+
             CloseWindow();
         }
 
@@ -213,6 +232,11 @@ namespace RDCT.Menu.SettingsMenu
 
         public void CloseWindow()
         {
+            if (mainMenuBlur != null)
+            {
+                mainMenuBlur.SetActive(false);
+            }
+
             cg.alpha = 0f;
             cg.blocksRaycasts = false;
             cg.interactable = false;

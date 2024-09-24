@@ -34,6 +34,11 @@ namespace RDCT.Menu.SettingsMenu
             inputSensitivity.text = Math.Round(sliderSensitivity.value, 2).ToString();
         }
 
+        public void LoadSettings(SOSettings settings)
+        {
+            stats.lookSpeed = (float)Math.Round(settings.sensitivity, 2);
+        }
+
         // String.Format("{0:#0.0}", sliderSensitivity.value);
         public void SetSensitivity()
         {

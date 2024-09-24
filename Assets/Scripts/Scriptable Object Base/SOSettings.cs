@@ -15,14 +15,14 @@ public class SOSettings : ScriptableObject
     public int resolution;
 
     [Header("Audio Settings")]
-    [Range(-60f, 5f)]
-    [Tooltip("Master volume setting. -60: Dead silent, 5: Very Loud")]
+    [Range(-60f, 0f)]
+    [Tooltip("Master volume setting. -60: Dead silent, 0: Very Loud")]
     public float masterVolume;
-    [Range(-60f, 5f)]
-    [Tooltip("BGM volume setting. -60: Dead silent, 5: Very Loud")]
+    [Range(-60f, 0f)]
+    [Tooltip("BGM volume setting. -60: Dead silent, 0: Very Loud")] 
     public float BGMVolume;
-    [Range(-60f, 5f)]
-    [Tooltip("SFX and Voice Line volume setting. -60: Dead silent, 5: Very Loud")]
+    [Range(-60f, 0f)]
+    [Tooltip("SFX and Voice Line volume setting. -60: Dead silent, 0: Very Loud")]
     public float SFXVolume;
     [Tooltip("Input device setting, used to pick input sound device. Value is the name of the device, if empty then it's using the default defice")]
     public string inputDevice;
@@ -32,9 +32,11 @@ public class SOSettings : ScriptableObject
     public int quality;
     [Tooltip("Anti aliasing setting. 0: disabled, 1: 2x MSAA, 2: 4x MSAA, 3: 8x MSAA, 4: 16x MSAA")]
     public int antiAliasing;
-    [Tooltip("SSO setting. (WIP)")]
+    [Tooltip("VSync setting. 0: disabled, 1: enabled")]
+    public int VSync;
+    [Tooltip("SSO setting. 0: disabled, 1: enabled")]
     public int SSO;
-    [Tooltip("Post processing setting. (WIP)")]
+    [Tooltip("Post processing setting. 0: disabled, 1: enabled")]
     public int postProcessing;
     [Tooltip("Max FPS setting. 0: Uncapped, 1: 30, 2: 60, 3: 90, 4: 120, 5: 144, 6: 165, 7: 240")]
     public int maxFPS;

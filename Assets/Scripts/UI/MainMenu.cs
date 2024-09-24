@@ -32,11 +32,11 @@ namespace RDCT.Menu
 
         public static void ExitGame()
         {
-            CloseMainMenu();
+            //CloseMainMenu();
 
-            ExitMenu.Instance.OpenWindow();
+            //ExitMenu.Instance.OpenWindow();
 
-            //Application.Quit();
+            Application.Quit();
         }
 
         private static void CloseMainMenu()
@@ -55,7 +55,7 @@ namespace RDCT.Menu
 
         public void ChangeScene(string scene)
         {
-            SceneManager.LoadScene(scene);
+            LoadingScreen.LoadScene(scene);
         }
     }
 }

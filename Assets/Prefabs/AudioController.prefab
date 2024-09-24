@@ -70,49 +70,56 @@ MonoBehaviour:
   - AudioName: ButtonClick
     AudioClip: {fileID: 8300000, guid: 974177bc014023643a57d2b74a917dad, type: 3}
     AudioPitch: 1
-    AudioVolume: 0
+    AudioVolume: 1
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
   - AudioName: Flashlight
     AudioClip: {fileID: 8300000, guid: 4f3fddc02d13925489eb607fa40b8cfb, type: 3}
     AudioPitch: 1
-    AudioVolume: 0
+    AudioVolume: 1
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
   - AudioName: Heartbeat
     AudioClip: {fileID: 8300000, guid: 3646f0172a5b2ed4bafe4d7278e6b988, type: 3}
     AudioPitch: 1
-    AudioVolume: 0
+    AudioVolume: 1
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
   - AudioName: LightOutEntity
     AudioClip: {fileID: 8300000, guid: bf0ea7dccb2b9e440932d45752fd4e7f, type: 3}
     AudioPitch: 1
-    AudioVolume: 0
+    AudioVolume: 1
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
   - AudioName: LightOut
     AudioClip: {fileID: 8300000, guid: 3ab0c4418735891488ae394f1210e9ee, type: 3}
     AudioPitch: 1
-    AudioVolume: 0
+    AudioVolume: 1
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
   - AudioName: ButtonHover
     AudioClip: {fileID: 8300000, guid: bcebe04d130bf074e9da797134afbd34, type: 3}
     AudioPitch: 1
-    AudioVolume: 0
+    AudioVolume: 1
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
   - AudioName: Walk
     AudioClip: {fileID: 8300000, guid: 53fe0ef3cc764884489df21aeb533b44, type: 3}
     AudioPitch: 1
-    AudioVolume: 0
+    AudioVolume: 1
+    Looping: 0
+    PlayOnAwake: 0
+    Source: {fileID: 0}
+  - AudioName: Valve
+    AudioClip: {fileID: 8300000, guid: 415d27229f46d0c42946cb79f1b7273f, type: 3}
+    AudioPitch: 1
+    AudioVolume: 0.5
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}

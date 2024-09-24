@@ -74,9 +74,9 @@ public class InventoryItem : MonoBehaviour
         gameObject.SetActive(tf);
     }
     
-    public void UseItem()
+    public virtual void UseItem()
     {
-
+        Debug.Log("Oke");
     }
 
 }

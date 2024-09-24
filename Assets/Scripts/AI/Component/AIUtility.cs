@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using static Unity.VisualScripting.Member;
 using Random = UnityEngine.Random;
@@ -46,13 +47,15 @@ public class AIUtility : AIBase
     bool voiceDetected = false;
     List<Vector3> lastSeenPos = new List<Vector3>(); // Player Last Seen Transform Position
     bool reacting;
+    PlayerState pState;
+    PlayerMotor motor;
     //GameObject[] clones;
 
 
     // Sound Var
     [Header("Sound Setting")]
     private float playerSound;
-    [Range(1,10)] public int soundTreshold;
+    [Range(30,50)] public int soundTreshold;
 
 
     #region Time Refrences
@@ -84,6 +87,9 @@ public class AIUtility : AIBase
         animator = GetComponent<Animator>();
         timeElapsed = 0;
         reacting = true;
+        motor = mPlayer.GetComponent<PlayerMotor>();
+        pState = motor.getPlayerstate();
+        StartCoroutine(randomVoice());
         if (AIPois.Count == 0)
         {
             GameObject[] pois;
@@ -104,14 +110,27 @@ public class AIUtility : AIBase
 
     public override void onSelected()
     {
+        pState = motor.playerState;
+        if (pState == PlayerState.InMinigames)
+        {
+            playerInMinigames();
+            return;
+        }
         isSelected = true;
         base.onSelected();
-        playerSound = audioLoudnessDetector.GetLoudnessFromMicrophone() * 100;
+        playerSound = audioLoudnessDetector.GetLoudnessFromMicrophone() * 1000;
         findSmartAction();
         perceptionEvaluation();
         animationControllers();
         if (aSource.isPlaying == false)
             isMakingSound = false;
+        //Debug.Log(playerSound);
+    }
+
+    void playerInMinigames()
+    {
+        agent.acceleration = 0;
+        agent.SetDestination(transform.position);
     }
 
     void animationControllers()
@@ -233,7 +252,7 @@ public class AIUtility : AIBase
             AiRoam();
             Debug.Log("Roam");
         }
-        Debug.Log(agent.velocity.magnitude);
+        //Debug.Log(agent.velocity.magnitude);
         state = aiStateEvaluation();
     }
 
@@ -255,8 +274,51 @@ public class AIUtility : AIBase
     private void Chase()
     {
         agent.SetDestination(mPlayer.transform.position);
+        JumpscareHandler();
         chase = true;
         roam = false;
+    }
+
+    IEnumerator randomVoice()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(4);
+            playRandomSound();
+        }
+    }
+
+    void playRandomSound()
+    {
+        switch (state)
+        {
+            case AIState.IDLE:
+                {
+                    AudioClip clip = aiStats.AIIdleSound[Random.Range(0, aiStats.AIIdleSound.Length - 1)];
+                    aSource.PlayOneShot(clip);
+                    break;
+                }
+            case AIState.ROAM:
+                {
+                    AudioClip clip = aiStats.AIIdleSound[Random.Range(0, aiStats.AIIdleSound.Length - 1)];
+                    aSource.PlayOneShot(clip);
+                    break;
+                }
+            case AIState.INVESTIGATE:
+                {
+                    AudioClip clip = aiStats.AIIdleSound[Random.Range(0, aiStats.AIIdleSound.Length - 1)];
+                    aSource.PlayOneShot(clip);
+                    break;
+                }
+            case AIState.CHASE:
+                {
+                    break;
+                }
+            case AIState.HUNT:
+                {
+                    break;
+                }
+        }
     }
 
     private void AiRoam()
@@ -513,5 +575,26 @@ public class AIUtility : AIBase
         if (agent.velocity.magnitude <= 0) return AIState.IDLE;
 
         return AIState.IDLE;
+    }
+
+    void JumpscareHandler()
+    {
+        var dist = Vector3.Distance(transform.position, mPlayer.transform.position);
+
+        if (dist <= 1.5f)
+        {
+            agent.acceleration = 0;
+            agent.SetDestination(transform.position);
+            animator.SetTrigger("Jumpscare");
+            aSource.PlayOneShot(aiStats.JumpscareSound);
+            Debug.Log("Jump Scare");
+        }
+    }
+
+    public void ChangeAfterJumpScare(string namascene)
+    {
+        SceneManager.LoadScene(namascene);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

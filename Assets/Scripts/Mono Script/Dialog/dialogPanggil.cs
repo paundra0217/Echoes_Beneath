@@ -7,14 +7,18 @@ public class dialogPanggil : MonoBehaviour
     public dialogBase dialogBase;
 
     public string dialogTitle;
+    public bool called;
 
     private void Start()
     {
         dialogBase = GameObject.FindAnyObjectByType<dialogBase>();
+        called = false;
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
+        if (called) return;
         dialogBase.panggilDialog(dialogTitle);
+        called = true;
     }
 }

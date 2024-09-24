@@ -6,11 +6,12 @@ namespace RDCT.Menu
 {
     public class PauseMenu : MonoBehaviour, IMenuWindow
     {
+        [SerializeField] private GameObject blurObject;
         private static CanvasGroup cg;
         private static bool currentlyPaused;
         private static bool isInPauseMenu;
 
-        private void Awake()
+        private void Start()
         {
             cg = GetComponent<CanvasGroup>();
         }
@@ -62,12 +63,15 @@ namespace RDCT.Menu
 
         public void QuitGame()
         {
-            SceneManager.LoadScene("MainMenu 1");
+            Time.timeScale = 1.0f;
+            LoadingScreen.LoadScene("MainMenu 1");
         }
 
         public void CloseWindow()
         {
             isInPauseMenu = false;
+
+            blurObject.SetActive(false);
 
             cg.alpha = 0f;
             cg.blocksRaycasts = false;
@@ -78,9 +82,16 @@ namespace RDCT.Menu
         {
             isInPauseMenu = true;
 
+            blurObject.SetActive(true);
+
             cg.alpha = 1f;
             cg.blocksRaycasts = true;
             cg.interactable = true;
+        }
+
+        public bool isInPause()
+        {
+            return isInPauseMenu;
         }
     }
 }

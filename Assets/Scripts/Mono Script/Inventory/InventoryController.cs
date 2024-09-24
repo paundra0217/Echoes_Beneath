@@ -176,7 +176,11 @@ public class InventoryController : MonoBehaviour
         Vector2Int tileGridPosition = GetTileGridPosition();
         if (selectedItem == null)
         {
-            PickUpItem(tileGridPosition);
+            UseItem(tileGridPosition);
+        }
+        else
+        {
+            return;
         }
     }
 
@@ -202,6 +206,11 @@ public class InventoryController : MonoBehaviour
         {
             rectTransform = selectedItem.GetComponent<RectTransform>();
         }
+    }
+
+    private void UseItem(Vector2Int tileGridPosition)
+    {
+        SelectedItemGrid.UseItem(tileGridPosition.x, tileGridPosition.y);
     }
 
     //Buat Input Place Item

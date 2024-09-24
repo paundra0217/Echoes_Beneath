@@ -6,8 +6,8 @@ using UnityEngine;
 public class ItemGrid : MonoBehaviour
 {
     //ukuran dari gambar (hitung manual)
-    public const float TileSizeWidth = 22;
-    public const float TileSizeHeight = 22;
+    public const float TileSizeWidth = 115.3792f;
+    public const float TileSizeHeight = 117.5f;
 
     RectTransform rectTransform;
 
@@ -30,7 +30,7 @@ public class ItemGrid : MonoBehaviour
     Vector2 positionOnGrid = new Vector2();
     Vector2Int tileGridPosition = new Vector2Int();
 
-    #region PickUp && Drop
+    #region PickUp && Drop && use
 
     //Buat PickUp
     public InventoryItem PickUpItem(int x, int y)
@@ -46,6 +46,22 @@ public class ItemGrid : MonoBehaviour
         //balikin Item yang mau di PickUp
         return ToReturn;
     }
+
+    public void UseItem(int x, int y)
+    {
+        //cek item di Array
+        InventoryItem ToUse = InventoryItemSlot[x, y];
+
+        //kalo gk ada langsung return
+        if (ToUse == null) return;
+
+        ToUse.UseItem();
+        BersihinGridBuatUseItem(ToUse);
+
+
+
+    }
+
 
     //Buat Ngecek bisa ditaro ato kaga
     public bool PlaceItem(InventoryItem inventoryItem, int PosX, int PosY, ref InventoryItem overlapItem)
@@ -247,6 +263,32 @@ public class ItemGrid : MonoBehaviour
 
         return item;
     }
+
+    //Function buat bersihinGrid buat UseItem
+    private void BersihinGridBuatUseItem(InventoryItem item)
+    {
+        if (item.count > 1)
+        {
+            item.count--;
+            item.RefreshCount();
+            return;
+        }
+
+        for (int ix = 0; ix < item.WIDTH; ix++)
+        {
+            for (int jy = 0; jy < item.HEIGHT; jy++)
+            {
+
+                InventoryItemSlot[item.OnGridPositionX + ix, item.OnGridPositionY + jy] = null;
+
+            }
+        }
+        InventoryItems.Remove(item);
+        Destroy(item.gameObject);
+
+        return;
+    }
+
     //Ngecek Posisi apakah keluar dari Grid
     bool CheckPosition(int posX, int posY)
     {
