@@ -43,6 +43,7 @@ public class GeneralAIStats : ScriptableObject
     public AudioClip[] AIHuntSound;
     public AudioClip[] AIReaction;
     public AudioClip[] AIWalkSound;
+    public AudioClip JumpscareSound;
 
     public float getAgentDetectionRange()
     {
