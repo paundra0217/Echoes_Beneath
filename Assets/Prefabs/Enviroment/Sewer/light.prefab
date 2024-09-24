@@ -110,13 +110,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788863403247512582}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.27448782, y: 0.46189535, z: -0.43085957, w: 0.7250305}
-  m_LocalPosition: {x: -0.0020800019, y: 0, z: -0.0000000035762786}
+  m_LocalRotation: {x: 0.117056236, y: 0.19658715, z: -0.11871444, w: 0.9662082}
+  m_LocalPosition: {x: -0.0020798321, y: 1.4901161e-10, z: 0.0000001719594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7289974437190396714}
-  m_LocalEulerAnglesHint: {x: 0, y: 65, z: -61.443}
+  m_LocalEulerAnglesHint: {x: 15.836, y: 21.468, z: -10.989}
 --- !u!108 &7934539422756083657
 Light:
   m_ObjectHideFlags: 0
@@ -129,9 +129,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 20.40672
+  m_Intensity: 9.764224
   m_Range: 10
-  m_SpotAngle: 120
+  m_SpotAngle: 118.7
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
@@ -191,10 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 64.109604
+  m_Intensity: 30.07445
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
-  m_InnerSpotPercent: 20
+  m_InnerSpotPercent: 36.7
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
@@ -361,13 +361,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7243979990566789785}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1954998, y: 0.32897782, z: -0.4719782, w: 0.79422295}
-  m_LocalPosition: {x: -0.002079994, y: 0, z: 0}
+  m_LocalRotation: {x: -0.023463279, y: 0.17435125, z: -0.55553585, w: 0.81266916}
+  m_LocalPosition: {x: -0.0020798256, y: 1.4901161e-10, z: 0.00000016525388}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7289974437190396714}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.95, y: 18.256, z: -67.272}
 --- !u!108 &5051924848792004882
 Light:
   m_ObjectHideFlags: 0
@@ -380,7 +380,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.5634218, b: 0.41429335, a: 1}
-  m_Intensity: 87.03377
+  m_Intensity: 222.87535
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 68.35616
+  m_Intensity: 175.0459
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
