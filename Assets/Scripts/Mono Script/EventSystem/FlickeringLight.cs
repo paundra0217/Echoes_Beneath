@@ -10,7 +10,7 @@ public class FLight : MonoBehaviour
     private Material[] objectmats;
     [SerializeField] float minTime,maxTime;
     private Color originEmis;
-    [SerializeField] private bool startFlicker;
+    private bool startFlicker;
     // Start is called before the first frame update
     void Start()
     {
