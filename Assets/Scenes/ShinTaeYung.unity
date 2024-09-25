@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4773.646, g: 3104.5288, b: 2291.5369, a: 1}
+  m_IndirectSpecularColor: {r: 4773.065, g: 3102.7427, b: 2287.9143, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,104 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &9363384
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 433.322
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.88
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 794.674
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000030908616
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5973aed0afb3594bb93267fc78799be, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45232be88413a3d4e922c7d4ab23f17d, type: 2}
+    - target: {fileID: 919132149155446097, guid: 98fd7cc70f818274ebd727bd79f18546,
+        type: 3}
+      propertyPath: m_Name
+      value: PintuPipeRoom
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98fd7cc70f818274ebd727bd79f18546, type: 3}
 --- !u!1001 &9559897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18172,11 +18270,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4718040791104185828, guid: 0e6106ce4c402fa49839f6c87d3f0715,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a3f1cf8480dd13243952d3a6f2fd0b8e, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e6106ce4c402fa49839f6c87d3f0715,
         type: 3}
       propertyPath: m_Name
       value: PipeRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 0e6106ce4c402fa49839f6c87d3f0715,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f216e59af8d8fc141be85d3cd3c1888e, type: 2}
+    - target: {fileID: 7743480366618694112, guid: 0e6106ce4c402fa49839f6c87d3f0715,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 339bd89d63d9dff4e8a0734d436eaea0, type: 2}
+    - target: {fileID: 8089062573417005363, guid: 0e6106ce4c402fa49839f6c87d3f0715,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b2f981d7af3b687428e52a83ad9472c1, type: 2}
+    - target: {fileID: 8089062573417005363, guid: 0e6106ce4c402fa49839f6c87d3f0715,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd7d7acf745df3a4c8141c243b937997, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29024,3 +29147,4 @@ SceneRoots:
   - {fileID: 835914296}
   - {fileID: 814434735}
   - {fileID: 1319280623}
+  - {fileID: 9363384}
