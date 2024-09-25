@@ -6,7 +6,8 @@ using UnityEngine;
 public class OpenDoor : InteractObject
 {
     public GameObject door;
-    
+    public ItemGrid grids;
+
     private Animator DoorAnimator;
 
     private bool canOpen;
@@ -14,6 +15,8 @@ public class OpenDoor : InteractObject
     [SerializeField] private MeshRenderer changedMaterial;
 
     public List<Material> green;
+
+    public ItemSize keycards;
 
     private void Start()
     {
@@ -23,7 +26,13 @@ public class OpenDoor : InteractObject
 
     public override void Interaction()
     {
-        changedMaterial.SetMaterials(green);
-        DoorAnimator.SetTrigger("buka");
+        foreach (InventoryItem items in grids.InventoryItems)
+        {
+            if (items.itemSize == keycards)
+            {
+                changedMaterial.SetMaterials(green);
+                DoorAnimator.SetTrigger("buka");
+            }
+        }
     }
 }
