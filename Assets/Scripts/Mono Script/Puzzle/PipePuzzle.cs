@@ -44,7 +44,7 @@ public class PipePuzzle : PuzzleBase
     {
         audioSource.enabled = true;
         Point += 1;
-        Valve.transform.Rotate(0f, -100f * Time.deltaTime, 0f);
+        Valve.transform.Rotate(0f, -140f * Time.deltaTime, 0f);
         if(Point >= PointToWin)
         {
             FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().PipeObjectiveClear();
