@@ -45,4 +45,15 @@ public class ObjectiveManager : MonoBehaviour
         }
     }
 
+    public bool CheckObjective()
+    {
+        if(ObjectivePipe && ObjectiveGenerator)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
