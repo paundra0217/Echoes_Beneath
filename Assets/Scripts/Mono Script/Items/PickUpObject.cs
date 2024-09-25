@@ -53,7 +53,7 @@ public class PickUpObject : InteractObject
         itemGrid.InventoryItems.Add(oke);
 
         //itemGrid.gameObject.SetActive(false);
-        //Destroy(gameObject);
+        Destroy(gameObject);
 
     }
 
