@@ -14,8 +14,8 @@ public class ObjectiveManager : MonoBehaviour
     private int GeneratorPoint = 0;
     private int PipePoint = 0;
 
-    bool ObjectivePipe = false;
-    bool ObjectiveGenerator = false;
+    private bool ObjectivePipe = false;
+    private bool ObjectiveGenerator = false;
 
     private void Start()
     {

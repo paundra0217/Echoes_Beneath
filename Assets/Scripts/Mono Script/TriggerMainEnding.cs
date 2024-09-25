@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TriggerMainEnding : MonoBehaviour
+public class TriggerMainEnding : InteractObject
 {
 
-    private void OnTriggerEnter(Collider other)
+    public override void Interaction()
     {
-        Debug.Log("ini gk tau");
-        if (other.gameObject.GetComponent<PlayerMotor>())
+        if (FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().CheckObjective() == false)
         {
-            if (FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().CheckObjective())
-            {
-                SceneManager.LoadScene("EscapeEnding");
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-            Debug.Log("ini player");
+            Debug.Log("Richard monyet");
+            return;
         }
+
+        SceneManager.LoadScene("EscapeEnding");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
+
 }
