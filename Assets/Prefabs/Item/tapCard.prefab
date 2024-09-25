@@ -110,10 +110,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}
+  grids: {fileID: 0}
   changedMaterial: {fileID: 6218823548946775856}
   green:
   - {fileID: 2100000, guid: 7c7604a1763435d4986d1f6af9b29fc0, type: 2}
   - {fileID: 2100000, guid: e193c034fcd3436478be294a446a052f, type: 2}
+  keycards: {fileID: 11400000, guid: d79ef7fe74fe062458bda84d852c74d8, type: 2}
 --- !u!65 &3412190380848361509
 BoxCollider:
   m_ObjectHideFlags: 0
