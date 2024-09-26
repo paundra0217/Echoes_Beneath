@@ -265,7 +265,7 @@ public class ItemGrid : MonoBehaviour
     }
 
     //Function buat bersihinGrid buat UseItem
-    private void BersihinGridBuatUseItem(InventoryItem item)
+    public void BersihinGridBuatUseItem(InventoryItem item)
     {
         if (item.count > 1)
         {

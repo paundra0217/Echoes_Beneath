@@ -215,6 +215,7 @@ public class PlayerMotor : MonoBehaviour
         {
             FlashLight();
         }
+        
         interactObject.Interaction();
 
     }
