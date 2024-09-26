@@ -115,16 +115,22 @@ MonoBehaviour:
     dialogGUI: {fileID: 0}
   - title: 2.5
     speaker: 
-    dialogs: What the... A tunnel behind the pipes? How did I miss this before?
+    dialogs: "What is this? I don\u2019t remember this tunnel being here."
     canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.6
     speaker: 
-    dialogs: This tunnel looks ancient. I wonder how long it's been hidden down here.
+    dialogs: An electrical lock. It looks like I need power to open it
     canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.7
     speaker: 
     dialogs: "An old note\u2026"
+    canBeCalled: 1
+    dialogGUI: {fileID: 0}
+  - title: 2.8
+    speaker: 
+    dialogs: "The fuse box. It\u2019s missing 3 fuses from the socket, why did it
+      go missing in the first place?"
     canBeCalled: 1
     dialogGUI: {fileID: 0}

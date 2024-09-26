@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FuseBox : InteractObject
 {
+    [SerializeField] private int Jumlahfuse;
     public ItemGrid grids;
     public ItemSize fuse;
     public Animator pintu;
@@ -14,11 +15,19 @@ public class FuseBox : InteractObject
         {
             if (items.itemSize == fuse)
             {
-                pintu.SetTrigger("Kebuka");
-                Nyala = true;
+                Jumlahfuse++;               
+                //pintu.SetTrigger("Kebuka");
+                //Nyala = true;
                 grids.BersihinGridBuatUseItem(items);
             }
         }
+
+        if(Jumlahfuse == 3)
+        {
+            pintu.SetTrigger("Kebuka");
+            Nyala = true;
+        }
+
     }
 
     public bool GetFuse()
