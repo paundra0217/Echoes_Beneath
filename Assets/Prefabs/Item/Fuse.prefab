@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 27.052982
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.11779954
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -16.328
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
@@ -77,6 +77,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fuse
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8fb7f2e4b638f2c4e8409162ea322830,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5312004344620782188, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
