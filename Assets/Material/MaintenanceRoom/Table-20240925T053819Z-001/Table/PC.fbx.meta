@@ -3,7 +3,22 @@ guid: e7493e9fb093e684b9a33ac99c955093
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Casing
+    second: {fileID: 2100000, guid: 5122ae4940b52db4b8928e741577f2f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keybrd
+    second: {fileID: 2100000, guid: a63ebe28f9f3b9b4fa31ff83643c7f9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mntr
+    second: {fileID: 2100000, guid: 4e75dd25cfaee444dac65b6f4a95fcde, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
