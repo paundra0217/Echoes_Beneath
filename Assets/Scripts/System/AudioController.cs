@@ -92,7 +92,7 @@ namespace RDCT.Audio
             {
                 if (_instance == null)
                 {
-                    Debug.LogError("Audio Controller is null");
+                    Debug.LogWarning("Audio Controller is null");
                 }
 
                 return _instance;

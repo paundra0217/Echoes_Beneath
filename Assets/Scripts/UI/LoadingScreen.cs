@@ -22,7 +22,8 @@ public class LoadingScreen : MonoBehaviour, IMenuWindow
     {
         _instance.OpenWindow();
 
-        AudioController.Instance.StopBGM();
+        if (AudioController.Instance)
+            AudioController.Instance.StopBGM();
 
         _instance.StartCoroutine(_instance.LoadLevelAsync(sceneName));
     }
