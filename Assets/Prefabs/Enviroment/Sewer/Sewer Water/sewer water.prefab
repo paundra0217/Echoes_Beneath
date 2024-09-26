@@ -84,8 +84,8 @@ MonoBehaviour:
   smoothnessFadeDistance: 100
   refractionColor: {r: 0, g: 0.14150941, b: 0.14150941, a: 1}
   maxRefractionDistance: 0.6
-  absorptionDistance: 5
-  scatteringColor: {r: 0.03844785, g: 0.25849688, b: 0.3018868, a: 1}
+  absorptionDistance: 2.5
+  scatteringColor: {r: 0.02745098, g: 0.12156863, b: 0.14117648, a: 1}
   ambientScattering: 0.6
   heightScattering: 0.918
   displacementScattering: 0.286

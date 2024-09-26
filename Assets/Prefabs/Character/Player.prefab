@@ -390,7 +390,7 @@ Transform:
   m_GameObject: {fileID: 3707657710701939504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000000018626451, y: 1.5539999, z: 0.13900758}
+  m_LocalPosition: {x: -0.00003536843, y: 1.5540004, z: 0.13899237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -928,16 +928,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5831871784829877439}
     m_Modifications:
-    - target: {fileID: 143052980177353120, guid: beaa4188174bba64d92379bcc6f032d5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 143052980177353120, guid: beaa4188174bba64d92379bcc6f032d5,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 203.24156
-      objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -991,7 +981,32 @@ PrefabInstance:
     - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_Intensity
-      value: 150
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: useVolumetric
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_ShadowNearPlane
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_InnerSpotPercent
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_CustomSpotLightShadowCone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096939244114781812, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
@@ -1041,7 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5042490916f1044c88c14423c3e801c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battery: 1e+10
+  battery: 700
   drainRate: 1
   rechargeAmount: 10
 --- !u!1001 &3551966030358360617

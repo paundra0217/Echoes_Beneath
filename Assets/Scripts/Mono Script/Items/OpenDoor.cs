@@ -10,7 +10,7 @@ public class OpenDoor : InteractObject
 
     private Animator DoorAnimator;
 
-    private bool canOpen;
+    private bool canOpen = true;
 
     [SerializeField] private MeshRenderer changedMaterial;
 
@@ -28,10 +28,11 @@ public class OpenDoor : InteractObject
     {
         foreach (InventoryItem items in grids.InventoryItems)
         {
-            if (items.itemSize == keycards)
+            if (items.itemSize == keycards && canOpen)
             {
                 changedMaterial.SetMaterials(green);
                 DoorAnimator.SetTrigger("buka");
+                canOpen = false;
             }
         }
     }
