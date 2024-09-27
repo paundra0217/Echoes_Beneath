@@ -174,11 +174,13 @@ public class PlayerMotor : MonoBehaviour
     public void Crouch()
     {
         //Toggle Crouch
+        audioSource.volume = 0.5f;
         IsCrouch = !IsCrouch;
         anim.SetBool("Isjongkok", IsCrouch);
         if (IsCrouch)
         {
             //controller.height = crouchHeight;
+            audioSource.volume = 0.4f;
             controller.center = new Vector3(0,-0.25f,0);
             controller.height = 1.5f;
             _cam[1].gameObject.SetActive(true);
@@ -188,6 +190,7 @@ public class PlayerMotor : MonoBehaviour
         }
         else
         {
+            audioSource.volume = 1f;
             _cam[1].gameObject.SetActive(false);
             _cam[0].gameObject.SetActive(true);
             CameraIndex = 0;
