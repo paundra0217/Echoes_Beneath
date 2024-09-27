@@ -7,6 +7,7 @@ public class PickUpObject : InteractObject
 {
     [SerializeField] InventoryItem ItemObject;
     [SerializeField] ItemSize itemData;
+    [SerializeField] int Index = -1;
     ItemGrid itemGrid;
     Image img;
     GameObject canvass;
@@ -53,6 +54,10 @@ public class PickUpObject : InteractObject
         itemGrid.InventoryItems.Add(oke);
 
         //itemGrid.gameObject.SetActive(false);
+        if(Index != -1)
+        {
+            FindAnyObjectByType<dialogBase>().GetComponent<dialogBase>().panggilDialog(Index.ToString());
+        }
         Destroy(gameObject);
 
     }
