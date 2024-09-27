@@ -6614,6 +6614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58361d63117bd4c46917f68ab5a134eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuBlur: {fileID: 0}
   windows:
   - windowButton: {fileID: 1087234561838205002}
     windowObject: {fileID: 4393373813606564460}
@@ -6629,6 +6630,12 @@ MonoBehaviour:
     windowCategory: 3
   defaultSettings: {fileID: 11400000, guid: 2fc798b78474da94bba3eb029967237a, type: 2}
   userSettings: {fileID: 11400000, guid: 4cb83458bc8681b4fb87c01a98ad4da7, type: 2}
+  functionAfterClose:
+    m_PersistentCalls:
+      m_Calls: []
+  fucntionAfterSave:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4325055314932596517
 GameObject:
   m_ObjectHideFlags: 0
@@ -6724,6 +6731,7 @@ MonoBehaviour:
   sliderMaster: {fileID: 7883856545191673685}
   sliderBGM: {fileID: 2797368650781353861}
   sliderSFX: {fileID: 3313124440028449744}
+  inputDeviceDropdown: {fileID: 0}
 --- !u!1 &4393373813606564460
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,7 +6821,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ca2b362146d614695796e15612b5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 0}
   sliderSensitivity: {fileID: 460146987660885898}
+  inputSensitivity: {fileID: 0}
 --- !u!1 &4396539799554681746
 GameObject:
   m_ObjectHideFlags: 0
@@ -12420,6 +12430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quality: {fileID: 8028522213704926439}
   antiAliasing: {fileID: 5382654657768571883}
+  VSync: {fileID: 0}
   SSO: {fileID: 576343930319434991}
   postProcessing: {fileID: 5219487213199179127}
   maxFPS: {fileID: 8050447346134154874}

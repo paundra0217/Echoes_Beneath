@@ -928,6 +928,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5831871784829877439}
     m_Modifications:
+    - target: {fileID: 143052980177353120, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1056,7 +1061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5042490916f1044c88c14423c3e801c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battery: 700
+  battery: 5000
   drainRate: 1
   rechargeAmount: 10
 --- !u!1001 &3551966030358360617

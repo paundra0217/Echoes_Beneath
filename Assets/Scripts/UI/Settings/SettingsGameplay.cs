@@ -64,7 +64,13 @@ namespace RDCT.Menu.SettingsMenu
         public void SaveSettings(SOSettings settings)
         {
             settings.sensitivity = (float)Math.Round(sliderSensitivity.value, 2);
-        }
+
+            if (GameObject.FindGameObjectWithTag("Player"))
+            {
+                stats.lookSpeed = settings.sensitivity;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMotor>().PlayerSetUp();
+            }
+        }   
     }
 
 }
