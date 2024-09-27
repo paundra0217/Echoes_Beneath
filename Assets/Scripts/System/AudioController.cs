@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -84,6 +85,9 @@ namespace RDCT.Audio
         private SceneBGMObject[] sceneBGMList;
 
         private AudioSource currentBGMPlaying;
+
+        private Queue<AudioSource> currentSFXesPlaying = new Queue<AudioSource>();
+        private Queue<AudioSource> currentVCLsPlaying = new Queue<AudioSource>();
 
         private static AudioController _instance;
         public static AudioController Instance
@@ -238,9 +242,9 @@ namespace RDCT.Audio
             if (audio == null)
                 return;
 
-            StopBGM();
-
-            currentBGMPlaying = audio.Source;
+            // Kenapa ada ini??S
+            // StopBGM();
+            // currentBGMPlaying = audio.Source;
 
             if (audio.Looping) 
                 audio.Source.Play();
@@ -307,6 +311,44 @@ namespace RDCT.Audio
             foreach (var a in audioVCL)
             {
                 a.Source.Stop();
+            }
+        }
+
+        public void PauseAllSound()
+        {
+            currentBGMPlaying.Pause();
+
+            foreach (var a in audioSFX)
+            {
+                if (a.Source.isPlaying)
+                {
+                    a.Source.Pause();
+                    currentSFXesPlaying.Append(a.Source);
+                }
+            }
+
+            foreach (var a in audioVCL)
+            {
+                if (a.Source.isPlaying)
+                {
+                    a.Source.Pause();
+                    currentVCLsPlaying.Append(a.Source);
+                }
+            }
+        }
+
+        public void ResumeAllSound()
+        {
+            currentBGMPlaying.UnPause();
+
+            while (currentSFXesPlaying.Count > 0)
+            {
+                currentSFXesPlaying.Dequeue().UnPause();
+            }
+
+            while (currentVCLsPlaying.Count > 0)
+            {
+                currentVCLsPlaying.Dequeue().UnPause();
             }
         }
     }

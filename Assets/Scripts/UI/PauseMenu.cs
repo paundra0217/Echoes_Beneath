@@ -1,6 +1,7 @@
 using UnityEngine;
 using RDCT.Menu.SettingsMenu;
 using UnityEngine.SceneManagement;
+using RDCT.Audio;
 
 namespace RDCT.Menu
 {
@@ -10,6 +11,7 @@ namespace RDCT.Menu
         private static CanvasGroup cg;
         private static bool currentlyPaused;
         private static bool isInPauseMenu;
+        private static bool isCursorCurrentlyVisible;
 
         private void Start()
         {
@@ -31,17 +33,26 @@ namespace RDCT.Menu
             if (currentlyPaused)
             {
                 currentlyPaused = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+
+                if (!isCursorCurrentlyVisible)
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                }
+
                 Time.timeScale = 1.0f;
+
                 CloseWindow();
             }
             else
             {
                 currentlyPaused = true;
+
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+
                 Time.timeScale = 0f;
+
                 OpenWindow();
             }
         }
@@ -72,6 +83,7 @@ namespace RDCT.Menu
             isInPauseMenu = false;
 
             blurObject.SetActive(false);
+            AudioController.Instance.ResumeAllSound();
 
             cg.alpha = 0f;
             cg.blocksRaycasts = false;
@@ -81,8 +93,10 @@ namespace RDCT.Menu
         public void OpenWindow()
         {
             isInPauseMenu = true;
+            isCursorCurrentlyVisible = Cursor.visible;
 
             blurObject.SetActive(true);
+            AudioController.Instance.PauseAllSound();
 
             cg.alpha = 1f;
             cg.blocksRaycasts = true;
