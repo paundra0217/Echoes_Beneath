@@ -264,16 +264,12 @@ public class PlayerMotor : MonoBehaviour
     // Player Open/Close Journal
     public void Journal()
     {
-        IsOpenJournal = !IsOpenJournal;
+        //IsOpenJournal = !IsOpenJournal;
+        if(JournalUI.activeSelf == true)
+        {
+            JournalUI.SetActive(false);
+        }
 
-        if (IsOpenJournal)
-        {
-            Debug.Log("Buka Journal");
-        }
-        else
-        {
-            Debug.Log("Tutup Journal");
-        }
     }
     //Player
     #endregion

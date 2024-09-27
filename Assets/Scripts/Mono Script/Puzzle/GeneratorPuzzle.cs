@@ -17,6 +17,10 @@ public class GeneratorPuzzle : PuzzleBase
     [SerializeField] private Lever Lever4;
     [SerializeField] private GeneratorButton generatorButton;
 
+    [SerializeField] MeshRenderer gantiwarna;
+
+    [SerializeField] private Material hijau;
+
     GeneratorPuzzle generatorPuzzle;
     [SerializeField] BoxCollider GeneratorCollider;
     public PuzzleInteract puzzleInteract;
@@ -62,6 +66,7 @@ public class GeneratorPuzzle : PuzzleBase
         Debug.Log("menang");
         Generatorenabled(false);
         puzzleInteract.minigameskelar = true;
+        gantiwarna.material = hijau;
         CancelMinigames();
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FuseBox : InteractObject
 {
+    [SerializeField] private GameObject[] Fuses; 
     [SerializeField] private int Jumlahfuse;
     public ItemGrid grids;
     public ItemSize fuse;
@@ -15,6 +16,7 @@ public class FuseBox : InteractObject
         {
             if (items.itemSize == fuse)
             {
+                Fuses[Jumlahfuse].SetActive(true);
                 Jumlahfuse++;               
                 //pintu.SetTrigger("Kebuka");
                 //Nyala = true;
