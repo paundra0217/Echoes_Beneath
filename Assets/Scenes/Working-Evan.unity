@@ -1053,6 +1053,218 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84a074803eabbbc48af1c8100fe2cb08, type: 3}
+--- !u!1001 &1856800198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690237483753520929, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[8].title
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[9].title
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[10].title
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[11].title
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[12].title
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[13].title
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[14].title
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[15].title
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[16].title
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[17].title
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[18].title
+      value: 2.10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[4].dialogs
+      value: There is something on the table
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[8].dialogs
+      value: This keycard should be used to unlock Area 02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[9].dialogs
+      value: Alright, here we go... Area 02. This place gives me the creeps already.
+        Better get this over with.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[10].dialogs
+      value: I've been warned about this area. Still, I need to check those pipes.
+        Let's hope nothing breaks while I'm here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[11].dialogs
+      value: The pipes here are a mess. Looks like they've been neglected for years.
+        Better start fixing these before it gets worse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[12].dialogs
+      value: "There's odd markings on the pipes\u2026 odd"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[13].dialogs
+      value: "What is this? I don\u2019t remember this tunnel being here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[14].dialogs
+      value: An electrical lock. It looks like I need power to open it
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[15].dialogs
+      value: "An old note\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[16].dialogs
+      value: "The fuse box. It\u2019s missing 3 fuses from the socket, why did it
+        go missing in the first place?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[17].dialogs
+      value: This door is locked, I need to find the other way to open it
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[18].dialogs
+      value: This door is locked, I need to find the other way to open it
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[15].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[16].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305528609334417590, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: dialogs.Array.data[18].canBeCalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944000350086331193, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa,
+        type: 3}
+      propertyPath: m_Name
+      value: === Dialog manager ===
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ae7c6926ca19b444a8b3d4f8b7391fa, type: 3}
 --- !u!1 &1904083742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4253658418964552278, guid: d89aa166ee81c9544bdb8da779e71914,
@@ -2828,3 +3040,4 @@ SceneRoots:
   - {fileID: 2029386230}
   - {fileID: 410613500}
   - {fileID: 3577091901034701510}
+  - {fileID: 1856800198}

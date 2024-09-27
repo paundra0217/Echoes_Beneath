@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TriggerMainEnding : MonoBehaviour
 {
     dialogBase dialogBase;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<PlayerMotor>())
@@ -19,7 +20,8 @@ public class TriggerMainEnding : MonoBehaviour
             }
             else
             {
-                dialogBase.panggilDialog("2.6");
+                FindAnyObjectByType<dialogBase>().GetComponent<dialogBase>().panggilDialog("2.6");
+                //dialogBase.panggilDialog("2.6");
             }
 
         }
