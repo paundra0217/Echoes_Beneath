@@ -71,7 +71,12 @@ MonoBehaviour:
     dialogGUI: {fileID: 0}
   - title: 5
     speaker: 
-    dialogs: The clipboard and flashlight should be on the table
+    dialogs: There is something on the table
+    canBeCalled: 1
+    dialogGUI: {fileID: 0}
+  - title: 5.1
+    speaker: 
+    dialogs: This keycard should be used to unlock Area 02
     canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 6
@@ -132,5 +137,10 @@ MonoBehaviour:
     speaker: 
     dialogs: "The fuse box. It\u2019s missing 3 fuses from the socket, why did it
       go missing in the first place?"
+    canBeCalled: 1
+    dialogGUI: {fileID: 0}
+  - title: 2.9
+    speaker: 
+    dialogs: This door is locked, I need to find the other way to open it
     canBeCalled: 1
     dialogGUI: {fileID: 0}
