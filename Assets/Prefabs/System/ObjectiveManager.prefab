@@ -44,3 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fc2ab70d923584d94a0d13511e58f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BanyakPipetxt: {fileID: 0}
+  BanyakGeneratortxt: {fileID: 0}
+  PipePointxt: {fileID: 0}
+  GeneratorPointtxt: {fileID: 0}
+  BanyakPipe: 1
+  BanyakGenerator: 2
