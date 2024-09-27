@@ -130,6 +130,20 @@ MonoBehaviour:
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
+  - AudioName: CardTap
+    AudioClip: {fileID: 8300000, guid: 9a51ef80591d07f4eb63e823368cbe55, type: 3}
+    AudioPitch: 1
+    AudioVolume: 0.5
+    Looping: 0
+    PlayOnAwake: 0
+    Source: {fileID: 0}
+  - AudioName: MetalDoor
+    AudioClip: {fileID: 8300000, guid: 594c5f618c549d044b17803f706eaf0c, type: 3}
+    AudioPitch: 1
+    AudioVolume: 0.5
+    Looping: 0
+    PlayOnAwake: 0
+    Source: {fileID: 0}
   audioVCL: []
   sceneBGMList:
   - sceneName: MainMenu 1
