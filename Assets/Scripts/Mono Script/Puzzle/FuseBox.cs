@@ -12,23 +12,31 @@ public class FuseBox : InteractObject
     private bool Nyala = false;
     public override void Interaction()
     {
+        if(Nyala == true)
+        {
+            return;
+        }
+
         foreach (InventoryItem items in grids.InventoryItems)
         {
             if (items.itemSize == fuse)
             {
                 Fuses[Jumlahfuse].SetActive(true);
-                Jumlahfuse++;               
+                Jumlahfuse++;
                 //pintu.SetTrigger("Kebuka");
                 //Nyala = true;
                 grids.BersihinGridBuatUseItem(items);
             }
+
+            if (Jumlahfuse == 3)
+            {
+                FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().FuseObjectiveClear();
+                pintu.SetTrigger("Kebuka");
+                Nyala = true;
+            }
         }
 
-        if(Jumlahfuse == 3)
-        {
-            pintu.SetTrigger("Kebuka");
-            Nyala = true;
-        }
+
 
     }
 

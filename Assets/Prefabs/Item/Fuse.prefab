@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.052982
+      value: 26.282
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11779954
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.328
+      value: -14.503719
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
@@ -109,7 +109,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8fb7f2e4b638f2c4e8409162ea322830,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6464659329300491490}
+      addedObject: {fileID: 2856196555584048691}
   m_SourcePrefab: {fileID: 100100000, guid: 8fb7f2e4b638f2c4e8409162ea322830, type: 3}
 --- !u!1 &9175159439200525022 stripped
 GameObject:
@@ -138,7 +138,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2699623, y: 1.0319653, z: 0.28674483}
   m_Center: {x: 0.029255867, y: 0.4337087, z: 0.010041833}
---- !u!114 &6464659329300491490
+--- !u!114 &2856196555584048691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,9 +147,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9175159439200525022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95432ebb00913964fa4ef28d89040002, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f5e99623634fe841b9e41669efc98d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ItemObject: {fileID: 4147131877483572295, guid: da484e5691a56c34e9114dc71150fdf3,
     type: 3}
   itemData: {fileID: 11400000, guid: 2d7480b05d112804fb0a7dc80e57213e, type: 2}
+  Index: -1
