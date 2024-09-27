@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using RDCT.Audio;
 
 public class OpenDoor : InteractObject
 {
@@ -26,6 +27,7 @@ public class OpenDoor : InteractObject
 
     public override void Interaction()
     {
+        AudioController.Instance.PlaySFX("CardTap");
         foreach (InventoryItem items in grids.InventoryItems)
         {
             if (items.itemSize == keycards && canOpen)
@@ -33,6 +35,7 @@ public class OpenDoor : InteractObject
                 changedMaterial.SetMaterials(green);
                 DoorAnimator.SetTrigger("buka");
                 canOpen = false;
+                AudioController.Instance.PlaySFX("MetalDoor");
             }
         }
     }
