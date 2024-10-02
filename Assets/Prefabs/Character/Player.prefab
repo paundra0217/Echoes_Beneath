@@ -985,21 +985,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
-      propertyPath: m_Intensity
-      value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
-        type: 3}
-      propertyPath: useVolumetric
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
-        type: 3}
-      propertyPath: m_ShadowNearPlane
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
-        type: 3}
       propertyPath: m_InnerSpotPercent
       value: 80
       objectReference: {fileID: 0}
@@ -1007,11 +992,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CustomSpotLightShadowCone
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
-        type: 3}
-      propertyPath: m_ShadowResolution.m_UseOverride
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096939244114781812, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
