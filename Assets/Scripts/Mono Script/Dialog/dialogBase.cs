@@ -15,9 +15,20 @@ public class dialogBase : MonoBehaviour
 
     private void Awake()
     {
+        _instance = this;
         foreach (var dialog in dialogs)
         {
             dialog.dialogGUI = textBox;
+        }
+    }
+
+    public static dialogBase _instance;
+
+    public static dialogBase Instance
+    {
+        get
+        {
+            return _instance;
         }
     }
 

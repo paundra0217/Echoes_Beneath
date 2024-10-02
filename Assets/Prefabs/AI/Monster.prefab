@@ -1526,7 +1526,7 @@ MonoBehaviour:
   detectedTarget: []
   smartActions: []
   audioLoudnessDetector: {fileID: 0}
-  soundTreshold: 0
+  soundTreshold: 40
 --- !u!114 &2478614143868738752
 MonoBehaviour:
   m_ObjectHideFlags: 0

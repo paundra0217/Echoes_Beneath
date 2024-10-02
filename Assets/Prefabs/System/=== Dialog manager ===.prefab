@@ -89,10 +89,9 @@ MonoBehaviour:
     dialogs: I should start exploring the area to familiarize myself
     canBeCalled: 1
     dialogGUI: {fileID: 0}
-  - title: 8
+  - title: 9
     speaker: 
-    dialogs: After 25 I never get used to the ire feeling when I'm in this labyrinth/sewer
-      system
+    dialogs: This keycard should be used to unlock Area 02
     canBeCalled: 1
     dialogGUI: {fileID: 0}
   - title: 2.1
@@ -142,5 +141,15 @@ MonoBehaviour:
   - title: 2.9
     speaker: 
     dialogs: This door is locked, I need to find the other way to open it
+    canBeCalled: 1
+    dialogGUI: {fileID: 0}
+  - title: Ga bisa Tap Card
+    speaker: 
+    dialogs: I need Keycard For This
+    canBeCalled: 1
+    dialogGUI: {fileID: 0}
+  - title: ga ada apa apa
+    speaker: 
+    dialogs: I Dont have anything with me
     canBeCalled: 1
     dialogGUI: {fileID: 0}

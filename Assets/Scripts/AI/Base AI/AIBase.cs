@@ -35,7 +35,7 @@ public class AIBase : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(.05f);
+            yield return new WaitForEndOfFrame();
             onSelected();
         }
     }

@@ -27,16 +27,28 @@ public class OpenDoor : InteractObject
 
     public override void Interaction()
     {
-        AudioController.Instance.PlaySFX("CardTap");
         foreach (InventoryItem items in grids.InventoryItems)
         {
             if (items.itemSize == keycards && canOpen)
             {
+                AudioController.Instance.PlaySFX("CardTap");
                 changedMaterial.SetMaterials(green);
                 DoorAnimator.SetTrigger("buka");
                 canOpen = false;
+                var dialMan = FindAnyObjectByType(typeof(dialogBase));
+                var DialComp = dialMan.GetComponent<dialogBase>();
+                DialComp.panggilDialog("2.1");
                 AudioController.Instance.PlaySFX("MetalDoor");
             }
+            else
+            {
+                dialogBase.Instance.panggilDialog("Ga bisa Tap Card");
+            }
+        }
+
+        if (grids.InventoryItems.Count < 1)
+        {
+            dialogBase.Instance.panggilDialog("ga ada apa apa");
         }
     }
 }
