@@ -30,7 +30,7 @@ public class FuseBox : InteractObject
 
             if (Jumlahfuse == 3)
             {
-                FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().FuseObjectiveClear();
+                FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("FuseBox");
                 pintu.SetTrigger("Kebuka");
                 Nyala = true;
             }
