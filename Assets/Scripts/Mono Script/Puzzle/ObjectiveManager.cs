@@ -25,7 +25,11 @@ public class ObjectiveManager : MonoBehaviour
                 objective.ObjectiveClearMinigames();
                 if (objective.ObjectiveClear)
                 {
-                    
+                    Index++;
+                    objectives[Index].ObjectiveTxt = objective.ObjectiveTxt;
+                    objectives[Index].ObjectiveTxt.text = "- " + objectives[Index].ObjectiveTask + " (" + objectives[Index].BanyakPoin.ToString() + "/" + objectives[Index].BanyakObjective.ToString() + ")";
+
+                    objective.ObjectiveTxt = null;
                 }
                 return;
             }
