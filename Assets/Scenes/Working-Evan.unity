@@ -3100,6 +3100,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7192590708687501029, guid: 5fee6da5df131944eacdbf28d6757c78,
+        type: 3}
+      propertyPath: PointToWin
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8398684123144281045, guid: 5fee6da5df131944eacdbf28d6757c78,
         type: 3}
       propertyPath: m_LocalPosition.x
