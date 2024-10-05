@@ -242,7 +242,7 @@ namespace RDCT.Audio
             if (audio == null)
                 return;
 
-            // Kenapa ada ini??S
+            // Kenapa ada ini??
             // StopBGM();
             // currentBGMPlaying = audio.Source;
 

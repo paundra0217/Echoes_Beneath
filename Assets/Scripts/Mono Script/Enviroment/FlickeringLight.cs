@@ -29,8 +29,8 @@ public class FlickeringLight : MonoBehaviour
 
     private void SwitchOn()
     {
-        spotLight.intensity = 100f;
-        spotLight.range = 8f;
+        spotLight.intensity = 500f;
+        spotLight.range = 10f;
         areaLight.intensity = 100f;
         areaLight.range = 8f;
     }
