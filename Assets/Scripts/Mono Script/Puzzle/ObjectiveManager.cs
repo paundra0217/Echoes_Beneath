@@ -5,90 +5,68 @@ using TMPro;
 
 public class ObjectiveManager : MonoBehaviour
 {
-    [SerializeField] TMP_Text BanyakPipetxt;
-    [SerializeField] TMP_Text BanyakGeneratortxt;
-    [SerializeField] TMP_Text BanyakFusetxt;
-    [SerializeField] TMP_Text BanyakFusePicktxt;
-
-    [SerializeField] TMP_Text PipePointxt;
-    [SerializeField] TMP_Text GeneratorPointtxt;
-    [SerializeField] TMP_Text FusePointtxt;
-    [SerializeField] TMP_Text PickFusePointtxt;
-
-    [SerializeField] int BanyakPipe;
-    [SerializeField] int BanyakGenerator;
-    [SerializeField] int BanyakFuse = 1;
-    [SerializeField] int BanyakFusePick = 3;
-
-    private int GeneratorPoint = 0;
-    private int PipePoint = 0;
-    private int FusePoint = 0;
-    private int PickFusePoint = 0;
-
-
-    private bool ObjectivePipe = false;
-    private bool ObjectiveGenerator = false;
-    private bool ObjectiveFuse;
-
-    private void Start()
+    [SerializeField] Objective[] objectives;
+    [SerializeField] private int Index = 4;
+    private void Awake()
     {
-        BanyakGeneratortxt.text = BanyakGenerator.ToString();
-        BanyakPipetxt.text = BanyakPipe.ToString();
-        PipePointxt.text = PipePoint.ToString();
-        GeneratorPointtxt.text = GeneratorPoint.ToString();
-
-        BanyakFusePicktxt.text = BanyakFusePick.ToString();
-
-        BanyakFusetxt.text = BanyakFuse.ToString();
-
+        foreach(Objective objective in objectives)
+        {
+            objective.SetText();
+        }
 
     }
 
-    public void PipeObjectiveClear()
+    public void ObjectiveClear(string ObjectiveName)
     {
-        PipePoint++;
-        PipePointxt.text = PipePoint.ToString();
-        if (PipePoint >= BanyakPipe)
+        foreach(Objective objective in objectives)
         {
-            ObjectivePipe = true;
+            if(ObjectiveName == objective.Title)
+            {
+                objective.ObjectiveClearMinigames();
+                if (objective.ObjectiveClear)
+                {
+                    Index++;
+                    objectives[Index].ObjectiveTxt = objective.ObjectiveTxt;
+                    objectives[Index].ObjectiveTxt.text = "- " + objectives[Index].ObjectiveTask + " (" + objectives[Index].BanyakPoin.ToString() + "/" + objectives[Index].BanyakObjective.ToString() + ")";
+
+                    objective.ObjectiveTxt = null;
+                }
+                return;
+            }
         }
     }
 
-    public void GeneratorObjectiveClear()
+
+}
+
+[System.Serializable]
+public class Objective
+{
+    public string Title;
+    public string ObjectiveTask;
+    public TMP_Text ObjectiveTxt;
+
+    public int BanyakObjective;
+    public int BanyakPoin;
+    public bool ObjectiveClear;
+
+    public void SetText()
     {
-        GeneratorPoint++;
-        GeneratorPointtxt.text = GeneratorPoint.ToString();
-        if (GeneratorPoint >= BanyakGenerator)
+        //biar inget bikin kaya gini string temp = "waaiwjdawi" + BanyakObjective.ToString() + " / " + 
+        ObjectiveTxt.text = "- " + ObjectiveTask + " (" + BanyakPoin.ToString() + "/" + BanyakObjective.ToString() + ")";
+        //BanyakObjectivetxt.text = BanyakObjective.ToString();
+        //BanyakPointtxt.text = BanyakPoin.ToString();
+    }
+
+    public void ObjectiveClearMinigames()
+    {
+        BanyakPoin++;
+        ObjectiveTxt.text = ObjectiveTask + " (" + BanyakPoin.ToString() + "/" + BanyakObjective.ToString() + ")";
+
+        if (BanyakPoin == BanyakObjective)
         {
-            ObjectiveGenerator = true;
+            ObjectiveClear = true;
         }
     }
 
-    public void FuseObjectiveClear()
-    {
-        FusePoint++;
-        FusePointtxt.text = FusePoint.ToString();
-        if (FusePoint >= BanyakFuse)
-        {
-            ObjectiveFuse = true;
-        }
-    }
-
-    public void PickFuseObjectiveClear()
-    {
-        PickFusePoint++;
-        PickFusePointtxt.text = PickFusePoint.ToString();
-    }
-
-    public bool CheckObjective()
-    {
-        if(ObjectivePipe && ObjectiveGenerator && ObjectiveFuse)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
 }

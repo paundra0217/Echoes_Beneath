@@ -19,7 +19,7 @@ public class GeneratorButton : MonoBehaviour
         if (generatorPuzzle.Benar)
         {
             generatorPuzzle.WinGames();
-            FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().GeneratorObjectiveClear();
+            FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Generator");
         }
         else
         {
