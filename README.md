@@ -1,4 +1,4 @@
-Hello! Thank you for downloading our game :D
+Hello! Thank you for downloading our game
 =====================================================================================
 Description:
 
