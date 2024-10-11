@@ -82,8 +82,11 @@ namespace RDCT.Menu
         {
             isInPauseMenu = false;
 
-            blurObject.SetActive(false);
-            AudioController.Instance.ResumeAllSound();
+            if (!currentlyPaused)
+            {
+                AudioController.Instance.ResumeAllSound();
+                blurObject.SetActive(false);
+            }
 
             cg.alpha = 0f;
             cg.blocksRaycasts = false;
