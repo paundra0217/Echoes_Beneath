@@ -144,6 +144,13 @@ MonoBehaviour:
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
+  - AudioName: FaintNoise
+    AudioClip: {fileID: 8300000, guid: 0af736f13e96b53408bda32f5e7bbacd, type: 3}
+    AudioPitch: 1
+    AudioVolume: 0.5
+    Looping: 0
+    PlayOnAwake: 0
+    Source: {fileID: 0}
   audioVCL: []
   sceneBGMList:
   - sceneName: MainMenu 1
