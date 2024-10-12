@@ -216,7 +216,7 @@ public class PlayerMotor : MonoBehaviour
         InteractObject interactObject = hit.collider.gameObject.GetComponent<InteractObject>();
         if (ToggleFlashLight)
         {
-            FlashLight();
+            //FlashLight();
         }
         
         interactObject.Interaction();

@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Keycard : MonoBehaviour
+public class Keycard : PickUpObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Interaction()
     {
-        
+        FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Keycard");
+        base.Interaction();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

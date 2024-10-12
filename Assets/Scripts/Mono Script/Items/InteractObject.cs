@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractObject : MonoBehaviour
 {
+
     public virtual void Interaction()
     {
         Debug.Log("gk tau");

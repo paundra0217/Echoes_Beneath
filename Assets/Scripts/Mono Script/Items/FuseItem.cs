@@ -7,7 +7,7 @@ public class FuseItem : PickUpObject
 {
     public override void Interaction()
     {
-        FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Fuse");
+        //FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Fuse");
         base.Interaction();
     }
 }
