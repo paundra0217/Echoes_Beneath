@@ -47,7 +47,7 @@ public class PipePuzzle : PuzzleBase
         Valve.transform.Rotate(0f, -140f * Time.deltaTime, 0f);
         if(Point >= PointToWin)
         {
-            FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().PipeObjectiveClear();
+            FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Pipe");
             puzzleInteract.enabled = false;
             puzzleInteract.minigameskelar = true;
             CancelMinigames();

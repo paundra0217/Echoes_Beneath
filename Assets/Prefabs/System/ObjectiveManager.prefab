@@ -44,9 +44,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fc2ab70d923584d94a0d13511e58f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BanyakPipetxt: {fileID: 0}
-  BanyakGeneratortxt: {fileID: 0}
-  PipePointxt: {fileID: 0}
-  GeneratorPointtxt: {fileID: 0}
-  BanyakPipe: 1
-  BanyakGenerator: 2
+  objectives:
+  - Title: Pipe
+    ObjectiveTask: Repair the Pipe
+    ObjectiveTxt: {fileID: 0}
+    BanyakObjective: 1
+    BanyakPoin: 0
+    ObjectiveClear: 0
+  - Title: Generator
+    ObjectiveTask: Repair the Generator
+    ObjectiveTxt: {fileID: 0}
+    BanyakObjective: 2
+    BanyakPoin: 0
+    ObjectiveClear: 0
+  - Title: Fuse
+    ObjectiveTask: Collect the Fuses
+    ObjectiveTxt: {fileID: 0}
+    BanyakObjective: 3
+    BanyakPoin: 0
+    ObjectiveClear: 0
+  - Title: FuseBox
+    ObjectiveTask: Fix the Fusebox
+    ObjectiveTxt: {fileID: 0}
+    BanyakObjective: 1
+    BanyakPoin: 0
+    ObjectiveClear: 0
+  Index: 4
