@@ -7,7 +7,7 @@ public class ObjectiveManager : MonoBehaviour
 {
     [SerializeField] List<ObjectiveTask> objectivesTask;
     [SerializeField] private int Index = 0;
-
+    [SerializeField] Animator animator;
     private void Start()
     {
         foreach (Objective objective in objectivesTask[Index].objectives)
@@ -72,6 +72,16 @@ public class ObjectiveManager : MonoBehaviour
             //objective.ObjectiveTxt.gameObject.SetActive(true);
             objective.SetText();
         }
+
+        if(Index >= 4)
+        {
+            animator.SetTrigger("Kebuka");
+        }
+    }
+
+    public int GetIndex()
+    {
+        return Index;
     }
 }
 
@@ -120,5 +130,7 @@ public class Objective
             ObjectiveClear = true;
         }
     }
+
+
 
 }

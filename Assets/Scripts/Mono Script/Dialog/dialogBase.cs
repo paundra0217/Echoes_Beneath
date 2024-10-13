@@ -87,6 +87,7 @@ public class dialogBase : MonoBehaviour
             {
                 //hentikanDialog(ini);
                 textBox.gameObject.SetActive(false);
+                OnDialogEndEvent();
                 break;
             }
         }
@@ -107,6 +108,12 @@ public class dialogBase : MonoBehaviour
             titledialogs.canBeCalled = true;
         }
     }
+
+    public virtual void OnDialogEndEvent()
+    {
+        Debug.Log("Kelar");
+    }
+
 }
 
 [Serializable]

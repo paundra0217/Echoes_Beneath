@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RDCT.Audio;
 
 public class FuseBox : InteractObject
 {
@@ -30,8 +31,9 @@ public class FuseBox : InteractObject
             }
 
             if (Jumlahfuse == 3)
-            {                
+            {
                 //pintu.SetTrigger("Kebuka");
+                AudioController.Instance.PlaySFX("Fusebox");
                 Nyala = true;
             }
         }
