@@ -49,17 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b10d691d35347469bbd26b48b572df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscenes:
-  - cutsceneName: CutsceneSample
-    cutsceneClip: {fileID: 32900000, guid: a552e52fdb893504082722a015c07015, type: 3}
-    eventsBeforeThisCutsceneStart:
-      m_PersistentCalls:
-        m_Calls: []
-    eventsAfterThisCutsceneEnds:
-      m_PersistentCalls:
-        m_Calls: []
-    onlyPlayOnce: 0
-    isAlreadyPlayed: 0
+  cutscenes: []
   videoRenderTexture: {fileID: 8400000, guid: c55f7bdebc3e14e44bab7e110ac92017, type: 2}
   generalEventsBeforeCutsceneStart:
     m_PersistentCalls:
