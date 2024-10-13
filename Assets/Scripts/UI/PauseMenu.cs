@@ -13,6 +13,13 @@ namespace RDCT.Menu
         private static bool isInPauseMenu;
         private static bool isCursorCurrentlyVisible;
 
+        private static PauseMenu _instance;
+
+        private void Awake()
+        {
+            _instance = this;
+        }
+
         private void Start()
         {
             cg = GetComponent<CanvasGroup>();
@@ -26,7 +33,7 @@ namespace RDCT.Menu
             }
         }
 
-        private void TogglePauseMenu()
+        public static void TogglePauseMenu()
         {
             if (!isInPauseMenu && currentlyPaused) return;
 
@@ -42,7 +49,7 @@ namespace RDCT.Menu
 
                 Time.timeScale = 1.0f;
 
-                CloseWindow();
+                _instance.CloseWindow();
             }
             else
             {
@@ -53,7 +60,7 @@ namespace RDCT.Menu
 
                 Time.timeScale = 0f;
 
-                OpenWindow();
+                _instance.OpenWindow();
             }
         }
 
