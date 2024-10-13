@@ -144,6 +144,20 @@ MonoBehaviour:
     Looping: 0
     PlayOnAwake: 0
     Source: {fileID: 0}
+  - AudioName: Fusebox
+    AudioClip: {fileID: 8300000, guid: 3e331fc5f407d8747bb83304b76bc570, type: 3}
+    AudioPitch: 1
+    AudioVolume: 0.5
+    Looping: 0
+    PlayOnAwake: 0
+    Source: {fileID: 0}
+  - AudioName: PlayerWalk
+    AudioClip: {fileID: 8300000, guid: d7939b02b47283041b3214fdcee31310, type: 3}
+    AudioPitch: 1
+    AudioVolume: 0.5
+    Looping: 0
+    PlayOnAwake: 0
+    Source: {fileID: 0}
   audioVCL: []
   sceneBGMList:
   - sceneName: MainMenu 1
