@@ -5,39 +5,93 @@ using TMPro;
 
 public class ObjectiveManager : MonoBehaviour
 {
-    [SerializeField] Objective[] objectives;
-    [SerializeField] private int Index = 4;
-    private void Awake()
+    [SerializeField] List<ObjectiveTask> objectivesTask;
+    [SerializeField] private int Index = 0;
+    [SerializeField] Animator animator;
+    private void Start()
     {
-        foreach(Objective objective in objectives)
+        foreach (Objective objective in objectivesTask[Index].objectives)
         {
+            if (objective.EventTrigger) continue;
+            //objective.ObjectiveTxt.gameObject.SetActive(true);
             objective.SetText();
         }
-
     }
 
     public void ObjectiveClear(string ObjectiveName)
     {
-        foreach(Objective objective in objectives)
+        bool CekKelar = true;
+
+        foreach(Objective objective in objectivesTask[Index].objectives)
         {
             if(ObjectiveName == objective.Title)
             {
                 objective.ObjectiveClearMinigames();
-                if (objective.ObjectiveClear)
-                {
-                    Index++;
-                    objectives[Index].ObjectiveTxt = objective.ObjectiveTxt;
-                    objectives[Index].ObjectiveTxt.text = "- " + objectives[Index].ObjectiveTask + " (" + objectives[Index].BanyakPoin.ToString() + "/" + objectives[Index].BanyakObjective.ToString() + ")";
-
-                    objective.ObjectiveTxt = null;
-                }
-                return;
+                //return;
             }
+
+        }
+
+        foreach (Objective objective in objectivesTask[Index].objectives)
+        {
+            if (!objective.ObjectiveClear) CekKelar = false;
+        }
+
+        Debug.Log(CekKelar);
+        if (CekKelar)
+        {
+            ObjectiveSectionClear();
+
         }
     }
 
+    public void TriggerObjective(string ObjectiveName)
+    {
+        foreach (Objective objective in objectivesTask[Index].objectives)
+        {          
+            if (ObjectiveName == objective.Title)
+            {
+                objective.SetText();
+            }
 
+        }
+    }
+
+    private void ObjectiveSectionClear()
+    {
+        foreach (Objective objective in objectivesTask[Index].objectives)
+        {
+            objective.ObjectiveTxt.gameObject.SetActive(false);
+        }
+
+        Index++;
+
+        foreach (Objective objective in objectivesTask[Index].objectives)
+        {
+            if(objective.EventTrigger) continue;
+            //objective.ObjectiveTxt.gameObject.SetActive(true);
+            objective.SetText();
+        }
+
+        if(Index >= 4)
+        {
+            animator.SetTrigger("Kebuka");
+        }
+    }
+
+    public int GetIndex()
+    {
+        return Index;
+    }
 }
+
+[System.Serializable]
+public class ObjectiveTask
+{
+    public Objective[] objectives;
+    public bool Kelar;
+}
+
 
 [System.Serializable]
 public class Objective
@@ -49,24 +103,34 @@ public class Objective
     public int BanyakObjective;
     public int BanyakPoin;
     public bool ObjectiveClear;
+    public bool EventTrigger;
 
     public void SetText()
     {
-        //biar inget bikin kaya gini string temp = "waaiwjdawi" + BanyakObjective.ToString() + " / " + 
-        ObjectiveTxt.text = "- " + ObjectiveTask + " (" + BanyakPoin.ToString() + "/" + BanyakObjective.ToString() + ")";
-        //BanyakObjectivetxt.text = BanyakObjective.ToString();
-        //BanyakPointtxt.text = BanyakPoin.ToString();
+
+        if(BanyakObjective == 0)
+        {
+
+            ObjectiveTxt.text = ObjectiveTask;
+        }
+        else
+        {
+          ObjectiveTxt.text = "- " + ObjectiveTask + " (" + BanyakPoin.ToString() + "/" + BanyakObjective.ToString() + ")";
+        }
+        ObjectiveTxt.gameObject.SetActive(true);
     }
 
     public void ObjectiveClearMinigames()
     {
         BanyakPoin++;
-        ObjectiveTxt.text = ObjectiveTask + " (" + BanyakPoin.ToString() + "/" + BanyakObjective.ToString() + ")";
+        ObjectiveTxt.text = "- "+ ObjectiveTask + " (" + BanyakPoin.ToString() + "/" + BanyakObjective.ToString() + ")";
 
         if (BanyakPoin == BanyakObjective)
         {
             ObjectiveClear = true;
         }
     }
+
+
 
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RDCT.Audio;
 
 public class FuseBox : InteractObject
 {
@@ -21,6 +22,7 @@ public class FuseBox : InteractObject
         {
             if (items.itemSize == fuse)
             {
+                FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Fuse");
                 Fuses[Jumlahfuse].SetActive(true);
                 Jumlahfuse++;
                 //pintu.SetTrigger("Kebuka");
@@ -30,8 +32,8 @@ public class FuseBox : InteractObject
 
             if (Jumlahfuse == 3)
             {
-                FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("FuseBox");
-                pintu.SetTrigger("Kebuka");
+                //pintu.SetTrigger("Kebuka");
+                AudioController.Instance.PlaySFX("Fusebox");
                 Nyala = true;
             }
         }

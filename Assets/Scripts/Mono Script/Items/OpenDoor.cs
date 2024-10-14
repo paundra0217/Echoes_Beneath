@@ -42,12 +42,14 @@ public class OpenDoor : InteractObject
             }
             else
             {
+                FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().TriggerObjective("Keycard");
                 dialogBase.Instance.panggilDialog("Ga bisa Tap Card");
             }
         }
 
         if (grids.InventoryItems.Count < 1)
         {
+            FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().TriggerObjective("Keycard");
             dialogBase.Instance.panggilDialog("ga ada apa apa");
         }
     }

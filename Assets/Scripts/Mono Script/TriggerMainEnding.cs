@@ -12,7 +12,7 @@ public class TriggerMainEnding : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerMotor>())
         {
 
-            if (FindAnyObjectByType<FuseBox>().GetComponent<FuseBox>().GetFuse())
+            if (FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().GetIndex() >= 4)
             {
                 SceneManager.LoadScene("EscapeEnding");
                 Cursor.lockState = CursorLockMode.None;

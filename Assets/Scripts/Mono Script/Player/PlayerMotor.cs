@@ -28,6 +28,7 @@ public class PlayerMotor : MonoBehaviour
 
     //other
     public bool CanRun = false;
+    private bool JournalPicked = false;
     private bool IsGrounded;
     private bool IsOpenInventory = false;
     private bool IsOpenJournal = false;
@@ -41,7 +42,6 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] LayerMask layerMask;
     [SerializeField] float JarakInteract;
     [SerializeField] GameObject Interacttxt;
-    AudioSource audioSource;
     private Image invUI;
     ItemGrid inventoryGrid;
     Vector3 movedirection = Vector3.zero;
@@ -66,7 +66,6 @@ public class PlayerMotor : MonoBehaviour
         inventoryGrid = InventoryUI.GetComponent<ItemGrid>();
         invUI = InventoryUI.GetComponent<Image>();
         invUI.enabled = false;
-        audioSource = GetComponent<AudioSource>();
         //InventoryUI.SetActive(false);
     }
 
@@ -116,8 +115,8 @@ public class PlayerMotor : MonoBehaviour
         movedirection.x = input.x;
         movedirection.z = input.y;
         float move = Mathf.Max(Mathf.Abs(movedirection.x), Mathf.Abs(movedirection.z));
-        if (move > 0) audioSource.enabled = true;
-        else audioSource.enabled = false;
+        //if (move > 0) audioSource.enabled = true;
+        //else audioSource.enabled = false;
         anim.SetFloat("movement", move);
 
         controller.Move(transform.TransformDirection(movedirection) * walkSpeed * Time.deltaTime);
@@ -174,13 +173,11 @@ public class PlayerMotor : MonoBehaviour
     public void Crouch()
     {
         //Toggle Crouch
-        audioSource.volume = 0.5f;
         IsCrouch = !IsCrouch;
         anim.SetBool("Isjongkok", IsCrouch);
         if (IsCrouch)
         {
             //controller.height = crouchHeight;
-            audioSource.volume = 0.4f;
             controller.center = new Vector3(0,-0.25f,0);
             controller.height = 1.5f;
             _cam[1].gameObject.SetActive(true);
@@ -190,7 +187,7 @@ public class PlayerMotor : MonoBehaviour
         }
         else
         {
-            audioSource.volume = 1f;
+
             _cam[1].gameObject.SetActive(false);
             _cam[0].gameObject.SetActive(true);
             CameraIndex = 0;
@@ -216,7 +213,7 @@ public class PlayerMotor : MonoBehaviour
         InteractObject interactObject = hit.collider.gameObject.GetComponent<InteractObject>();
         if (ToggleFlashLight)
         {
-            FlashLight();
+            //FlashLight();
         }
         
         interactObject.Interaction();
@@ -267,6 +264,8 @@ public class PlayerMotor : MonoBehaviour
     // Player Open/Close Journal
     public void Journal()
     {
+        if (!JournalPicked) return;
+        Debug.Log("BukaJournal");
         //IsOpenJournal = !IsOpenJournal;
         if(JournalUI.activeSelf == true)
         {
@@ -313,6 +312,13 @@ public class PlayerMotor : MonoBehaviour
     #endregion
 
     #region
+
+
+    public void JournalPick()
+    {
+        JournalPicked = true;
+    }
+
     public void ChangeState(bool oke)
     {
         if (oke)

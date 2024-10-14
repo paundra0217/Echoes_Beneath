@@ -44,29 +44,115 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fc2ab70d923584d94a0d13511e58f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectives:
-  - Title: Pipe
-    ObjectiveTask: Repair the Pipe
-    ObjectiveTxt: {fileID: 0}
-    BanyakObjective: 1
-    BanyakPoin: 0
-    ObjectiveClear: 0
-  - Title: Generator
-    ObjectiveTask: Repair the Generator
-    ObjectiveTxt: {fileID: 0}
-    BanyakObjective: 2
-    BanyakPoin: 0
-    ObjectiveClear: 0
-  - Title: Fuse
-    ObjectiveTask: Collect the Fuses
-    ObjectiveTxt: {fileID: 0}
-    BanyakObjective: 3
-    BanyakPoin: 0
-    ObjectiveClear: 0
-  - Title: FuseBox
-    ObjectiveTask: Fix the Fusebox
-    ObjectiveTxt: {fileID: 0}
-    BanyakObjective: 1
-    BanyakPoin: 0
-    ObjectiveClear: 0
-  Index: 4
+  objectivesTask:
+  - objectives:
+    - Title: GoToMaintenance
+      ObjectiveTask: Head To The Maintenance Room
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    Kelar: 0
+  - objectives:
+    - Title: InspectTask
+      ObjectiveTask: Inspect Task List
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    Kelar: 0
+  - objectives:
+    - Title: Generator
+      ObjectiveTask: 'Turn On The Power/Generator '
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    - Title: Pipe
+      ObjectiveTask: Repair Suddenly Broken Pipe
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    - Title: EnterArea2
+      ObjectiveTask: Enter Area 2
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    - Title: Keycard
+      ObjectiveTask: Take A Keycard
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 1
+    Kelar: 0
+  - objectives:
+    - Title: Journal
+      ObjectiveTask: Pick Up Journal
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    - Title: Pipe
+      ObjectiveTask: Repair Broken Pipes
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    - Title: Generator
+      ObjectiveTask: Turn On The Second Generator
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    - Title: Fuse
+      ObjectiveTask: Insert Fuse into Fuse Box
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 3
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    Kelar: 0
+  - objectives:
+    - Title: JournalPage
+      ObjectiveTask: Find missing pages of journal
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 4
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    - Title: Pipe
+      ObjectiveTask: Or
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 0
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    - Title: Escape
+      ObjectiveTask: 'Get Out of The Sewer '
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    Kelar: 0
+  - objectives:
+    - Title: Escape
+      ObjectiveTask: ESCAPE
+      ObjectiveTxt: {fileID: 0}
+      BanyakObjective: 1
+      BanyakPoin: 0
+      ObjectiveClear: 0
+      EventTrigger: 0
+    Kelar: 0
+  Index: 0

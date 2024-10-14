@@ -10,7 +10,8 @@ public class Note : InteractObject
     public override void Interaction()
     {
         FindAnyObjectByType<NoteManager>().GetComponent<NoteManager>().SetGambar(Index);
-        nota.SetActive(true);       
+        nota.SetActive(true);
     }
+
 
 }
