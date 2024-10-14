@@ -23,15 +23,7 @@ public class TimedRandomSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isActive)
-        {
-            if(_timerActive) _currentTime = _currentTime + Time.deltaTime;
-            TimeSpan _actualTime = TimeSpan.FromSeconds(_currentTime);
-            Debug.Log(_timer);
-            Debug.Log(_actualTime.Seconds);
-            if(_actualTime.Seconds == _timer)
-            CallSFX();
-        }
+        if(isActive)    Timer();
     }
         
 
@@ -77,5 +69,13 @@ public class TimedRandomSound : MonoBehaviour
     {
         isActive = false;
         _timerActive = false;
+    }
+
+    private void Timer()
+    {
+        if(_timerActive) _currentTime = _currentTime + Time.deltaTime;
+        TimeSpan _actualTime = TimeSpan.FromSeconds(_currentTime);
+        if(_actualTime.Seconds == _timer)
+        CallSFX();
     }
 }
