@@ -107,6 +107,15 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""b6e0297d-ebf2-44bf-b972-11683733c4ac"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -252,6 +261,17 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
                     ""action"": ""Journal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6253b063-69d1-42c0-98c8-69aa06519a39"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -269,6 +289,7 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         m_On_Foot_FlashLight = m_On_Foot.FindAction("FlashLight", throwIfNotFound: true);
         m_On_Foot_Inventory = m_On_Foot.FindAction("Inventory", throwIfNotFound: true);
         m_On_Foot_Journal = m_On_Foot.FindAction("Journal", throwIfNotFound: true);
+        m_On_Foot_Pause = m_On_Foot.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -339,6 +360,7 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
     private readonly InputAction m_On_Foot_FlashLight;
     private readonly InputAction m_On_Foot_Inventory;
     private readonly InputAction m_On_Foot_Journal;
+    private readonly InputAction m_On_Foot_Pause;
     public struct On_FootActions
     {
         private @Player_Input m_Wrapper;
@@ -352,6 +374,7 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         public InputAction @FlashLight => m_Wrapper.m_On_Foot_FlashLight;
         public InputAction @Inventory => m_Wrapper.m_On_Foot_Inventory;
         public InputAction @Journal => m_Wrapper.m_On_Foot_Journal;
+        public InputAction @Pause => m_Wrapper.m_On_Foot_Pause;
         public InputActionMap Get() { return m_Wrapper.m_On_Foot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -388,6 +411,9 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
             @Journal.started += instance.OnJournal;
             @Journal.performed += instance.OnJournal;
             @Journal.canceled += instance.OnJournal;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IOn_FootActions instance)
@@ -419,6 +445,9 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
             @Journal.started -= instance.OnJournal;
             @Journal.performed -= instance.OnJournal;
             @Journal.canceled -= instance.OnJournal;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IOn_FootActions instance)
@@ -447,5 +476,6 @@ public partial class @Player_Input: IInputActionCollection2, IDisposable
         void OnFlashLight(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
         void OnJournal(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

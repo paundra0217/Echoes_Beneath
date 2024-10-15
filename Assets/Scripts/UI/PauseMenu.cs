@@ -27,10 +27,12 @@ namespace RDCT.Menu
 
         private void Update()
         {
+            /*
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 TogglePauseMenu();
             }
+            */
         }
 
         public static void TogglePauseMenu()

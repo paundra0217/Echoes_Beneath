@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using RDCT.Audio;
 using Cinemachine;
 using TMPro;
+using RDCT.Menu;
 
 
 public enum PlayerState { InMinigames, normal }
@@ -42,6 +43,9 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] LayerMask layerMask;
     [SerializeField] float JarakInteract;
     [SerializeField] GameObject Interacttxt;
+    [SerializeField] GameObject JournalText;
+
+    private bool FoundNoteFirstTime = false;
     private Image invUI;
     ItemGrid inventoryGrid;
     Vector3 movedirection = Vector3.zero;
@@ -267,12 +271,27 @@ public class PlayerMotor : MonoBehaviour
         if (!JournalPicked) return;
         Debug.Log("BukaJournal");
         //IsOpenJournal = !IsOpenJournal;
+        JournalText.SetActive(false);
         if(JournalUI.activeSelf == true)
         {
             JournalUI.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            JournalUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
     }
+
+    public void PauseGame()
+    {
+        PauseMenu.TogglePauseMenu();
+    }
+
     //Player
     #endregion
 
@@ -317,6 +336,17 @@ public class PlayerMotor : MonoBehaviour
     public void JournalPick()
     {
         JournalPicked = true;
+    }
+
+    public bool GetPickUpNoteFirstTime()
+    {
+        return FoundNoteFirstTime;
+    }
+
+    public void PickUpNoteFirstTime()
+    {
+        FoundNoteFirstTime = true;
+        JournalText.SetActive(true);
     }
 
     public void ChangeState(bool oke)

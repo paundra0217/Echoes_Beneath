@@ -37,7 +37,7 @@ public class ObjectiveManager : MonoBehaviour
             if (!objective.ObjectiveClear) CekKelar = false;
         }
 
-        Debug.Log(CekKelar);
+        
         if (CekKelar)
         {
             ObjectiveSectionClear();

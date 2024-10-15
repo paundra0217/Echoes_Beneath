@@ -25,6 +25,7 @@ namespace RDCT.PlayerController
             on_Foot.Inventory.performed     += ctx => motor.Inventory();
             on_Foot.FlashLight.performed    += ctx => motor.FlashLight();
             on_Foot.Journal.performed       += ctx => motor.Journal();
+            on_Foot.Pause.performed         += ctx => motor.PauseGame();
         }
 
         private void Start()
