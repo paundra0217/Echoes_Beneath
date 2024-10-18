@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TriggerMainEnding : MonoBehaviour
+public class TriggerTrueEnding : MonoBehaviour
 {
-    dialogBase dialogBase;
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<PlayerMotor>())
         {
 
-            if (FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().GetIndex() == 4)
+            if (FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().GetIndex() == 5)
             {
                 SceneManager.LoadScene("EscapeEnding");
                 Cursor.lockState = CursorLockMode.None;
@@ -26,8 +24,4 @@ public class TriggerMainEnding : MonoBehaviour
 
         }
     }
-
-
-
-
 }

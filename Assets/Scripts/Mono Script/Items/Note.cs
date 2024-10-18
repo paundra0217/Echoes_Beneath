@@ -9,6 +9,7 @@ public class Note : InteractObject
     public override void Interaction()
     {
         FindAnyObjectByType<NoteManager>().GetComponent<NoteManager>().UnlockPage(Index);
+        FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("JournalPage");
         Destroy(gameObject);
         //nota.SetActive(true);
     }

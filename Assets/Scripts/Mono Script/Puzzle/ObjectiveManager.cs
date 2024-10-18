@@ -7,6 +7,8 @@ public class ObjectiveManager : MonoBehaviour
 {
     [SerializeField] List<ObjectiveTask> objectivesTask;
     [SerializeField] private int Index = 0;
+    [SerializeField] GameObject Debres;
+    [SerializeField] Transform DebresSpawn;
     [SerializeField] Animator animator;
     private void Start()
     {
@@ -34,6 +36,15 @@ public class ObjectiveManager : MonoBehaviour
 
         foreach (Objective objective in objectivesTask[Index].objectives)
         {
+            if(objective.Title == "JournalPage")
+            {
+                if (objective.ObjectiveClear)
+                {
+                    ObjectiveSectionClear();
+                    return;
+                }
+            }
+
             if (!objective.ObjectiveClear) CekKelar = false;
         }
 
@@ -73,9 +84,14 @@ public class ObjectiveManager : MonoBehaviour
             objective.SetText();
         }
 
-        if(Index >= 4)
+        if(Index == 4)
         {
             animator.SetTrigger("Kebuka");
+        }
+        else if(Index == 5)
+        {
+            FindAnyObjectByType<PlayerMotor>().GetComponent<PlayerMotor>().CanRun = true;
+            GameObject oke = Instantiate(Debres, DebresSpawn);
         }
     }
 
