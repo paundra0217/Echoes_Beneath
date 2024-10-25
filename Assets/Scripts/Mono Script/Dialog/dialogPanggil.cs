@@ -18,6 +18,11 @@ public class dialogPanggil : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (called) return;
+        DialogCalled();
+    }
+
+    public virtual void DialogCalled()
+    {
         dialogBase.panggilDialog(dialogTitle);
         called = true;
     }
