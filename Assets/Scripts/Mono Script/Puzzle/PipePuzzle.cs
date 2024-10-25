@@ -11,6 +11,7 @@ public class PipePuzzle : PuzzleBase
     [SerializeField] KeyCode Back;
     [Header("Valve SetUp")]
     [SerializeField] GameObject Valve;
+    [SerializeField] TriggerChecker triggerChecker;
     PuzzleInteract puzzleInteract;
     PipePuzzle pipePuzzle;
     private int Point = 0;
@@ -48,6 +49,7 @@ public class PipePuzzle : PuzzleBase
         if(Point >= PointToWin)
         {
             FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Pipe");
+            triggerChecker.TriggerMatiin();
             puzzleInteract.enabled = false;
             puzzleInteract.minigameskelar = true;
             CancelMinigames();

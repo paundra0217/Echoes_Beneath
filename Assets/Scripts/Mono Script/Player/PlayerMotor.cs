@@ -29,6 +29,7 @@ public class PlayerMotor : MonoBehaviour
 
     //other
     public bool CanRun = false;
+    public bool CanFlashlight = false;
     private bool JournalPicked = false;
     private bool IsGrounded;
     private bool IsOpenInventory = false;
@@ -253,6 +254,8 @@ public class PlayerMotor : MonoBehaviour
     //Player On/Off FlashLight
     public void FlashLight()
     {
+        if (!CanFlashlight) return;
+
         ToggleFlashLight = !ToggleFlashLight;
         AudioController.Instance.PlaySFX("Flashlight");
         if (ToggleFlashLight)
