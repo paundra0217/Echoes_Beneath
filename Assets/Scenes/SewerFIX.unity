@@ -6832,6 +6832,64 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.347544, y: 4.612854, z: 1}
   m_Center: {x: 0.21799289, y: 0.107120514, z: 7.3778594e-11}
+--- !u!1001 &608131721
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 188.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.736
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895781687219775, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 580501941886971029, guid: ccd9973c8250d7b42a09b1a0660bc74b,
+        type: 3}
+      propertyPath: m_Name
+      value: SecretRoom Decor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccd9973c8250d7b42a09b1a0660bc74b, type: 3}
 --- !u!1001 &608175960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21945,3 +22003,4 @@ SceneRoots:
   - {fileID: 1322977464}
   - {fileID: 200766601}
   - {fileID: 1588229993380687136}
+  - {fileID: 608131721}
