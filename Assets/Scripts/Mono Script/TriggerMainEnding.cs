@@ -20,7 +20,7 @@ public class TriggerMainEnding : MonoBehaviour
             }
             else
             {
-                FindAnyObjectByType<dialogBase>().GetComponent<dialogBase>().panggilDialog("2.6");
+                FindAnyObjectByType<dialogBase>().GetComponent<dialogBase>().panggilDialog("2.20");
                 //dialogBase.panggilDialog("2.6");
             }
 
