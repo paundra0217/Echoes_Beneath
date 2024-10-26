@@ -87,6 +87,7 @@ public class ObjectiveManager : MonoBehaviour
         if(Index == 4)
         {
             animator.SetTrigger("Kebuka");
+            dialogBase.Instance.panggilDialog("2.9");
         }
         else if(Index == 5)
         {

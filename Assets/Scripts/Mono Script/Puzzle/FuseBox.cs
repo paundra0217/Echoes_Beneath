@@ -34,6 +34,7 @@ public class FuseBox : InteractObject
             {
                 //pintu.SetTrigger("Kebuka");
                 AudioController.Instance.PlaySFX("Fusebox");
+                AudioController.Instance.PlaySFX("Screeching");
                 Nyala = true;
             }
         }

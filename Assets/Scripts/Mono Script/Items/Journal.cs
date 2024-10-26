@@ -11,7 +11,7 @@ public class Journal : InteractObject
         {
             FindAnyObjectByType<PlayerMotor>().GetComponent<PlayerMotor>().PickUpNoteFirstTime();
         }
-
+        dialogBase.Instance.panggilDialog("Jurnal");
         FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Journal");
         FindAnyObjectByType<PlayerMotor>().GetComponent<PlayerMotor>().JournalPick();
         Destroy(gameObject);
