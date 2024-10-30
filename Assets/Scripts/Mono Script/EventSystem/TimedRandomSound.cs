@@ -21,7 +21,7 @@ public class TimedRandomSound : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if(isActive)    Timer();
     }

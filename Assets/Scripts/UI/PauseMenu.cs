@@ -25,15 +25,6 @@ namespace RDCT.Menu
             cg = GetComponent<CanvasGroup>();
         }
 
-        private void Update()
-        {
-            /*
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                TogglePauseMenu();
-            }
-            */
-        }
 
         public static void TogglePauseMenu()
         {

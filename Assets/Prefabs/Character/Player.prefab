@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 1322e31d1a3aa294da1ff3a781bba571, type: 2}
   CanRun: 0
+  CanFlashlight: 0
   senter: {fileID: 2017660818950785167}
   InventoryUI: {fileID: 0}
   JournalUI: {fileID: 0}
@@ -294,7 +295,7 @@ Transform:
   m_GameObject: {fileID: 3707657710701939504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000048661605, y: 1.5539999, z: 0.13899969}
+  m_LocalPosition: {x: 0.000000018626451, y: 1.554, z: 0.13900043}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -837,6 +838,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 143052980177353120, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 269.56265
+      objectReference: {fileID: 0}
+    - target: {fileID: 143052980177353120, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1050656203896215310, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -886,6 +897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 4677113251900722944, guid: beaa4188174bba64d92379bcc6f032d5,
         type: 3}
