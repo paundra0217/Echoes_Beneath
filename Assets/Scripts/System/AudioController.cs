@@ -316,7 +316,8 @@ namespace RDCT.Audio
 
         public void PauseAllSound()
         {
-            currentBGMPlaying.Pause();
+            if(currentBGMPlaying != null) currentBGMPlaying.Pause();
+            
 
             foreach (var a in audioSFX)
             {
@@ -339,7 +340,8 @@ namespace RDCT.Audio
 
         public void ResumeAllSound()
         {
-            currentBGMPlaying.UnPause();
+            if(currentBGMPlaying != null) currentBGMPlaying.UnPause();
+            
 
             while (currentSFXesPlaying.Count > 0)
             {
