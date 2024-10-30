@@ -3,7 +3,127 @@ guid: 8e3093c2276138f4f856570403b6e604
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Area1Room
+    second: {fileID: 2100000, guid: f8d74bac9c664e045a2566f52af5ce88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Area2Start
+    second: {fileID: 2100000, guid: c46514ba9cd02de41854cf31d7e16d29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LantaiPipeRoom
+    second: {fileID: 2100000, guid: 975d4a1ef1c6ac643884b17828af466f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LorongArea2Kiri.001
+    second: {fileID: 2100000, guid: 21401aa513b9d394eb46855b0e00f369, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LorongArea2Miring.001
+    second: {fileID: 2100000, guid: 45805409609dcd54a85a695bed1b4679, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaintenanceRoom.001
+    second: {fileID: 2100000, guid: dd7888345b597384182cb34f7f0078c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MiringEnd1
+    second: {fileID: 2100000, guid: 31ca66f295db9b3418af5e4b6acbb09b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MiringEnd2
+    second: {fileID: 2100000, guid: 9bae6987e4c31b14db69d02ed488dd1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PeganganTanggaHalfMaintenance.001
+    second: {fileID: 2100000, guid: a623511c1dfad564797fe1ef9634add2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PeganganTanggaMaintenance.001
+    second: {fileID: 2100000, guid: 9c3a306e61767fb478e4a7582950ac29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PeganganTanggaMaintenance1.001
+    second: {fileID: 2100000, guid: 89a13b427573ca742868f83f1bebdad2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeRoom
+    second: {fileID: 2100000, guid: 716f7f5a95fe28c4caebd8a10e6f098d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RuanganArea2Pojok.001
+    second: {fileID: 2100000, guid: 647466501ddba184db0852b9274f1feb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RuanganGen
+    second: {fileID: 2100000, guid: 9ccf65d933d7b6a4cbdc3254c2b333a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TanggaHalfMaintenance.001
+    second: {fileID: 2100000, guid: 4b06b9390fd710245839b6e514442c98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TanggaMaintenance.005
+    second: {fileID: 2100000, guid: df6f853ca27f869449691fc4653db842, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TanggaMaintenance.006
+    second: {fileID: 2100000, guid: 70fe9bb46f5bb6246b6e4bb1c846ce9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TanggaMaintenance.008
+    second: {fileID: 2100000, guid: b6ca19384ec4dec419d73c22ed0c0af6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TanggaMaintenance.009
+    second: {fileID: 2100000, guid: abb808415000f084caeb5b607b608f18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TembokTanggaKA2
+    second: {fileID: 2100000, guid: bb41b42b29876304cbe72a641408bf30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tiangkecil
+    second: {fileID: 2100000, guid: 524e9a24500f7ea4ab6da9bbd97b63ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: afterpiperoom
+    second: {fileID: 2100000, guid: 5cf339387de72af4b91cdde783b271e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gagangPngumpetRoom
+    second: {fileID: 2100000, guid: f341e089f61395a489a60c49c34bdc4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pintuPngumpetRoom
+    second: {fileID: 2100000, guid: e1cb471b9ec7b38428ed1bdd825ad186, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
