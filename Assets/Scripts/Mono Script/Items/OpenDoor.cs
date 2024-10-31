@@ -11,7 +11,7 @@ public class OpenDoor : InteractObject
 
     private Animator DoorAnimator;
 
-    private bool canOpen = true;
+    private bool canOpen = false;
 
     [SerializeField] private MeshRenderer changedMaterial;
 
@@ -27,6 +27,16 @@ public class OpenDoor : InteractObject
 
     public override void Interaction()
     {
+        
+        if (!canOpen)
+        {
+            dialogBase.Instance.panggilDialog("");
+            Debug.Log("bayar listrik");
+            return;
+        }
+
+        
+
         foreach (InventoryItem items in grids.InventoryItems)
         {
             if (items.itemSize == keycards && canOpen)
@@ -52,5 +62,11 @@ public class OpenDoor : InteractObject
             FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().TriggerObjective("Keycard");
             dialogBase.Instance.panggilDialog("ga ada apa apa");
         }
+    }
+
+    public void CanOpenDoor()
+    {
+        Debug.Log("Berhasil");
+        canOpen = true;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using RDCT.PlayerController;
 
 public class GeneratorPuzzle : PuzzleBase
@@ -18,7 +19,7 @@ public class GeneratorPuzzle : PuzzleBase
     [SerializeField] private GeneratorButton generatorButton;
 
     [SerializeField] MeshRenderer gantiwarna;
-
+    [SerializeField] UnityEvent KelarMinigamesEvent;
     [SerializeField] private Material hijau;
 
     GeneratorPuzzle generatorPuzzle;
@@ -64,6 +65,7 @@ public class GeneratorPuzzle : PuzzleBase
     public void WinGames()
     {
         Debug.Log("menang");
+        KelarMinigamesEvent.Invoke();
         Generatorenabled(false);
         puzzleInteract.minigameskelar = true;
         gantiwarna.material = hijau;

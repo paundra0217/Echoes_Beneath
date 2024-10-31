@@ -49,7 +49,7 @@ public class PipePuzzle : PuzzleBase
         if(Point >= PointToWin)
         {
             FindObjectOfType<ObjectiveManager>().GetComponent<ObjectiveManager>().ObjectiveClear("Pipe");
-            triggerChecker.TriggerMatiin();
+            if(triggerChecker != null) triggerChecker.TriggerMatiin();
             puzzleInteract.enabled = false;
             puzzleInteract.minigameskelar = true;
             CancelMinigames();

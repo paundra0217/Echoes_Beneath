@@ -20,7 +20,7 @@ public class TriggerChecker : MonoBehaviour
         {
             _TriggerEnter.Invoke();
             Debug.Log("Yes");
-            AudioController.Instance.PlaySFX(AudioName);
+            if(AudioName != "") AudioController.Instance.PlaySFX(AudioName);
             isActivated = true;
         }
     }
