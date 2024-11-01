@@ -3406,45 +3406,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1875267704949879191, guid: 83e2f75738af73748b2db5e304b1cf29,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 176484396}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e2f75738af73748b2db5e304b1cf29, type: 3}
---- !u!1 &176484394 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1875267704949879191, guid: 83e2f75738af73748b2db5e304b1cf29,
-    type: 3}
-  m_PrefabInstance: {fileID: 176484393}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &176484395 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5545791645757269947, guid: 83e2f75738af73748b2db5e304b1cf29,
     type: 3}
   m_PrefabInstance: {fileID: 176484393}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &176484396
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176484394}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: de6dea441d33d91448c2e5e67c99ddcc, type: 3}
-  m_Controller: {fileID: 9100000, guid: 44b5a26638520f24aa05d9a8cbd3d4d6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &176746676
 GameObject:
   m_ObjectHideFlags: 0
@@ -22876,7 +22845,7 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -3846121980959477025, guid: f3d5d6ded0089a54fa65b8dda127fd31, type: 2}
-    value: {fileID: 176484396}
+    value: {fileID: 1825591076}
   - key: {fileID: 9159720412841622129, guid: f3d5d6ded0089a54fa65b8dda127fd31, type: 2}
     value: {fileID: 1391608780}
   - key: {fileID: 7047260309929314504, guid: f3d5d6ded0089a54fa65b8dda127fd31, type: 2}
@@ -23468,6 +23437,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 8e3093c2276138f4f856570403b6e604, type: 3}
+--- !u!95 &1825591076 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7029918686960819914, guid: 83e2f75738af73748b2db5e304b1cf29,
+    type: 3}
+  m_PrefabInstance: {fileID: 176484393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1827824753
 GameObject:
   m_ObjectHideFlags: 0
