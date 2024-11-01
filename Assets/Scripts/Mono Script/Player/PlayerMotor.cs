@@ -120,8 +120,7 @@ public class PlayerMotor : MonoBehaviour
         movedirection.x = input.x;
         movedirection.z = input.y;
         float move = Mathf.Max(Mathf.Abs(movedirection.x), Mathf.Abs(movedirection.z));
-        //if (move > 0) audioSource.enabled = true;
-        //else audioSource.enabled = false;
+        Debug.Log(move);
         anim.SetFloat("movement", move);
 
         controller.Move(transform.TransformDirection(movedirection) * walkSpeed * Time.deltaTime);
