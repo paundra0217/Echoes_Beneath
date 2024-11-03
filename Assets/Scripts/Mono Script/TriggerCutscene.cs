@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using RDCT.PlayerController;
 
 public class TriggerCutscene : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class TriggerCutscene : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerMotor>())
         {
+            FindAnyObjectByType<InputManager>().GetComponent<InputManager>().SetEnable(false);
             playableDirector.Play();
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class ObjectiveManager : MonoBehaviour
@@ -40,6 +41,7 @@ public class ObjectiveManager : MonoBehaviour
             {
                 if (objective.ObjectiveClear)
                 {
+
                     ObjectiveSectionClear();
                     return;
                 }
@@ -70,6 +72,7 @@ public class ObjectiveManager : MonoBehaviour
 
     private void ObjectiveSectionClear()
     {
+        objectivesTask[Index].unityEvent.Invoke();
         foreach (Objective objective in objectivesTask[Index].objectives)
         {
             objective.ObjectiveTxt.gameObject.SetActive(false);
@@ -84,6 +87,7 @@ public class ObjectiveManager : MonoBehaviour
             objective.SetText();
         }
 
+        /*
         if(Index == 4)
         {
             animator.SetTrigger("Kebuka");
@@ -94,6 +98,7 @@ public class ObjectiveManager : MonoBehaviour
             FindAnyObjectByType<PlayerMotor>().GetComponent<PlayerMotor>().CanRun = true;
             GameObject oke = Instantiate(Debres, DebresSpawn);
         }
+        */
     }
 
     public int GetIndex()
@@ -106,6 +111,7 @@ public class ObjectiveManager : MonoBehaviour
 public class ObjectiveTask
 {
     public Objective[] objectives;
+    public UnityEvent unityEvent;
     public bool Kelar;
 }
 

@@ -52,6 +52,11 @@ namespace RDCT.PlayerController
             on_Foot.Disable();
         }
 
+        public void SetEnable(bool Set)
+        {
+            GetComponent<InputManager>().enabled = Set;
+        }
+
     }
 
 }

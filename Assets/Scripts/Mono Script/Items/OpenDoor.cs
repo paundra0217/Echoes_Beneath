@@ -30,8 +30,8 @@ public class OpenDoor : InteractObject
         
         if (!canOpen)
         {
-            dialogBase.Instance.panggilDialog("");
-            Debug.Log("bayar listrik");
+            dialogBase.Instance.panggilDialog("GeneratorMati");
+            
             return;
         }
 

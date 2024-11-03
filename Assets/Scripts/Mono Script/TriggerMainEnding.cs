@@ -14,9 +14,7 @@ public class TriggerMainEnding : MonoBehaviour
 
             if (FindAnyObjectByType<ObjectiveManager>().GetComponent<ObjectiveManager>().GetIndex() == 4)
             {
-                SceneManager.LoadScene("EscapeEnding");
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                GotoMainEnding();
             }
             else
             {
@@ -27,7 +25,10 @@ public class TriggerMainEnding : MonoBehaviour
         }
     }
 
-
-
-
+    public void GotoMainEnding()
+    {
+        SceneManager.LoadScene("EscapeEnding");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 }
