@@ -66,7 +66,7 @@ Developers:
             ├── MainMenu 1.unity        # The entry scene for this gams is this scene, whic his MainMenu 1.unity
       ├── Scripts                       # Contains all the scripts that manage various game mechanics and functionalities.
          ├── System                     # Contans scripts that handles the system or backend of the game. My work lies on making AudioController.cs
-         ├── UI                         # Contain scripts that handles the UI of the game. My work lies on making and programming the game UI, which in this folder.
+         ├── UI                         # Contain scripts that handles the UI of the game. My work lies on making and programming the game UI, which in this folder, and in-game settings.
       ├── ...
    ├── ...
       
