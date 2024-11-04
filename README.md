@@ -61,11 +61,12 @@ Developers:
    ├── ...
    ├── Assets                           # In this Folder, it contains all of our code, assets, scenes, etc.
       ├── ...
-      ├── Scenes                        # In this folder, there are scenes. You can open these scenes to play the game via Unity.
-          ├── MainMenuCandidate         # In this folder, there are scenes for main menu. The entry scene comes from from MainMenu 1.unity
-      ├── Scripts                       # In this Folder, there are scripts. You can inspect the scripts here.
-          ├── System                    # In this folder, there are scripts that handles the system or backend of the game. My work lies on making AudioController.cs
-          ├── UI                        # In this folder, there are scripts that handles the UI of the game. My work lies on making and programming the game UI, which in this folder.
+      ├── Scenes                        # Contains all of the unity scenes. You can open these scenes to play the game via Unity.
+         ├── MainMenuCandidate          # Contains scenes for main menu.
+            ├── MainMenu 1.unity        # The entry scene for this gams is this scene, whic his MainMenu 1.unity
+      ├── Scripts                       # Contains all the scripts that manage various game mechanics and functionalities.
+         ├── System                     # Contans scripts that handles the system or backend of the game. My work lies on making AudioController.cs
+         ├── UI                         # Contain scripts that handles the UI of the game. My work lies on making and programming the game UI, which in this folder.
       ├── ...
    ├── ...
       
