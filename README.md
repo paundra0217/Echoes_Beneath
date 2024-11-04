@@ -1,43 +1,72 @@
-Hello! Thank you for downloading our game
-=====================================================================================
-Description:
+<p align="center">
+  <img width="50%" alt="prostir" src="https://github.com/user-attachments/assets/2be270e9-a073-4033-9f04-e94828dda4e4">
+  </br>
+</p>
 
-Echoes Beneath is a 3D first person horror game in which you play as Xavier, an experienced sewer inspector working beneath the streets of France. You will walk down a sewer known for it's mythical stories from the locals and your co-workers.
+## 🔴About
+**Echoes Beneath** is a 3D first person horror game in which you play as Xavier, an experienced sewer inspector working beneath the streets of France. You will walk down a sewer known for it's mythical stories from the locals and your co-workers.
 
 Inside the sewer, you will do the tasks assigned to you and explore the depths of the sewer. The deeper you go, the eerie feeling thickens and you will feel something watching every step of your way in the sewer. Experience puzzles mini games and be one step closer to the truth of the sewers.
 
 Will you live to tell the tale? Or will you succumb to the echoes beneath...
 
-=====================================================================================
-Installation Guide:
+## ⬇️Download Game
+Itch.io : https://xviig.itch.io/echoes-beneath
 
-Itch.io:
-1. Download the Echoes Beneath file from the download page
-2. Provide sufficient storage and make sure your device meets the minimum requirements of the game
-3. The file will be directed automatically into the default download space designated on your device
-4. Unzip the file on the place you wish to place the game on
-5. Run the Echoes Beneath.exe file
-6. If your device security shows up pop up notification, choose run anyway/run
+## 🕹️Game controls
+| Key Binding       | Function          |
+| ----------------- | ----------------- |
+| W, A, S, D        | Player Movement   |
+| Spacebar        | Jump             |
+| C       | Crouch   |
+| F           | Flashlight   |
+| Shift      | Run |
+| E      | Interact |
+| I      | Inventory |
 
-Steam:
-1. Download the game Echoes Beneath from Steam
-2. Provide sufficient storage and make sure your device meets the minimum requirements of the game
-3. Play and run the game through shortcut or run on steam
+## 💼 My Responsilibites
+As a key member of the development team, I was responsible for crafting the game's user interface and implementing several backend systems within the Unity engine. I designed and developed intuitive UI elements, ensuring a seamless user experience. Additionally, I worked on crucial backend systems such as Audio and Game Settings. By combining artistic flair with technical expertise, I contributed significantly to the overall gameplay experience.
 
+## 📋 Project Info and Developers
+This project using Unity 2022.3.21f1 ([Repository Link](https://github.com/Redacted-Studio/HorrorGame))
 
-=====================================================================================
-Support and Contact:
+Developers:
+- Radovieo Anugraha Daffacetta (Design)
+- Tengku Muhammad Baha'Uddin (Design)
+- Muhammad Chandika Syarukhan (Design)
+- Richard Bui Hiung (Programming)
+- Christopher Owen Anjaya (Programming)
+- Evan Jonathan (Programming)
+- Luas Adil Kurniawan (Programming)
+- **Paundra Amirtha Tanto (Programming)**
+- Bagas Hidayat (Art)
+- Ariq Bimo Nurputro (Art)
+- Nathania Joscelind (Art)
+- Annabelle Cristie Liango (Art)
+- Nicholas Van Lukman (Sound)
+- Nicholas Alexander Siswanto (Sound)
 
-If there are any problems on opening/while playing the game, contact us on:
+##  📜Scripts
+|  Script       | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `MainMenu.cs` | Handles the UI on the Main Menu. |
+| `PauseMenu.cs` | Handles the UI on the in-game Pause Menu. |
+| `Settings.cs` | Handles and Manages settings of the game such as sensitivity, audio volume, graphics, etc. |
+| `AudioController.cs` | Manages all kind of audios existed in the project, and handles play, pause, and stop function calls based on events happening in the game. |
+| `etc`  | |
 
-1. Itch.io: https://xviig.itch.io/echoes-beneath
-2. Instagram: Redacted.Studios_
-3. Youtube: Redacted Studios
-4. Gmail: Redacted.Studios1@gmail.com
-
-=====================================================================================
-
-Thank you very much for your attention!
-If you enjoy our game, please give a like, review, or post your gameplay and tag us!
-
-Enjoy your time on Echoes Beneath. 
+## 📂Files description
+```
+├── Echoes_Beneath                      # In this Folder, containing all the Unity project files, to be opened by a Unity Editor
+   ├── ...
+   ├── Assets                           # In this Folder, it contains all our code, assets, scenes, etcwas not automatically created by Unity
+      ├── ...
+      ├── Scenes                        # In this folder, there are scenes. You can open these scenes to play the game via Unity.
+          ├── MainMenuCandidate         # In this folder, there are scenes for main menu. The entry scene comes from from MainMenu 1.unity
+      ├── Scripts                       # In this Folder, there are scripts. You can inspect the scripts here.
+          ├── System                    # In this folder, there are scripts that handles the system or backend of the game. My work lies on making AudioController.cs
+          ├── UI                        # In this folder, there are scripts that handles the UI of the game. My work lies on making and programming the game UI, which in this folder.
+      ├── ...
+   ├── ...
+      
+```
