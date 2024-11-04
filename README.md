@@ -59,7 +59,7 @@ Developers:
 ```
 ├── Echoes_Beneath                      # In this Folder, containing all the Unity project files, to be opened by a Unity Editor
    ├── ...
-   ├── Assets                           # In this Folder, it contains all our code, assets, scenes, etcwas not automatically created by Unity
+   ├── Assets                           # In this Folder, it contains all of our code, assets, scenes, etc.
       ├── ...
       ├── Scenes                        # In this folder, there are scenes. You can open these scenes to play the game via Unity.
           ├── MainMenuCandidate         # In this folder, there are scenes for main menu. The entry scene comes from from MainMenu 1.unity
