@@ -28,7 +28,7 @@ Itch.io : https://xviig.itch.io/echoes-beneath
 As a key member of the development team, I was responsible for crafting the game's user interface and implementing several backend systems within the Unity engine. I designed and developed intuitive UI elements, ensuring a seamless user experience. Additionally, I worked on crucial backend systems such as Audio and Game Settings. By combining artistic flair with technical expertise, I contributed significantly to the overall gameplay experience.
 
 ## 📋 Project Info and Developers
-This project using Unity 2022.3.21f1 ([Repository Link](https://github.com/Redacted-Studio/HorrorGame))
+This project was made using Unit Unity 2022.3.21f1
 
 Developers:
 - Radovieo Anugraha Daffacetta (Design)
